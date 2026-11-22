@@ -1,0 +1,9361 @@
+{
+ "project": "REDUCTIONS · continuous stream",
+ "version": 4,
+ "structure": "100 composers × 3 patterns × 10 s over a continuous stream",
+ "source": "",
+ "duration": 0,
+ "architecture": "<audio> + createMediaElementSource + 4 s ring buffer + two crossfade buses with per-slot bed",
+ "taxonomy": "Trevor Wishart, Audible Design (1994)",
+ "fidelity": {
+  "d": "d · documented",
+  "r": "r · reconstruction",
+  "i": "i · interpretation"
+ },
+ "families": {
+  "sp": {
+   "n": "spectrum/timbre",
+   "c": "#35d0e0"
+  },
+  "tm": {
+   "n": "time/process",
+   "c": "#9fe838"
+  },
+  "pt": {
+   "n": "pitch/tuning",
+   "c": "#ffb02e"
+  },
+  "sc": {
+   "n": "space",
+   "c": "#4f7dff"
+  },
+  "ch": {
+   "n": "chance/structure",
+   "c": "#ff4fa3"
+  },
+  "cn": {
+   "n": "concept",
+   "c": "#ff5c39"
+  },
+  "vc": {
+   "n": "voice/pop-avant",
+   "c": "#b07dff"
+  },
+  "qt": {
+   "n": "silence/dynamics",
+   "c": "#d8d2c0"
+  }
+ },
+ "mixer": {
+  "vol": 0.85,
+  "mix": 1,
+  "tone": 18000,
+  "drive": 1,
+  "space": 0,
+  "width": 1,
+  "rate": 1,
+  "lim": true
+ },
+ "quality": 0.55,
+ "composers": [
+  {
+   "no": 1,
+   "name": "Charles-Valentin Alkan",
+   "years": "1813–1888",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Train gains momentum",
+     "fidelity": "r",
+     "principle": "Motif microloups accelerate from 0.4 to 0.05 s — ostinato as mechanical acceleration.",
+     "reference": "«Le chemin de fer» op. 27 (1844) — the first depiction of a railway in music.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "stutter",
+        "a": 0.4,
+        "b": 0.05
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "lowpass",
+        "f0": 500,
+        "f1": 3200
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Aesop's feast: 8 variations",
+     "fidelity": "r",
+     "principle": "A short motif repeats alternating forward and backward — variational obsession.",
+     "reference": "«Le festin d'Ésope» op. 39 (1839): 25 variations on a single theme.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "palin",
+        "n": 8
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         2
+        ],
+        "g": 0.25
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Symphony for solo piano",
+     "fidelity": "i",
+     "principle": "Octave layers and dense saturation — one instrument pretends to be an orchestra.",
+     "reference": "«Symphonie» from the 12 Études op. 39 (1857): piano as orchestra.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         0.5,
+         1,
+         2
+        ],
+        "g": 0.5
+       }
+      ],
+      [
+       "shaper",
+       {
+        "kind": "soft",
+        "k": 3,
+        "g": 0.6
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "name": "George Antheil",
+   "years": "1900–1959",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Mechanical ballet",
+     "fidelity": "d",
+     "principle": "16 synchronized metronome clicks over a low humming propeller drone.",
+     "reference": "«Ballet mécanique» (1924/25): mechanical pianos, airplane propellers, electric bells.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "clicks",
+       {
+        "n": 16,
+        "t0": 0.4,
+        "t1": 0.42,
+        "f": 1800,
+        "g": 0.5
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "sawtooth",
+        "f": 55,
+        "g": 0.18,
+        "env": "drone"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Airplane propellers",
+     "fidelity": "r",
+     "principle": "Deep amplitude modulation at 22 Hz turns the material into propeller rumble.",
+     "reference": "The «Ballet mécanique» score prescribes actual aircraft propellers.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "trem",
+       {
+        "f": 22,
+        "depth": 0.9,
+        "g": 0.8
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "lowpass",
+        "f0": 900,
+        "f1": 400
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Electric bells",
+     "fidelity": "r",
+     "principle": "Inharmonic resonator bank: metallic strikes, sparse rhythmic mask.",
+     "reference": "Bells and sirens were part of the original 1925 instrumentation.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         220,
+         607,
+         1188,
+         1958
+        ],
+        "q": 35,
+        "g": 0.8
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.2,
+         0.6,
+         0.2,
+         1.2
+        ],
+        "floor": 0.05
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "name": "Gilbert Artman",
+   "years": "b. 1943",
+   "family": "sc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Urban Sax: the city as stage",
+     "fidelity": "r",
+     "principle": "Eight scattered diffusion points — sound dispersed across an imagined city.",
+     "reference": "Urban Sax (1973): dozens of saxophonists on rooftops, squares, and parks.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "space",
+       {
+        "n": 8,
+        "spread": 1,
+        "rot": 0.05
+       }
+      ],
+      [
+       "formant",
+       {
+        "set": "sax",
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Swarm of saxophones",
+     "fidelity": "i",
+     "principle": "Twelve detuned copies form a breathing mass of one timbre.",
+     "reference": "Artman's mass saxophone ensembles are minimalist drone compositions.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 12,
+        "cents": 30,
+        "g": 0.6
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         320,
+         780,
+         1400
+        ],
+        "q": 12,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Lard Free: motorik",
+     "fidelity": "i",
+     "principle": "Continuous 4/4 krautrock pulse with tape echo.",
+     "reference": "Lard Free — Artman's krautrock band of the mid-1970s.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.25,
+         0.25,
+         0.25,
+         0.25
+        ],
+        "floor": 0.25
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.375,
+        "fb": 0.45,
+        "mix": 0.4
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "name": "Ana-Maria Avram",
+   "years": "1961–2017",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Spectral growth",
+     "fidelity": "r",
+     "principle": "Resonators on the stream's own peaks gradually build up — sound grows itself.",
+     "reference": "Romanian spectral school: Avram and Dumitrescu, spectralism outside schools.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "res",
+       {
+        "f": "peaks",
+        "q": 60,
+        "g": 0.8,
+        "ramp": 1
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Arborescences",
+     "fidelity": "i",
+     "principle": "Branching overtones 1 : 1.5 : 2.25 : 3.375 enter one by one.",
+     "reference": "Her orchestral branches grow from one sound like a living structure.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5,
+         2.25,
+         3.375
+        ],
+        "g": 0.5,
+        "stagger": 1
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "highshelf",
+        "f0": 2000,
+        "f1": 6000,
+        "gain": 6
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Inner light",
+     "fidelity": "i",
+     "principle": "Granular freeze slowly brightens through a filter — contemplation of a single moment.",
+     "reference": "Spectral meditation: duration as a way of listening.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "freeze",
+       {
+        "s": 0.14,
+        "jit": 0.02,
+        "g": 0.7
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "highshelf",
+        "f0": 1200,
+        "f1": 5000,
+        "gain": 9
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "name": "Leonardo Balada",
+   "years": "b. 1933",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Folk line",
+     "fidelity": "i",
+     "principle": "Fifth-octave doubling with light vibrato — a folk melody inside the avant-garde.",
+     "reference": "Balada: synthesis of Spanish folklore and hard-edged avant-garde, Carnegie Mellon.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5,
+         2
+        ],
+        "g": 0.55
+       }
+      ],
+      [
+       "trem",
+       {
+        "f": 5,
+        "depth": 0.2
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Cluster background",
+     "fidelity": "r",
+     "principle": "13 semitone copies — a dense cluster beneath the melody.",
+     "reference": "His cluster writing of the 1960–70s: folklore against sound masses.",
+     "bed": 0.4,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 13,
+        "cents": 600,
+        "g": 0.35
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Sinfonía negra",
+     "fidelity": "i",
+     "principle": "Dark ostinato gate and low resonances — ritual drama.",
+     "reference": "«Sinfonía negra» (1968) — Afro-Cuban roots in symphonic fabric.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.3,
+         0.3,
+         0.6
+        ],
+        "floor": 0.1
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         110,
+         165,
+         220
+        ],
+        "q": 20,
+        "g": 0.6
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "name": "Ros Bandt",
+   "years": "b. 1951",
+   "family": "sc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "File inside a silo",
+     "fidelity": "r",
+     "principle": "Long metallic combs and echo — the acoustics of an industrial tank.",
+     "reference": "Bandt voices silos, tanks, and industrial chambers of Australia.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "comb",
+       {
+        "f": [
+         82,
+         123,
+         196
+        ],
+        "fb": 0.7,
+        "g": 0.7
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.42,
+        "fb": 0.5,
+        "mix": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Flagong: glass",
+     "fidelity": "r",
+     "principle": "Glass inharmonic resonances 1 : 2.32 : 4.25 : 6.63 — a fragile shimmering fabric.",
+     "reference": "Flagong (1978) — her playable glass sound sculpture.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         660,
+         1531,
+         2805,
+         4376
+        ],
+        "q": 70,
+        "g": 0.8
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Sound landscape",
+     "fidelity": "i",
+     "principle": "Slow spatial diffusion, source almost dry — place matters more than processing.",
+     "reference": "Pioneer of Australian sound art and acoustic ecology, books on sound sculpture.",
+     "bed": 0.7,
+     "fx": [
+      [
+       "space",
+       {
+        "n": 4,
+        "spread": 0.7,
+        "rot": 0.02
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.6
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "name": "François Bayle",
+   "years": "b. 1932",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Brassage",
+     "fidelity": "d",
+     "principle": "Granular tape mixing: random 30 ms grains — a GRM classic.",
+     "reference": "Bayle headed GRM; brassage is the signature technique of the Groupe de Recherches Musicales.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 30,
+        "s": 0.05,
+        "g": 0.8
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Time freeze",
+     "fidelity": "r",
+     "principle": "A single instant stuck in a granular loop with micro-jitter.",
+     "reference": "«L'Expérience acoustique» (1969–72): a journey inside sound.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "freeze",
+       {
+        "s": 0.12,
+        "jit": 0.03,
+        "g": 0.8
+       }
+      ],
+      [
+       "trem",
+       {
+        "f": 0.5,
+        "depth": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Acousmatic montage",
+     "fidelity": "r",
+     "principle": "Random splice of fragments: the cause of the sound vanishes, only the gesture remains.",
+     "reference": "Acousmatics: sound without visible source, montage as dramaturgy.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 24
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "bandpass",
+        "f0": 400,
+        "f1": 2400,
+        "q": 1
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "name": "Arthur Berger",
+   "years": "1912–2003",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Intervallic cells",
+     "fidelity": "i",
+     "principle": "Minor seventh and minor ninth as harmonic cells — clarity instead of mass.",
+     "reference": "«Ideas of Order» (1952): neoclassicism shading into serialism.",
+     "bed": 0.4,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.682,
+         2.119
+        ],
+        "g": 0.5
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Neoclassical clarity",
+     "fidelity": "i",
+     "principle": "Clean bandpass filter and accented gate — chamber discipline.",
+     "reference": "A Stravinskian line: transparent texture, sharp accents.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "filt",
+       {
+        "type": "bandpass",
+        "f0": 600,
+        "f1": 1800,
+        "q": 0.8
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.15,
+         0.45,
+         0.15,
+         0.8
+        ],
+        "floor": 0.2
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Serialization of order",
+     "fidelity": "i",
+     "principle": "Deterministic permutation of fragments — order as a compositional gesture.",
+     "reference": "Late Berger: serial organization while retaining clarity.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 12,
+        "seed": 44
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.059
+        ],
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "name": "Luciano Berio",
+   "years": "1925–2003",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Thema: homage to the project",
+     "fidelity": "d",
+     "principle": "Scanning granulation and filter sweep — the stream turns into abstraction.",
+     "reference": "«Thema (Omaggio a Joyce)» (1958): Cathy Berberian reads Joyce, tape transforms the voice. Ancestor of this project.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "scan",
+        "d": 24,
+        "s": 0.08,
+        "g": 0.8
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "bandpass",
+        "f0": 300,
+        "f1": 3000,
+        "q": 2
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Sequenza: virtuoso voice",
+     "fidelity": "r",
+     "principle": "Explosive micro-stutters and dynamic waves — extreme vocal gesturality.",
+     "reference": "«Sequenza III» (1965): the voice as theater of all possible states.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "stutter",
+        "a": 0.25,
+        "b": 0.08
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Sinfonia: palimpsest",
+     "fidelity": "r",
+     "principle": "Cloud of copies and collage of quotes — layers of music on top of music.",
+     "reference": "«Sinfonia» (1968): Mahler's scherzo as a river carrying the debris of history.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 8,
+        "cents": 20,
+        "g": 0.4
+       }
+      ],
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 16,
+        "g": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "name": "Johanna M. Beyer",
+   "years": "1888–1944",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Music of the Spheres",
+     "fidelity": "r",
+     "principle": "Sliding sine layers — electric glissandi of the 1930s.",
+     "reference": "«Music of the Spheres» (1938) — an early electronic score, forgotten for decades.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 220,
+        "glide": 1.5,
+        "g": 0.25,
+        "env": "drone"
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5
+        ],
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Clusters",
+     "fidelity": "r",
+     "principle": "Semitone cluster ±6 semitones — piano masses.",
+     "reference": "«Clusters» (1936): clusters performed through hand choreography.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 13,
+        "cents": 600,
+        "g": 0.6
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Cluster choreography",
+     "fidelity": "i",
+     "principle": "Cluster turns on and off with a rhythmic gate — hand motion as rhythm.",
+     "reference": "Beyer choreographed cluster performance — the body as score.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 9,
+        "cents": 400,
+        "g": 0.5
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.5,
+         0.3,
+         0.5,
+         0.9
+        ],
+        "floor": 0.05
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "name": "Björk",
+   "years": "b. 1965",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Vespertine: microbeats",
+     "fidelity": "r",
+     "principle": "20 ms grains, 40 per second — intimate micro-percussion from the stream itself.",
+     "reference": "«Vespertine» (2001): Matmos built beats from footsteps, cards, whispers.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 40,
+        "s": 0.02,
+        "g": 0.7
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.12,
+         0.18,
+         0.12,
+         0.3
+        ],
+        "floor": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Medúlla: voice only",
+     "fidelity": "r",
+     "principle": "Formant choir and octave layers — everything made from vocal matter.",
+     "reference": "«Medúlla» (2004) — an album assembled entirely from voices.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "u",
+        "g": 0.7
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         0.5,
+         1,
+         2
+        ],
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Biophilia: gravity harp",
+     "fidelity": "i",
+     "principle": "Pendulum pitch relations and a slow drone — music of natural forces.",
+     "reference": "«Biophilia» (2011): pendulum harp, sonification of gravity.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.335,
+         1.78
+        ],
+        "g": 0.45
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 220,
+        "g": 0.15,
+        "env": "drone"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "name": "Pierre Boulez",
+   "years": "1925–2016",
+   "family": "sc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Répons",
+     "fidelity": "d",
+     "principle": "Spatial rotation, resonator chord, echo — soloist and electronic aura.",
+     "reference": "«Répons» (1981–84), IRCAM: live soloists and computer spatialization.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "space",
+       {
+        "n": 6,
+        "spread": 1,
+        "rot": 0.15
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         262,
+         330,
+         392,
+         523
+        ],
+        "q": 25,
+        "g": 0.4
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.21,
+        "fb": 0.4,
+        "mix": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Anthèmes 2",
+     "fidelity": "r",
+     "principle": "Harmonizer and fast panoramic gestures follow the sound.",
+     "reference": "«Anthèmes 2» (1997): violin and live-electronics, score-following.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5,
+         2.02
+        ],
+        "g": 0.45
+       }
+      ],
+      [
+       "pan",
+       {
+        "f": 1.2,
+        "depth": 0.9
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "IRCAM machine (Boulez #4)",
+     "fidelity": "i",
+     "principle": "Granulation, ring modulation, and space in one breath — the engine itself as a fourth Boulez.",
+     "reference": "Boulez holds four slots in the list — the fourth, IRCAM, is this machine.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "scan",
+        "d": 20,
+        "s": 0.09,
+        "g": 0.6
+       }
+      ],
+      [
+       "ring",
+       {
+        "f": 440,
+        "depth": 0.5
+       }
+      ],
+      [
+       "space",
+       {
+        "n": 4,
+        "rot": 0.1
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "name": "Henry Brant",
+   "years": "1913–2008",
+   "family": "sc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Antiphony: space required",
+     "fidelity": "d",
+     "principle": "Left and right channels processed independently and never synchronized.",
+     "reference": "«Antiphony 1» (1953): spatial separation is a condition of the music, not an effect.",
+     "bed": 0.05,
+     "fx": [
+      [
+       "chain",
+       {
+        "steps": [
+         [
+          "filt",
+          {
+           "type": "highpass",
+           "f0": 800,
+           "f1": 800
+          }
+         ]
+        ],
+        "g": 0.6,
+        "pan": -1
+       }
+      ],
+      [
+       "chain",
+       {
+        "steps": [
+         [
+          "filt",
+          {
+           "type": "lowpass",
+           "f0": 900,
+           "f1": 900
+          }
+         ]
+        ],
+        "g": 0.6,
+        "pan": 1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Ice Field",
+     "fidelity": "r",
+     "principle": "Four unsynchronized cloud groups and sparse clicks — a sound landscape of ensembles.",
+     "reference": "«Ice Field» (2001), Pulitzer: orchestral groups scattered through the hall.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 4,
+        "cents": 15,
+        "g": 0.4
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 4,
+        "t0": 0.7,
+        "t1": 1.3,
+        "f": 1200,
+        "g": 0.3
+       }
+      ],
+      [
+       "space",
+       {
+        "n": 4,
+        "rot": 0.05
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Unsynchronized ensembles",
+     "fidelity": "r",
+     "principle": "Three voices in tempos 1 : 1.07 : 0.93, spread across the field.",
+     "reference": "Brant: space is the fourth dimension of music.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "canon",
+       {
+        "r": [
+         1,
+         1.07,
+         0.93
+        ],
+        "gran": 0,
+        "g": 0.6,
+        "spread": 1
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "name": "Anthony Braxton",
+   "years": "b. 1945",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "For Alto",
+     "fidelity": "r",
+     "principle": "Saxophone formant and breathing grains — solo without accompaniment.",
+     "reference": "«For Alto» (1968) — the first solo-sax album in jazz history.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "formant",
+       {
+        "set": "sax",
+        "g": 0.7
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 12,
+        "s": 0.06,
+        "g": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Ghost Trance",
+     "fidelity": "i",
+     "principle": "Irregular gate and echo — a pulse that is almost a dance.",
+     "reference": "Ghost Trance Music (1995–2006): a ritual pulse under improvisation.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.22,
+         0.18,
+         0.4,
+         0.14,
+         0.3
+        ],
+        "floor": 0.15
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.28,
+        "fb": 0.5,
+        "mix": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Graphic scores",
+     "fidelity": "i",
+     "principle": "Fragment collage and pulse markers — diagrams as music.",
+     "reference": "His compositions have diagram names: «Composition No. 96» with projectors.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 20
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 3,
+        "t0": 0.5,
+        "t1": 0.9,
+        "f": 2200,
+        "g": 0.25
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "name": "James \"Sarmad\" Brody",
+   "years": "1941–2010",
+   "family": "ch",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Zikr: repetition as path",
+     "fidelity": "i",
+     "principle": "A loop grows in number of repetitions — a Sufi remembrance from the fabric of the stream.",
+     "reference": "Sarmad Brody — an Inayati Sufi teacher in Texas, composer, friend of Xenakis.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "loop",
+        "n": 12
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Echo of Xenakis",
+     "fidelity": "i",
+     "principle": "Stochastic grains and a cloud — probabilistic masses in the spirit of his liner notes.",
+     "reference": "Brody wrote the liner notes for a Xenakis record on Nonesuch.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 25,
+        "s": 0.07,
+        "g": 0.6
+       }
+      ],
+      [
+       "cloud",
+       {
+        "n": 6,
+        "cents": 25,
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "In memory of a friend",
+     "fidelity": "i",
+     "principle": "A sparse 660 Hz bell and long echo — a hidden motif connected to block 054 Kamin.",
+     "reference": "Brody and Kamin died in the same car crash on April 11, 2010.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 660,
+        "g": 0.3,
+        "env": "bell",
+        "dec": 4
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.5,
+        "fb": 0.6,
+        "mix": 0.6
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.25
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 16,
+   "name": "Earle Brown",
+   "years": "1926–2002",
+   "family": "ch",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "December 1952",
+     "fidelity": "r",
+     "principle": "A random field of sparse events — a graphic score as a field of possibilities.",
+     "reference": "«December 1952» — one of the first graphic scores: lines and rectangles.",
+     "bed": 0.4,
+     "fx": [
+      [
+       "clicks",
+       {
+        "n": 6,
+        "t0": 0.3,
+        "t1": 1.6,
+        "f": 1500,
+        "g": 0.35
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 8,
+        "s": 0.1,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Available Forms",
+     "fidelity": "r",
+     "principle": "Cue splices: the conductor chooses the order — here the seed makes the choice.",
+     "reference": "«Available Forms» (1961): forms are available, order is chosen in the moment.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 14
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "25 Pages",
+     "fidelity": "r",
+     "principle": "Forward and backward alternate randomly — pages played in any order.",
+     "reference": "«25 Pages» (1953): 25 pages in any sequence and direction.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "palin",
+        "n": 6
+       }
+      ],
+      [
+       "pan",
+       {
+        "f": 0.3,
+        "depth": 0.6
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 17,
+   "name": "John Cage",
+   "years": "1912–1992",
+   "family": "ch",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Williams Mix",
+     "fidelity": "d",
+     "principle": "200 fragments spliced by lot: aleatoric tape montage.",
+     "reference": "«Williams Mix» (1952): 600 fragments cut according to the I Ching.",
+     "bed": 0.05,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 200
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Prepared piano",
+     "fidelity": "r",
+     "principle": "Inharmonic resonators 1 : 1.41 : 2.1 : 3.7 — bolts and screws between the strings.",
+     "reference": "Prepared piano (from 1940): a percussion orchestra inside the piano.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         180,
+         254,
+         378,
+         666
+        ],
+        "q": 45,
+        "g": 0.8
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.2
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "4′33″: near silence",
+     "fidelity": "r",
+     "principle": "The stream is muted down to the noise floor — silence in which you hear the room.",
+     "reference": "«4′33″» (1952): not silence, but everything that sounds around. Schulhoff preceded him by 33 years.",
+     "bed": 0,
+     "fx": [
+      [
+       "silence",
+       {
+        "g": 0.06
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 52,
+        "g": 0.02,
+        "env": "drone"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 18,
+   "name": "Captain Beefheart",
+   "years": "1941–2010",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Trout Mask Replica",
+     "fidelity": "r",
+     "principle": "Chaotic splice rehearsed to precision: a 7/8 gate over the collage.",
+     "reference": "«Trout Mask Replica» (1969): eight months of rehearsal for the sake of chaos.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 18
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.21,
+         0.21,
+         0.21,
+         0.21,
+         0.21,
+         0.21,
+         0.21,
+         0.42
+        ],
+        "floor": 0.2
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Polyrhythm 3 against 4",
+     "fidelity": "i",
+     "principle": "Gate 3+3+2 against 4/4 clicks — two pulses do not meet.",
+     "reference": "Magic Band: polyrhythmic density of blues played as chamber avant-garde.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.3,
+         0.3,
+         0.2
+        ],
+        "floor": 0.15
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 2,
+        "t0": 0.5,
+        "t1": 0.5,
+        "f": 1000,
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Dachau Blues",
+     "fidelity": "i",
+     "principle": "Fuzz saturation and a wailing formant — voice at its limit.",
+     "reference": "His vocal range was four and a half octaves, from growl to falsetto.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "shaper",
+       {
+        "kind": "fuzz",
+        "k": 12,
+        "g": 0.6
+       }
+      ],
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "i",
+        "g": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 19,
+   "name": "Elliott Carter",
+   "years": "1908–2012",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Metric modulation 4:5",
+     "fidelity": "d",
+     "principle": "The delay grows as a tempo shift 1→1.25 — time flows smoothly.",
+     "reference": "Cello Sonata (1948): tempo change through a shared duration — Carter's signature device.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "phase",
+       {
+        "drift": 0.025,
+        "spread": 0.8,
+        "g": 0.8
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Strata",
+     "fidelity": "r",
+     "principle": "Three tempo layers 1 : 1.25 : 0.8 — independent musical characters.",
+     "reference": "String Quartet No. 1 (1951): layer-characters in their own tempos.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "canon",
+       {
+        "r": [
+         1,
+         1.25,
+         0.8
+        ],
+        "gran": 1,
+        "g": 0.6,
+        "spread": 0.8
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Night Fantasies",
+     "fidelity": "i",
+     "principle": "A slow cloud and dynamic waves — nocturnal fluidity.",
+     "reference": "«Night Fantasies» (1980): piano fabric that never repeats.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 8,
+        "cents": 12,
+        "g": 0.5
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 20,
+   "name": "Carlos Chávez",
+   "years": "1899–1978",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Sinfonía india",
+     "fidelity": "r",
+     "principle": "Driving ostinato and wooden clicks — indigenous percussion in the orchestra.",
+     "reference": "«Sinfonía india» (1935): themes of Mexican Indians, huéhuetl and teponaztli.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.25,
+         0.25,
+         0.5,
+         0.25,
+         0.25,
+         0.5
+        ],
+        "floor": 0.15
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 3,
+        "t0": 0.25,
+        "t1": 0.5,
+        "f": 700,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Teponaztli",
+     "fidelity": "i",
+     "principle": "Wooden resonances 1 : 3.1 : 5.2 — a slit drum.",
+     "reference": "The Aztec teponaztli is a wooden slit drum with two tongues.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         140,
+         434,
+         728
+        ],
+        "q": 30,
+        "g": 0.8
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.4,
+         0.2,
+         0.4,
+         0.6
+        ],
+        "floor": 0.05
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Open harmonies",
+     "fidelity": "i",
+     "principle": "Fifths and major thirds — a transparent, republican clarity.",
+     "reference": "His harmonic language: open intervals, archaism, and modernism.",
+     "bed": 0.4,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5,
+         2.5
+        ],
+        "g": 0.55
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.35
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 21,
+   "name": "Ornette Coleman",
+   "years": "1930–2015",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Harmolodics",
+     "fidelity": "r",
+     "principle": "Three transposed copies of one line drift independently — no principal key.",
+     "reference": "Harmolodics: all voices equal, the melody lives in all tunings at once.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.189,
+         1.498
+        ],
+        "g": 0.55,
+        "drift": 1
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.25
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Free Jazz",
+     "fidelity": "r",
+     "principle": "Jittered grains and a swing gate — collective improvisation of a double quartet.",
+     "reference": "«Free Jazz» (1960): two quartets improvise simultaneously for 38 minutes.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 18,
+        "s": 0.06,
+        "jit": 0.4,
+        "g": 0.5
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.3,
+         0.15,
+         0.3,
+         0.15
+        ],
+        "floor": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Dancing in Your Head",
+     "fidelity": "i",
+     "principle": "A loop-chant and a calling oscillator — jazz as ritual.",
+     "reference": "«Dancing in Your Head» (1977): recorded with the Master Musicians of Jajouka.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "loop",
+        "n": 8
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "triangle",
+        "f": 220,
+        "glide": 1.2,
+        "g": 0.2,
+        "env": "drone"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 22,
+   "name": "Henry Cowell",
+   "years": "1897–1965",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Tone clusters",
+     "fidelity": "d",
+     "principle": "13 semitone copies — a cluster played with palm and forearm.",
+     "reference": "«The Tides of Manaunaun» (1917): clusters as part of the musical language.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 13,
+        "cents": 600,
+        "g": 0.65
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "String piano",
+     "fidelity": "r",
+     "principle": "Freeze with jitter and high resonances — plucks and glissandi on the strings.",
+     "reference": "«Aeolian Harp» (1923): playing directly on the piano strings.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "freeze",
+       {
+        "s": 0.08,
+        "jit": 0.05,
+        "g": 0.6
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         1200,
+         2400,
+         3600
+        ],
+        "q": 50,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "New Musical Resources",
+     "fidelity": "r",
+     "principle": "Tempo canon 1 : 4/3 : 5/3 — rhythm from harmonic ratios.",
+     "reference": "The book «New Musical Resources» (1930): rhythmic ratios equal harmonic ones.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "canon",
+       {
+        "r": [
+         1,
+         1.333,
+         1.667
+        ],
+        "gran": 1,
+        "g": 0.6,
+        "spread": 0.7
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 23,
+   "name": "George Crumb",
+   "years": "1929–2022",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Black Angels",
+     "fidelity": "r",
+     "principle": "Electric saturation, metallic resonances, tremolo — an amplified string quartet.",
+     "reference": "«Black Angels» (1970): electric string quartet, gongs, crystals, shouts.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "shaper",
+       {
+        "kind": "soft",
+        "k": 6,
+        "g": 0.5
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         523,
+         1397,
+         2610
+        ],
+        "q": 40,
+        "g": 0.5
+       }
+      ],
+      [
+       "trem",
+       {
+        "f": 9,
+        "depth": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Vox Balaenae",
+     "fidelity": "r",
+     "principle": "Whale-call glissando and a formant mask — performers in masks.",
+     "reference": "«Vox Balaenae» (1971): electric flute, cello, piano; masks.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 180,
+        "glide": 0.5,
+        "g": 0.25,
+        "env": "drone"
+       }
+      ],
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "o",
+        "g": 0.6
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Numerology 7 and 13",
+     "fidelity": "i",
+     "principle": "Rhythmic mask 7+13 — his numerical magic.",
+     "reference": "Crumb built forms on the numbers 7 and 13 — «Vox Balaenae», «Makrokosmos».",
+     "bed": 0.25,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.7,
+         0.7,
+         0.7,
+         1.3
+        ],
+        "floor": 0.1
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.13,
+        "fb": 0.4,
+        "mix": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 24,
+   "name": "Alvin Curran",
+   "years": "b. 1938",
+   "family": "ch",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Hypercollage",
+     "fidelity": "r",
+     "principle": "300 splices and a granular layer — extreme montage density.",
+     "reference": "Curran: hyper-energetic tape collages, Musica Elettronica Viva.",
+     "bed": 0.05,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 300
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 15,
+        "s": 0.04,
+        "g": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "A Rose Is a Round",
+     "fidelity": "r",
+     "principle": "Three identical voices with staggered entries — a circle canon.",
+     "reference": "«A Rose Is a Rose Is a Round» — a vocal circle as collage.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "canon",
+       {
+        "r": [
+         1,
+         1,
+         1
+        ],
+        "gran": 1,
+        "off": [
+         0,
+         0.8,
+         1.6
+        ],
+        "g": 0.6,
+        "spread": 0.8
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Schtyx",
+     "fidelity": "i",
+     "principle": "Folk-jitter gate and intervallic layers — roots in the avant-garde.",
+     "reference": "«Schtyx» (1988): Jewish melodic roots in new fabric.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.2,
+         0.1,
+         0.3,
+         0.1,
+         0.2,
+         0.4
+        ],
+        "floor": 0.2
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5
+        ],
+        "g": 0.4
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 25,
+   "name": "Mario Davidovsky",
+   "years": "1934–2019",
+   "family": "sc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Synchronisms: instrument and tape",
+     "fidelity": "d",
+     "principle": "Dry voice and granular shadow synchronize on attacks.",
+     "reference": "The «Synchronisms» cycle (from 1962): live instrument and tape as one hybrid.",
+     "bed": 0.4,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.6
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "seq",
+        "d": 20,
+        "s": 0.07,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Synchronization point",
+     "fidelity": "r",
+     "principle": "Micro-stutters on attacks and a ping oscillator — tape answers the instrument.",
+     "reference": "«Synchronisms No. 6» (1970), Pulitzer: piano and tape.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "stutter",
+        "a": 0.15,
+        "b": 0.06
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 440,
+        "g": 0.15,
+        "env": "bell",
+        "dec": 1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Divergence",
+     "fidelity": "i",
+     "principle": "Two copies begin in sync and drift apart in phase.",
+     "reference": "The dramaturgy of the cycle: union of live and electronic, their fusion and rupture.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "phase",
+       {
+        "drift": 0.012,
+        "spread": 0.8,
+        "g": 0.7
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 26,
+   "name": "Peter Maxwell Davies",
+   "years": "1934–2016",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Eight Songs for a Mad King",
+     "fidelity": "r",
+     "principle": "Extreme formants and stutters — voice on the edge of madness.",
+     "reference": "«Eight Songs for a Mad King» (1969): King George III sings across four octaves.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "i",
+        "g": 0.7
+       }
+      ],
+      [
+       "tape",
+       {
+        "op": "stutter",
+        "a": 0.2,
+        "b": 0.07,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Foxtrot inside the symphony",
+     "fidelity": "r",
+     "principle": "A buried dance gate is deformed by a filter.",
+     "reference": "«St. Thomas Wake» (1969): a foxtrot distorted into a symphonic shadow.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.3,
+         0.3,
+         0.6
+        ],
+        "floor": 0.25
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "bandpass",
+        "f0": 500,
+        "f1": 2000,
+        "q": 1.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Farewell to Stromness",
+     "fidelity": "r",
+     "principle": "Nearly dry sound and soft harmonization — farewell simplicity.",
+     "reference": "«Farewell to Stromness» (1980) — his most famous, tender piece.",
+     "bed": 0.7,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.7
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5
+        ],
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 27,
+   "name": "Dubravko Detoni",
+   "years": "b. 1937",
+   "family": "cn",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "ACEZANTEZ",
+     "fidelity": "r",
+     "principle": "Theatrical collage and click-gestures — a stage without words.",
+     "reference": "ACEZANTEZ (Zagreb, 1971): Detoni's musical theater ensemble.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 16
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 4,
+        "t0": 0.4,
+        "t1": 0.8,
+        "f": 1600,
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Phonomorphia",
+     "fidelity": "i",
+     "principle": "Granular morph through the material — sound metamorphoses.",
+     "reference": "His phonomorphias — a theater of sonic metamorphoses.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "scan",
+        "d": 22,
+        "s": 0.09,
+        "g": 0.7
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "lowpass",
+        "f0": 3000,
+        "f1": 500
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Stage without words",
+     "fidelity": "i",
+     "principle": "Formant characters and rhythmic gestures.",
+     "reference": "Detoni: composer, pianist and writer, musical theater as method.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "e",
+        "g": 0.6
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.4,
+         0.2,
+         0.8
+        ],
+        "floor": 0.15
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 28,
+   "name": "Dr. John the Night Tripper",
+   "years": "1941–2019",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Gris-Gris",
+     "fidelity": "r",
+     "principle": "Second-line gate and swamp echo — New Orleans voodoo psychedelia.",
+     "reference": "«Gris-Gris» (1968): voodoo ritual as psychedelic album.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.25,
+         0.15,
+         0.25,
+         0.15,
+         0.4
+        ],
+        "floor": 0.2
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.33,
+        "fb": 0.5,
+        "mix": 0.45
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Voodoo chant",
+     "fidelity": "i",
+     "principle": "Fifth doubling and tremolo — incantation in layers.",
+     "reference": "His chants trace back to New Orleans rituals and Mardi Gras Indians.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5
+        ],
+        "g": 0.5
+       }
+      ],
+      [
+       "trem",
+       {
+        "f": 6,
+        "depth": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Night Tripper",
+     "fidelity": "i",
+     "principle": "Slow panorama and saturation — a night tripper in space.",
+     "reference": "The Night Tripper stage persona: feathers, skulls, swamp groove.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "pan",
+       {
+        "f": 0.2,
+        "depth": 0.9
+       }
+      ],
+      [
+       "shaper",
+       {
+        "kind": "soft",
+        "k": 4,
+        "g": 0.6
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 29,
+   "name": "Charles Dodge",
+   "years": "b. 1942",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Any Resemblance…",
+     "fidelity": "d",
+     "principle": "A recognizable motif stays dry, alien synthesis around it.",
+     "reference": "«Any Resemblance Is Purely Coincidental» (1980): Caruso sings inside computer music.",
+     "bed": 0.45,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.65
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "sawtooth",
+        "f": 220,
+        "glide": 2,
+        "g": 0.15,
+        "env": "drone"
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 10,
+        "s": 0.05,
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "The Earth Is My Mother",
+     "fidelity": "r",
+     "principle": "Formant singer and harmonic layers — a synthesized voice.",
+     "reference": "«The Earth Is My Mother» — the computer voice as a solo instrument.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "a",
+        "g": 0.7
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         2
+        ],
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Bell Labs",
+     "fidelity": "i",
+     "principle": "Ring modulation and early computer grains — 1960s aesthetics.",
+     "reference": "Dodge worked at Bell Labs — the cradle of computer music.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "ring",
+       {
+        "f": 660,
+        "depth": 0.6
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "seq",
+        "d": 16,
+        "s": 0.06,
+        "g": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 30,
+   "name": "Jacob Druckman",
+   "years": "1928–1996",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Animus: duel",
+     "fidelity": "r",
+     "principle": "Aggressive tape-antagonist against a dry protagonist.",
+     "reference": "«Animus I» (1966): trombone and tape as opponents in a drama.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.5
+       }
+      ],
+      [
+       "shaper",
+       {
+        "kind": "fuzz",
+        "k": 10,
+        "g": 0.45
+       }
+      ],
+      [
+       "ring",
+       {
+        "f": 880,
+        "depth": 0.4,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Prism: quotes",
+     "fidelity": "r",
+     "principle": "Collage of debris and a cloud — refraction of other people's music.",
+     "reference": "«Prism» (1969): quotes from Berio, Bach, Mahler in an orchestral prism.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 20
+       }
+      ],
+      [
+       "cloud",
+       {
+        "n": 6,
+        "cents": 18,
+        "g": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Windows",
+     "fidelity": "i",
+     "principle": "Spatial orchestral waves — windows into a sound field.",
+     "reference": "«Windows» (1972), Pulitzer: orchestral windows of memory.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "space",
+       {
+        "n": 5,
+        "rot": 0.08
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 31,
+   "name": "Iancu Dumitrescu",
+   "years": "b. 1944",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Inside sound",
+     "fidelity": "r",
+     "principle": "Freeze and resonators on peaks — microscopic listening.",
+     "reference": "Romanian spectralism: Dumitrescu and Avram, music inside sound.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "freeze",
+       {
+        "s": 0.16,
+        "jit": 0.015,
+        "g": 0.7
+       }
+      ],
+      [
+       "res",
+       {
+        "f": "peaks",
+        "q": 80,
+        "g": 0.5,
+        "ramp": 1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Glissando textures",
+     "fidelity": "r",
+     "principle": "A slowly diverging cloud — his long mass glissandi.",
+     "reference": "His orchestral textures glide continuously like living matter.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 16,
+        "cents": 40,
+        "gliss": 120,
+        "g": 0.6
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Aphonic: spectral silence",
+     "fidelity": "i",
+     "principle": "Near silence and rare grains — sound on the threshold of hearing.",
+     "reference": "Spectral asceticism: extreme concentration on the small.",
+     "bed": 0.05,
+     "fx": [
+      [
+       "silence",
+       {
+        "g": 0.08
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 6,
+        "s": 0.08,
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 32,
+   "name": "Tan Dun",
+   "years": "b. 1957",
+   "family": "sc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Water Concerto",
+     "fidelity": "r",
+     "principle": "Water filter sweeps and drop-grains — water as instrument.",
+     "reference": "«Water Concerto» (1998): water percussion in a basin, orchestra responds.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "filt",
+       {
+        "type": "bandpass",
+        "f0": 400,
+        "f1": 2600,
+        "q": 3
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 20,
+        "s": 0.03,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Organic Music: paper",
+     "fidelity": "i",
+     "principle": "Noise resonances and transients — paper and wood as instruments.",
+     "reference": "His organic music: paper, water, stones, ceramics.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "transient",
+        "n": 20,
+        "floor": 0.08
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         900,
+         1800,
+         3200
+        ],
+        "q": 15,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Ritual",
+     "fidelity": "i",
+     "principle": "Slow gate and a bell — shamanic theater.",
+     "reference": "Opera «Marco Polo» (1996): ritual as musical form.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         1,
+         0.5,
+         1,
+         1.5
+        ],
+        "floor": 0.1
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 330,
+        "g": 0.2,
+        "env": "bell",
+        "dec": 3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 33,
+   "name": "David Dunn",
+   "years": "b. 1953",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Interspecies dialogue",
+     "fidelity": "r",
+     "principle": "Transposition ×4 and echo-answer — a conversation with the non-human.",
+     "reference": "Dunn: bioacoustics, attempts at dialogue with birds and insects.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         4
+        ],
+        "g": 0.5
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.4,
+        "fb": 0.45,
+        "mix": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Avian range",
+     "fidelity": "i",
+     "principle": "Transposition ×6 and chirp-grains — the stream in the avian register.",
+     "reference": "His works explore how animals hear the world.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         6
+        ],
+        "g": 0.45
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 24,
+        "s": 0.025,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Insects",
+     "fidelity": "i",
+     "principle": "40 Hz tremolo and high resonances — stridulation.",
+     "reference": "Dunn recorded bark beetles and built interspecies interfaces.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "trem",
+       {
+        "f": 40,
+        "depth": 0.8
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         3200,
+         4800,
+         6400
+        ],
+        "q": 40,
+        "g": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 34,
+   "name": "Duke Ellington",
+   "years": "1899–1974",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Jungle growl",
+     "fidelity": "r",
+     "principle": "24 Hz tremolo and a bandpass wah — the growling brass of the Cotton Club.",
+     "reference": "Jungle style (1920s): growl trumpets of Bubber Miley and Tricky Sam Nanton.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "trem",
+       {
+        "f": 24,
+        "depth": 0.6
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "bandpass",
+        "f0": 600,
+        "f1": 1600,
+        "q": 4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Ellington effect",
+     "fidelity": "i",
+     "principle": "Mixing formant resonances — timbre as collective creation.",
+     "reference": "Ellington effect: he wrote not for instruments but for specific people of the orchestra.",
+     "bed": 0.4,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         350,
+         700,
+         1200,
+         2100
+        ],
+        "q": 10,
+        "g": 0.6
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Take the A Train",
+     "fidelity": "r",
+     "principle": "Swing gate and harmonization — the orchestra's signature tune.",
+     "reference": "«Take the 'A' Train» (1941, Strayhorn) — the theme of the Ellington orchestra.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.33,
+         0.17,
+         0.33,
+         0.17
+        ],
+        "floor": 0.25
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.26,
+         1.5
+        ],
+        "g": 0.4
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 35,
+   "name": "Donald Erb",
+   "years": "1927–2008",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Trombone + tape",
+     "fidelity": "r",
+     "principle": "Sliding formant and ring modulation — brass and electronics.",
+     "reference": "Erb: trombonist and composer, pioneer of live-electronics for brass.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "formant",
+       {
+        "set": "brass",
+        "morph": "o",
+        "g": 0.6
+       }
+      ],
+      [
+       "ring",
+       {
+        "f": 440,
+        "depth": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "The Seventh Trumpet",
+     "fidelity": "i",
+     "principle": "Brass resonances and echo — a theatrical trumpet.",
+     "reference": "«The Seventh Trumpet» (1969) — his brass-electronic theater.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         440,
+         880,
+         1320
+        ],
+        "q": 20,
+        "g": 0.6
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.25,
+        "fb": 0.4,
+        "mix": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Brass theater",
+     "fidelity": "i",
+     "principle": "Panoramic gestures and saturation — the instrument as character.",
+     "reference": "His brass concertos with tape — the drama of soloist and electronics.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "pan",
+       {
+        "f": 0.6,
+        "depth": 0.8
+       }
+      ],
+      [
+       "shaper",
+       {
+        "kind": "soft",
+        "k": 5,
+        "g": 0.55
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 36,
+   "name": "Morton Feldman",
+   "years": "1926–1987",
+   "family": "qt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Silence and duration",
+     "fidelity": "d",
+     "principle": "−18 dB, long resonances — sound allowed to be itself.",
+     "reference": "«Triadic Memories» (1981): 90 minutes of quiet, almost static music.",
+     "bed": 0.85,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.12
+       }
+      ],
+      [
+       "res",
+       {
+        "f": "peaks",
+        "q": 30,
+        "g": 0.2,
+        "ramp": 1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Rare events",
+     "fidelity": "r",
+     "principle": "Gate passes only a few attacks of the stream, long echo between them.",
+     "reference": "Late Feldman: events as rare as stars in emptiness.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         2.5,
+         0.3,
+         3,
+         0.4
+        ],
+        "floor": 0.04
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.6,
+        "fb": 0.6,
+        "mix": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Let it be",
+     "fidelity": "i",
+     "principle": "Nearly dry sound, dark spectral tilt — non-intervention as method.",
+     "reference": "Let sound be itself — his aesthetic of non-intervention.",
+     "bed": 0.8,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.35
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "highshelf",
+        "f0": 2000,
+        "f1": 2000,
+        "gain": -8
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 37,
+   "name": "Lukas Foss",
+   "years": "1922–2009",
+   "family": "cn",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Baroque Variations: erasure",
+     "fidelity": "d",
+     "principle": "Progressive subtraction of the stream's own peaks — down to a ghost.",
+     "reference": "«Baroque Variations» (1967): Bach, Handel, Scarlatti erased to semi-transparency.",
+     "bed": 0.9,
+     "fx": [
+      [
+       "notch",
+       {
+        "q0": 2,
+        "q1": 30,
+        "dry0": 0.9,
+        "dry1": 0.15
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Phorion",
+     "fidelity": "r",
+     "principle": "Ghost collage: debris of the recognizable in alien fabric.",
+     "reference": "«Phorion» — part of «Baroque Variations», Bach as mirage.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 24,
+        "return": 1
+       }
+      ],
+      [
+       "res",
+       {
+        "f": "peaks",
+        "q": 20,
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Improvisation ensemble",
+     "fidelity": "i",
+     "principle": "Free cloud and gate — collective improvisation of 1957.",
+     "reference": "Foss founded the Improvisation Chamber Ensemble (1957) — rare for an academic.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 6,
+        "cents": 20,
+        "g": 0.45
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.6,
+         0.3,
+         1.2
+        ],
+        "floor": 0.2
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 38,
+   "name": "Kenneth Gaburo",
+   "years": "1926–1993",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Linguistics of sound",
+     "fidelity": "r",
+     "principle": "Phoneme-grains of 30 ms and formants — speech as musical matter.",
+     "reference": "Gaburo: musical language, compositional linguistics.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "seq",
+        "d": 30,
+        "s": 0.03,
+        "g": 0.7
+       }
+      ],
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "e",
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Lemon Drops",
+     "fidelity": "r",
+     "principle": "Bell-drops and echo — early electronics.",
+     "reference": "«Lemon Drops» (1965) — his electronic miniature.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 880,
+        "g": 0.25,
+        "env": "bell",
+        "dec": 1.5
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.18,
+        "fb": 0.5,
+        "mix": 0.5
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Antiphony III",
+     "fidelity": "r",
+     "principle": "Voice and tape in space — antiphony of live and electronic.",
+     "reference": "«Antiphony III (Pearl-white moments)» (1962): voice and tape.",
+     "bed": 0.45,
+     "fx": [
+      [
+       "space",
+       {
+        "n": 4,
+        "rot": 0.06
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.5
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 12,
+        "s": 0.06,
+        "g": 0.4
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 39,
+   "name": "George Gershwin",
+   "years": "1898–1937",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Rhapsody: glissando",
+     "fidelity": "r",
+     "principle": "Ascending glissando oscillator and harmonization — the famous clarinet climb.",
+     "reference": "«Rhapsody in Blue» (1924): clarinet glissando, improvised at rehearsal.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "triangle",
+        "f": 220,
+        "glide": 4,
+        "g": 0.2,
+        "env": "drone"
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5,
+         2
+        ],
+        "g": 0.45
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Blue notes",
+     "fidelity": "r",
+     "principle": "Minor third and minor seventh against major — blues coloring.",
+     "reference": "His language: blues notes inside European harmony.",
+     "bed": 0.4,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.189,
+         1.782
+        ],
+        "g": 0.5
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Swing",
+     "fidelity": "r",
+     "principle": "Swing gate over almost-dry sound.",
+     "reference": "Gershwin joined jazz rhythm to concert form.",
+     "bed": 0.55,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.33,
+         0.17,
+         0.33,
+         0.17
+        ],
+        "floor": 0.3
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 40,
+   "name": "Robert Graettinger",
+   "years": "1923–1957",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "City of Glass",
+     "fidelity": "r",
+     "principle": "Dissonant cloud and brass saturation — a city of glass and brass.",
+     "reference": "«City of Glass» (1951) for the Stan Kenton orchestra: an atonal jazz monument.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 10,
+        "cents": 50,
+        "g": 0.45
+       }
+      ],
+      [
+       "shaper",
+       {
+        "kind": "soft",
+        "k": 6,
+        "g": 0.5
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         466,
+         622,
+         932
+        ],
+        "q": 15,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Atonal brass",
+     "fidelity": "i",
+     "principle": "Brass resonances and percussive stabs.",
+     "reference": "Graettinger: radical atonalism inside a big band.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         415,
+         554,
+         830
+        ],
+        "q": 18,
+        "g": 0.6
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.1,
+         0.7,
+         0.1,
+         1.1
+        ],
+        "floor": 0.05
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "This Modern World",
+     "fidelity": "i",
+     "principle": "Tempo strata — anxious density.",
+     "reference": "«This Modern World» (1953) — his second suite for Kenton.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "canon",
+       {
+        "r": [
+         1,
+         1.12,
+         0.9
+        ],
+        "gran": 1,
+        "g": 0.55,
+        "spread": 0.7
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 41,
+   "name": "Alois Hába",
+   "years": "1893–1973",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Quarter tones",
+     "fidelity": "d",
+     "principle": "Harmonization in quarter-tone ratios 2^(1/24), 2^(3/24), 2^(5/24).",
+     "reference": "Hába: quarter-tone system, Prague 1920s, special instruments.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1.0293,
+         1.0905,
+         1.1548
+        ],
+        "g": 0.55
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "24-EDO grid",
+     "fidelity": "r",
+     "principle": "Resonators on a quarter-tone grid — a new harmonic landscape.",
+     "reference": "His theory: 24 steps per octave, sixth-tone harmony.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         262,
+         269,
+         277,
+         285,
+         294,
+         302
+        ],
+        "q": 35,
+        "g": 0.6
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Matka",
+     "fidelity": "i",
+     "principle": "Grains and a quarter-tone layer — an opera in microtones.",
+     "reference": "Quarter-tone opera «Matka» (1931).",
+     "bed": 0.25,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "scan",
+        "d": 18,
+        "s": 0.08,
+        "g": 0.5
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1.0293,
+         1.0905
+        ],
+        "g": 0.4
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 42,
+   "name": "Lou Harrison",
+   "years": "1917–2003",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Gamelan",
+     "fidelity": "r",
+     "principle": "Metallic resonances in an approximation of slendro — a gamelan from the stream.",
+     "reference": "Harrison built an American gamelan with William Colvig.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         300,
+         345,
+         405,
+         450,
+         510
+        ],
+        "q": 50,
+        "g": 0.7
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.4,
+         0.4,
+         0.8
+        ],
+        "floor": 0.1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Just intonation",
+     "fidelity": "d",
+     "principle": "Harmonization in just ratios 9/8, 5/4, 3/2, 5/3.",
+     "reference": "Just intonation — his harmonic faith.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.125,
+         1.25,
+         1.5,
+         1.667
+        ],
+        "g": 0.5
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Prepared piano",
+     "fidelity": "r",
+     "principle": "Inharmonic resonators — legacy of working with Cage.",
+     "reference": "Harrison and Cage: prepared piano, 1940s.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         200,
+         283,
+         420,
+         740
+        ],
+        "q": 40,
+        "g": 0.7
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 43,
+   "name": "Josef Matthias Hauer",
+   "years": "1883–1959",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "44 tropes",
+     "fidelity": "r",
+     "principle": "Deterministic permutation of 44 fragments — his trope system.",
+     "reference": "Hauer: 44 tropes of 12 tones, a system earlier than Schoenberg (1919).",
+     "bed": 0.1,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 44,
+        "seed": 44
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "12-tone grid",
+     "fidelity": "r",
+     "principle": "Resonators on an equal 12-tone grid.",
+     "reference": "His Zwölftonmusik: law and play.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         262,
+         277,
+         294,
+         311,
+         330,
+         349,
+         370,
+         392,
+         415,
+         440,
+         466,
+         494
+        ],
+        "q": 40,
+        "g": 0.55
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Zwölftonspiel",
+     "fidelity": "i",
+     "principle": "Gate and row harmonization — playing by the law.",
+     "reference": "Zwölftonspiele — his meditative 12-tone games.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.5,
+         0.5,
+         0.5,
+         1.5
+        ],
+        "floor": 0.2
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.414
+        ],
+        "g": 0.35
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 44,
+   "name": "Jimi Hendrix",
+   "years": "1942–1970",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Fuzz + feedback",
+     "fidelity": "r",
+     "principle": "Asymmetric fuzz and self-exciting resonant peak.",
+     "reference": "Fuzz Face and controlled feedback — his voice (1967–70).",
+     "bed": 0.05,
+     "fx": [
+      [
+       "shaper",
+       {
+        "kind": "fuzz",
+        "k": 18,
+        "g": 0.6
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         1600
+        ],
+        "q": 90,
+        "g": 0.5,
+        "ramp": 1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Univibe",
+     "fidelity": "r",
+     "principle": "Slow tremolo and panorama — four-stage phase vortex.",
+     "reference": "Uni-Vibe (1968): «Machine Gun», Woodstock.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "trem",
+       {
+        "f": 1.8,
+        "depth": 0.6
+       }
+      ],
+      [
+       "pan",
+       {
+        "f": 0.9,
+        "depth": 0.7
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Backwards guitar",
+     "fidelity": "r",
+     "principle": "Reverse tape and echo — a flipped solo.",
+     "reference": "«Are You Experienced?» (1967): backward guitar solos.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "reverse"
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.3,
+        "fb": 0.45,
+        "mix": 0.45
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 45,
+   "name": "Pierre Henry",
+   "years": "1927–2017",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Voile d'Orphée",
+     "fidelity": "r",
+     "principle": "Tearing grains and a filter sweep — Orpheus's veil tears.",
+     "reference": "«Le Voile d'Orphée» (1953): Henry's first concrete drama.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 26,
+        "s": 0.04,
+        "g": 0.7
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "bandpass",
+        "f0": 200,
+        "f1": 3200,
+        "q": 2
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Porte et soupir",
+     "fidelity": "d",
+     "principle": "Creak-stutters and breathing pauses — the door and the sigh.",
+     "reference": "«Variations pour une porte et un soupir» (1963): a door hinge as soloist.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "stutter",
+        "a": 0.3,
+        "b": 0.1
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.8,
+         1.2,
+         0.4,
+         1.6
+        ],
+        "floor": 0.05
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Montage of causes",
+     "fidelity": "r",
+     "principle": "Collage of concrete debris — the source of the sound is hidden.",
+     "reference": "Musique concrète: Schaeffer and Henry, Rue de l'Université studio.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 30
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.25
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 46,
+   "name": "Hans Werner Henze",
+   "years": "1926–2012",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "El Cimarrón",
+     "fidelity": "r",
+     "principle": "Dry storytelling voice and guitar gate — a fugitive slave's narrative.",
+     "reference": "«El Cimarrón» (1970): recital for four performers, Montejo's story.",
+     "bed": 0.55,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.65
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.2,
+         0.4,
+         0.2,
+         0.8
+        ],
+        "floor": 0.2
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Political gesture",
+     "fidelity": "i",
+     "principle": "Saturation and clicks — music as a position.",
+     "reference": "Henze: a communist who moved to Italy; art as politics.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "shaper",
+       {
+        "kind": "soft",
+        "k": 6,
+        "g": 0.5
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 4,
+        "t0": 0.4,
+        "t1": 0.7,
+        "f": 1400,
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Night music",
+     "fidelity": "i",
+     "principle": "Dynamic waves and soft layers — late Henze's lyricism.",
+     "reference": "His late scores: a politician turned lyricist.",
+     "bed": 0.4,
+     "fx": [
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5
+        ],
+        "g": 0.35
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 47,
+   "name": "Mike Heron",
+   "years": "b. 1942",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "A Very Cellular Song",
+     "fidelity": "r",
+     "principle": "Octave chant and a dry layer — a psychedelic folk hymn.",
+     "reference": "Incredible String Band, «The Hangman's Beautiful Daughter» (1968).",
+     "bed": 0.4,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         0.5,
+         1,
+         2
+        ],
+        "g": 0.5
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Psychedelic folk",
+     "fidelity": "i",
+     "principle": "Slow phase and modal resonances.",
+     "reference": "ISB: folk passed through psychedelia and ethnicity.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "phase",
+       {
+        "drift": 0.006,
+        "spread": 0.6,
+        "g": 0.6
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         294,
+         330,
+         392,
+         440
+        ],
+        "q": 15,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Log Cabin Home in the Sky",
+     "fidelity": "i",
+     "principle": "Choral cloud — polyphony of one voice.",
+     "reference": "His multi-layered vocal arrangements in ISB.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 8,
+        "cents": 15,
+        "g": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 48,
+   "name": "Lejaren Hiller",
+   "years": "1924–1994",
+   "family": "ch",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Illiac Suite",
+     "fidelity": "d",
+     "principle": "Stochastic permutation of fragments — the first computer score.",
+     "reference": "«Illiac Suite» (1957), Hiller and Isaacson: ILLIAC I composes a string quartet.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 32,
+        "seed": 1957
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Markov transitions",
+     "fidelity": "r",
+     "principle": "Grains run sequentially but with probabilistic jumps.",
+     "reference": "Markov chains — his method of generating musical text.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "seq",
+        "d": 22,
+        "s": 0.08,
+        "jump": 0.3,
+        "g": 0.7
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "HPSCHD",
+     "fidelity": "r",
+     "principle": "Seven clouds and clicks — computer anarchy with Cage.",
+     "reference": "«HPSCHD» (1969), Hiller and Cage: 7 harpsichords, 51 tapes, a mainframe.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 7,
+        "cents": 30,
+        "g": 0.4
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 6,
+        "t0": 0.3,
+        "t1": 0.9,
+        "f": 1700,
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 49,
+   "name": "Tim Hodgkinson",
+   "years": "b. 1949",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Henry Cow: angular riffs",
+     "fidelity": "r",
+     "principle": "Collage of angular debris and a gate — rock as chamber avant-garde.",
+     "reference": "Henry Cow (1968–78): rock in opposition, compositional complexity.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 16
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.2,
+         0.2,
+         0.3,
+         0.2,
+         0.5
+        ],
+        "floor": 0.15
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Polymeter 5 and 7",
+     "fidelity": "i",
+     "principle": "Gate 5+7 against clicks — two meters at once.",
+     "reference": "His scores: polymeter as political form.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.25,
+         0.25,
+         0.25,
+         0.25,
+         0.25,
+         0.35,
+         0.35
+        ],
+        "floor": 0.2
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 2,
+        "t0": 0.5,
+        "t1": 0.5,
+        "f": 900,
+        "g": 0.25
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Living in the Heart of the Beast",
+     "fidelity": "i",
+     "principle": "Reverse tape and saturation — fury of form.",
+     "reference": "«In Praise of Learning» (1975): a 15-minute composition by Hodgkinson.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "reverse"
+       }
+      ],
+      [
+       "shaper",
+       {
+        "kind": "fuzz",
+        "k": 9,
+        "g": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 50,
+   "name": "Jerry Hunt",
+   "years": "1943–1993",
+   "family": "ch",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Haramand Plane",
+     "fidelity": "r",
+     "principle": "Irregular fast clicks and grains — ritual streaming.",
+     "reference": "«Haramand Plane» (1970s): ritual performances with electronics.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "clicks",
+       {
+        "n": 8,
+        "t0": 0.08,
+        "t1": 0.5,
+        "f": 2000,
+        "g": 0.4
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 20,
+        "s": 0.03,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Streaming",
+     "fidelity": "r",
+     "principle": "Dense jitter-granulate at 40 grains per second — formless stream.",
+     "reference": "His streaming — music as continuous ritual flow.",
+     "bed": 0.05,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 40,
+        "s": 0.025,
+        "jit": 0.5,
+        "g": 0.7
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Breath of ritual",
+     "fidelity": "i",
+     "principle": "Near silence and tremolo — the performer's body in the sound.",
+     "reference": "Hunt: Texan shaman of electronics, video, and gesture.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "silence",
+       {
+        "g": 0.1
+       }
+      ],
+      [
+       "trem",
+       {
+        "f": 3,
+        "depth": 0.6
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 51,
+   "name": "Toshi Ichiyanagi",
+   "years": "1933–2022",
+   "family": "qt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Sapporo",
+     "fidelity": "r",
+     "principle": "Long freeze and slow tremolo — sustained tones.",
+     "reference": "«Sapporo» (1962): long tones with electronics.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "freeze",
+       {
+        "s": 0.2,
+        "jit": 0.01,
+        "g": 0.7
+       }
+      ],
+      [
+       "trem",
+       {
+        "f": 0.4,
+        "depth": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Extended Voices",
+     "fidelity": "r",
+     "principle": "Formant choir and harmonic layers — extended voice.",
+     "reference": "«Extended Voices» (1967): voices and electronics.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "u",
+        "g": 0.6
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         2
+        ],
+        "g": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Sustained tones",
+     "fidelity": "i",
+     "principle": "Drone oscillator and a quiet dry layer — time as material.",
+     "reference": "His music: silence, duration, one sound.",
+     "bed": 0.5,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 220,
+        "g": 0.2,
+        "env": "drone"
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 52,
+   "name": "Charles Ives",
+   "years": "1874–1954",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Two chapels",
+     "fidelity": "d",
+     "principle": "Two layers in different tunings and tempos, hard-panned L/R — collision of marches.",
+     "reference": "«Putnam's Camp» from «Three Places in New England»: two orchestras play different things at once.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "canon",
+       {
+        "r": [
+         1.03,
+         0.97
+        ],
+        "gran": 0,
+        "g": 0.6,
+        "spread": 1
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.414
+        ],
+        "g": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "The Unanswered Question",
+     "fidelity": "r",
+     "principle": "Question-oscillator and cloud-answer — an eternal dialogue.",
+     "reference": "«The Unanswered Question» (1908): trumpet asks, flutes do not answer.",
+     "bed": 0.45,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "triangle",
+        "f": 440,
+        "g": 0.2,
+        "env": "bell",
+        "dec": 2.5
+       }
+      ],
+      [
+       "cloud",
+       {
+        "n": 6,
+        "cents": 25,
+        "g": 0.35
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Central Park in the Dark",
+     "fidelity": "i",
+     "principle": "Nocturnal cloud and distant clicks — urban darkness.",
+     "reference": "«Central Park in the Dark» (1906): night sounds of New York.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 8,
+        "cents": 20,
+        "g": 0.4
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 3,
+        "t0": 0.8,
+        "t1": 1.5,
+        "f": 800,
+        "g": 0.2
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 53,
+   "name": "Mauricio Kagel",
+   "years": "1931–2008",
+   "family": "cn",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Match: duel",
+     "fidelity": "r",
+     "principle": "Panoramic L/R duel and a gate — two cellists compete.",
+     "reference": "«Match» (1964): two cellists and a percussionist-referee.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "pan",
+       {
+        "f": 0.8,
+        "depth": 1
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.3,
+         0.3,
+         0.6
+        ],
+        "floor": 0.15
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Absurdist montage",
+     "fidelity": "i",
+     "principle": "Collage and clicks — theater of the absurd in sound.",
+     "reference": "Kagel: instrumental theater, humor as method.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 20
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 5,
+        "t0": 0.3,
+        "t1": 0.7,
+        "f": 1900,
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Gesture theater",
+     "fidelity": "i",
+     "principle": "Formant replies and stutters — sound as stage action.",
+     "reference": "His mute instruments are prescribed gestures, not notes.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "o",
+        "g": 0.6
+       }
+      ],
+      [
+       "tape",
+       {
+        "op": "stutter",
+        "a": 0.25,
+        "b": 0.1,
+        "g": 0.4
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 54,
+   "name": "Franz Kamin",
+   "years": "1941–2010",
+   "family": "cn",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Topology of time",
+     "fidelity": "r",
+     "principle": "Continuous tempo deformation — time as a topological space.",
+     "reference": "Kamin: structures from topology, prosody, and general systems theory.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "phase",
+       {
+        "drift": 0.03,
+        "spread": 0.6,
+        "g": 0.8
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Prosody",
+     "fidelity": "r",
+     "principle": "Syllable-grains and speech gate — prosodic segmentation.",
+     "reference": "His oneiric forms: fictional languages and conceptual mythologies.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "seq",
+        "d": 24,
+        "s": 0.05,
+        "g": 0.6
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.3,
+         0.2,
+         0.5,
+         0.2,
+         0.4
+        ],
+        "floor": 0.15
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Echo to a friend",
+     "fidelity": "i",
+     "principle": "660 Hz bell and long echo — a motif connected to block 015 Brody.",
+     "reference": "Kamin and Brody died together on April 11, 2010.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 660,
+        "g": 0.3,
+        "env": "bell",
+        "dec": 4
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.5,
+        "fb": 0.6,
+        "mix": 0.6
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.25
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 55,
+   "name": "William Kraft",
+   "years": "1923–2022",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Encounters",
+     "fidelity": "r",
+     "principle": "Percussive clicks in space — a meeting of percussion.",
+     "reference": "«Encounters» (1970s): Kraft's percussion theater.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "clicks",
+       {
+        "n": 6,
+        "t0": 0.2,
+        "t1": 0.8,
+        "f": 1200,
+        "g": 0.45
+       }
+      ],
+      [
+       "space",
+       {
+        "n": 4,
+        "rot": 0.1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Percussion theater",
+     "fidelity": "i",
+     "principle": "Stream transients and panorama — attacks as characters.",
+     "reference": "Kraft: percussionist of the Los Angeles Philharmonic, percussionist-composer.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "transient",
+        "n": 24,
+        "floor": 0.06
+       }
+      ],
+      [
+       "pan",
+       {
+        "f": 0.7,
+        "depth": 0.8
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Rhythm mass",
+     "fidelity": "i",
+     "principle": "Dense gate and a cloud — rhythmic mass.",
+     "reference": "His percussion ensembles: rhythm as architecture.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.15,
+         0.15,
+         0.3,
+         0.15,
+         0.45
+        ],
+        "floor": 0.1
+       }
+      ],
+      [
+       "cloud",
+       {
+        "n": 6,
+        "cents": 20,
+        "g": 0.35
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 56,
+   "name": "Johannes Kreidler",
+   "years": "b. 1980",
+   "family": "cn",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Fremdarbeit: outsourcing",
+     "fidelity": "d",
+     "principle": "Demonstratively cheap processing: 5-bit and decimation — labor outsourced.",
+     "reference": "«Fremdarbeit» (2009): composition commissioned from a Chinese composer and an Indian programmer.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "crush",
+        "bits": 5,
+        "hold": 8
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.15
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Product placements",
+     "fidelity": "r",
+     "principle": "15 ms microsamples, 40 per second — tens of thousands of other people's sounds as a gesture.",
+     "reference": "«product placements» (2008): 70,261 microsamples of other people's music.",
+     "bed": 0.05,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 40,
+        "s": 0.015,
+        "g": 0.75
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Charts Music",
+     "fidelity": "r",
+     "principle": "Oscillator pitch follows the stream's loudness — curve sonification.",
+     "reference": "«Charts Music» (2009): stock charts sung through Auto-Tune.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": "rms",
+        "g": 0.25,
+        "env": "drone"
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 57,
+   "name": "Helmut Lachenmann",
+   "years": "b. 1935",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Musique concrète instrumentale",
+     "fidelity": "d",
+     "principle": "Tonal is suppressed, attacks, rustles, breath of the stream remain.",
+     "reference": "«Pression» (1969): sound equals the way it is produced, bow noise matters more than the note.",
+     "bed": 0.05,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "transient",
+        "n": 30,
+        "floor": 0.04
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "highpass",
+        "f0": 1200,
+        "f1": 1200
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Rustles",
+     "fidelity": "r",
+     "principle": "High grains and a highpass — the noise matter of the instrument.",
+     "reference": "His instrumental concrete music: the body of the instrument as source.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 28,
+        "s": 0.03,
+        "g": 0.6
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "highpass",
+        "f0": 2000,
+        "f1": 2000
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Gran Torso",
+     "fidelity": "r",
+     "principle": "Transients and bow resonances — string quartet as noise theater.",
+     "reference": "«Gran Torso» (1972): quartet No. 1, radical noise writing.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "transient",
+        "n": 20,
+        "floor": 0.05
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         1800,
+         2700,
+         3900
+        ],
+        "q": 30,
+        "g": 0.4
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 58,
+   "name": "John Lennon",
+   "years": "1940–1980",
+   "family": "ch",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Revolution 9",
+     "fidelity": "d",
+     "principle": "Collage of loops and reverse — sonic chaos as composition.",
+     "reference": "«Revolution 9» (1968): eight minutes of tape loops, «number nine».",
+     "bed": 0.05,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 40
+       }
+      ],
+      [
+       "tape",
+       {
+        "op": "reverse",
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Number nine",
+     "fidelity": "r",
+     "principle": "One loop repeats with panoramic drift — an obsessive phrase.",
+     "reference": "The «number nine» voice from a Royal Schools of Music test record.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "loop",
+        "n": 16
+       }
+      ],
+      [
+       "pan",
+       {
+        "f": 0.4,
+        "depth": 0.8
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Tomorrow Never Knows",
+     "fidelity": "r",
+     "principle": "Echo, phase, and resonances — the Revolver tape loops.",
+     "reference": "«Tomorrow Never Knows» (1966): five tape loops spinning in the studio.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "echo",
+       {
+        "dt": 0.28,
+        "fb": 0.55,
+        "mix": 0.5
+       }
+      ],
+      [
+       "phase",
+       {
+        "drift": 0.008,
+        "spread": 0.7,
+        "g": 0.5
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         440,
+         660
+        ],
+        "q": 20,
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 59,
+   "name": "György Ligeti",
+   "years": "1923–2006",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Micropolyphony",
+     "fidelity": "d",
+     "principle": "48 copies detuned ±15 cents — a dense shimmering cloud.",
+     "reference": "«Atmosphères» (1961): 87 voices, not one distinguishable line.",
+     "bed": 0.05,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 48,
+        "cents": 15,
+        "delay": 0.04,
+        "g": 0.7
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Poème symphonique",
+     "fidelity": "d",
+     "principle": "24 metronomes in different tempos winding down one by one (out of 100 original).",
+     "reference": "«Poème symphonique» (1962): 100 metronomes wound up and left to themselves.",
+     "bed": 0.05,
+     "fx": [
+      [
+       "clicks",
+       {
+        "n": 24,
+        "t0": 0.25,
+        "t1": 1.4,
+        "f": 1600,
+        "g": 0.5,
+        "decay": 1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Lux Aeterna",
+     "fidelity": "r",
+     "principle": "16 slow voices and resonances — the light of eternity.",
+     "reference": "«Lux Aeterna» (1966): 16 voices, canon without rhythm.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 16,
+        "cents": 10,
+        "g": 0.55
+       }
+      ],
+      [
+       "res",
+       {
+        "f": "peaks",
+        "q": 40,
+        "g": 0.3,
+        "ramp": 1
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 60,
+   "name": "Annea Lockwood",
+   "years": "b. 1939",
+   "family": "sc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "World Rhythms",
+     "fidelity": "r",
+     "principle": "Quiet dry layer and gong-clicks — rivers and a gong.",
+     "reference": "«World Rhythms» (1975): 10-channel tape, gong and river sounds.",
+     "bed": 0.5,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.45
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 2,
+        "t0": 1.5,
+        "t1": 2.5,
+        "f": 300,
+        "g": 0.4
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 98,
+        "g": 0.15,
+        "env": "bell",
+        "dec": 5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Danube",
+     "fidelity": "r",
+     "principle": "Water filter and stream-grains — a sound map of a river.",
+     "reference": "«A Sound Map of the Danube» (2005): 86 places along the river.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "filt",
+       {
+        "type": "bandpass",
+        "f0": 300,
+        "f1": 1800,
+        "q": 2
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "seq",
+        "d": 18,
+        "s": 0.06,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Sound geography",
+     "fidelity": "i",
+     "principle": "Slow diffusion — the place sounds itself.",
+     "reference": "Lockwood: listening as ecology, sound as place.",
+     "bed": 0.7,
+     "fx": [
+      [
+       "space",
+       {
+        "n": 4,
+        "spread": 0.8,
+        "rot": 0.03
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 61,
+   "name": "Alvin Lucier",
+   "years": "1931–2021",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "I Am Sitting in a Room",
+     "fidelity": "d",
+     "principle": "Resonators on the stream's reference frequencies are excited one by one — the room amplifies itself.",
+     "reference": "«I Am Sitting in a Room» (1969): room re-recorded over itself, resonances defeat speech.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "res",
+       {
+        "f": "peaks",
+        "q": 120,
+        "g": 0.85,
+        "ramp": 1
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "fade",
+        "to": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Vespers",
+     "fidelity": "d",
+     "principle": "Echolocation clicks and echo — sound feels its way through space.",
+     "reference": "«Vespers» (1961): performers with sondols orient by echo like bats.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "clicks",
+       {
+        "n": 3,
+        "t0": 0.5,
+        "t1": 0.9,
+        "f": 2400,
+        "g": 0.5
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.12,
+        "fb": 0.5,
+        "mix": 0.6
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.2
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Music on a Long Thin Wire",
+     "fidelity": "r",
+     "principle": "Drone and slow tremolo — the wire sings itself.",
+     "reference": "«Music on a Long Thin Wire» (1977): an electromagnet excites a 20-meter wire.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 220,
+        "g": 0.25,
+        "env": "drone"
+       }
+      ],
+      [
+       "trem",
+       {
+        "f": 0.3,
+        "depth": 0.5
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 62,
+   "name": "Ivo Malec",
+   "years": "1925–2019",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Triola",
+     "fidelity": "r",
+     "principle": "Tape speed fluctuates — GRM time jumps.",
+     "reference": "«Triola» (1978): tape and orchestra, playing with time.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "phase",
+       {
+        "drift": 0.02,
+        "spread": 0.7,
+        "g": 0.7
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "lowpass",
+        "f0": 2500,
+        "f1": 1200
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Zeitsprünge",
+     "fidelity": "i",
+     "principle": "Granular morph with sharp tempo jumps.",
+     "reference": "His music: montage of time, jumps between states.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "scan",
+        "d": 26,
+        "s": 0.06,
+        "g": 0.7
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 10,
+        "s": 0.1,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Spectral theater",
+     "fidelity": "i",
+     "principle": "Grains and formants — sound as a stage.",
+     "reference": "Malec: Croatian-French master of musique concrète.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "scan",
+        "d": 20,
+        "s": 0.08,
+        "g": 0.6
+       }
+      ],
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "a",
+        "g": 0.4
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 63,
+   "name": "Toshiro Mayuzumi",
+   "years": "1929–1997",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Nirvana Symphony",
+     "fidelity": "r",
+     "principle": "Bon-shō bell resonances 1 : 2.4 : 4.1 : 6.8 — Buddhist tolling.",
+     "reference": "«Nirvana Symphony» (1958): bon-shō bells as harmonic model.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         98,
+         235,
+         402,
+         666
+        ],
+        "q": 60,
+        "g": 0.8
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Mandala",
+     "fidelity": "r",
+     "principle": "Freeze and drone — a sound mandala.",
+     "reference": "«Mandala Symphony» (1960): Buddhist cosmology in sound.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "freeze",
+       {
+        "s": 0.18,
+        "jit": 0.02,
+        "g": 0.6
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 110,
+        "g": 0.15,
+        "env": "drone"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Bon-shō",
+     "fidelity": "i",
+     "principle": "A bell with long decay and echo — the strike and its shadow.",
+     "reference": "Bon-shō: a Japanese temple bell that sounds for minutes.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 98,
+        "g": 0.35,
+        "env": "bell",
+        "dec": 6
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.7,
+        "fb": 0.6,
+        "mix": 0.6
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.2
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 64,
+   "name": "Olivier Messiaen",
+   "years": "1908–1992",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Mode 2: octatonic",
+     "fidelity": "d",
+     "principle": "Resonators and harmonization on the octatonic grid — a mode of limited transposition.",
+     "reference": "«Technique de mon langage musical» (1944): seven modes of limited transposition.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         262,
+         294,
+         311,
+         349,
+         392,
+         415,
+         466,
+         494
+        ],
+        "q": 35,
+        "g": 0.6
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.189,
+         1.414
+        ],
+        "g": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Non-retrogradable rhythms",
+     "fidelity": "d",
+     "principle": "Palindromic gate 3-5-7-5-3 — a rhythm readable in both directions.",
+     "reference": "His non-retrogradable rhythms: palindromes as a theological symbol.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.3,
+         0.5,
+         0.7,
+         0.5,
+         0.3,
+         1
+        ],
+        "floor": 0.08
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Birds",
+     "fidelity": "r",
+     "principle": "Chirp-grains and high transposition — a bird catalog.",
+     "reference": "«Catalogue d'oiseaux» (1958): 13 pieces, 77 bird species.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 30,
+        "s": 0.02,
+        "g": 0.6
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         3,
+         4
+        ],
+        "g": 0.35
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 65,
+   "name": "Darius Milhaud",
+   "years": "1892–1974",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Polytonality",
+     "fidelity": "d",
+     "principle": "Two harmonic layers in a tritone relation — two keys at once.",
+     "reference": "«Le Bœuf sur le toit» (1919), «Saudades do Brasil»: polytonality as a signature.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.414
+        ],
+        "g": 0.55
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Saudades do Brasil",
+     "fidelity": "r",
+     "principle": "Samba gate and harmonization — Brazilian memory.",
+     "reference": "«Saudades do Brasil» (1920): 12 dances written after Brazil.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.2,
+         0.2,
+         0.4,
+         0.2,
+         0.2,
+         0.4
+        ],
+        "floor": 0.2
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5
+        ],
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Tenderness",
+     "fidelity": "i",
+     "principle": "Dry sound and soft layers — a lyricist inside Les Six.",
+     "reference": "Milhaud: lyricism and polyphony of keys, La Six.",
+     "bed": 0.6,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.6
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.25
+        ],
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 66,
+   "name": "Minoru Miki",
+   "years": "1930–2011",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Marimba Spiritual",
+     "fidelity": "r",
+     "principle": "Wooden resonances and an accelerating gate — a marimba ritual.",
+     "reference": "«Marimba Spiritual» (1984): marimba and percussion, a prayer for repose.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         220,
+         660,
+         1100
+        ],
+        "q": 25,
+        "g": 0.6
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.4,
+         0.4,
+         0.3,
+         0.3,
+         0.2,
+         0.2,
+         0.15,
+         0.15
+        ],
+        "floor": 0.1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Ritual ostinato",
+     "fidelity": "i",
+     "principle": "Repeating gate and clicks — a growing ritual.",
+     "reference": "His percussion pieces: ostinato as incantation.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.25,
+         0.25,
+         0.5
+        ],
+        "floor": 0.1
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 3,
+        "t0": 0.25,
+        "t1": 0.5,
+        "f": 800,
+        "g": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Wood and skin",
+     "fidelity": "i",
+     "principle": "Wooden resonances and transients — the instrument's material.",
+     "reference": "Miki revived Japanese instruments in contemporary music.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         180,
+         576,
+         990
+        ],
+        "q": 20,
+        "g": 0.55
+       }
+      ],
+      [
+       "tape",
+       {
+        "op": "transient",
+        "n": 16,
+        "floor": 0.08,
+        "g": 0.4
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 67,
+   "name": "Ilhan Mimaroglu",
+   "years": "1926–2012",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Songmy",
+     "fidelity": "r",
+     "principle": "Hard saturation and collage — political electronics.",
+     "reference": "«Sing Me a Song of Songmy» (1971) with Freddie Hubbard: protest on tape.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "shaper",
+       {
+        "kind": "fuzz",
+        "k": 14,
+        "g": 0.55
+       }
+      ],
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 24,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Aggressive montage",
+     "fidelity": "r",
+     "principle": "Sharp splices and speed jumps — tape as a weapon.",
+     "reference": "His montage: violence of form as a political statement.",
+     "bed": 0.05,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 60
+       }
+      ],
+      [
+       "tape",
+       {
+        "op": "speed",
+        "r": 1.6,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Political tape",
+     "fidelity": "i",
+     "principle": "Ring modulation and echo — a voice distorted by the system.",
+     "reference": "Mimaroglu: Turkish-American pioneer of electronic music.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "ring",
+       {
+        "f": 660,
+        "depth": 0.7
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.2,
+        "fb": 0.5,
+        "mix": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 68,
+   "name": "Charles Mingus",
+   "years": "1922–1979",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Pithecanthropus Erectus",
+     "fidelity": "r",
+     "principle": "Free canon and dynamic waves — collective improvisation.",
+     "reference": "«Pithecanthropus Erectus» (1956): a suite of the rise and fall of man.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "canon",
+       {
+        "r": [
+         1,
+         1.05,
+         0.95
+        ],
+        "gran": 0,
+        "g": 0.55,
+        "spread": 0.7
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "The Clown",
+     "fidelity": "i",
+     "principle": "Swing gate and formant storytelling — jazz as theater.",
+     "reference": "«The Clown» (1957): narrator and orchestra, tragicomedy.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.33,
+         0.17,
+         0.33,
+         0.17
+        ],
+        "floor": 0.25
+       }
+      ],
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "o",
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Double bass growl",
+     "fidelity": "i",
+     "principle": "Low resonances and tremolo — a growling bass.",
+     "reference": "His bass: from tenderness to fury, always on the cutting edge.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         82,
+         123,
+         164
+        ],
+        "q": 15,
+        "g": 0.6
+       }
+      ],
+      [
+       "trem",
+       {
+        "f": 7,
+        "depth": 0.4
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 69,
+   "name": "Joni Mitchell",
+   "years": "b. 1943",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Open tunings",
+     "fidelity": "r",
+     "principle": "Resonators of the open C-G-C-G-E chord — guitar in her tuning.",
+     "reference": "Mitchell used about 50 open tunings; «Big Yellow Taxi» is open E.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         131,
+         196,
+         262,
+         392,
+         330
+        ],
+        "q": 25,
+        "g": 0.65
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Blue: vocal layers",
+     "fidelity": "r",
+     "principle": "Harmonic layers over the dry voice — her polyphony.",
+     "reference": "«Blue» (1971): she overdubbed all the vocal parts herself.",
+     "bed": 0.45,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5,
+         2
+        ],
+        "g": 0.45
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Dulcimer",
+     "fidelity": "i",
+     "principle": "String resonances and gate — Appalachian dulcimer.",
+     "reference": "«All I Want» (Blue): a dulcimer bought in Arkansas.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         294,
+         440,
+         587,
+         880
+        ],
+        "q": 30,
+        "g": 0.6
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.2,
+         0.2,
+         0.4
+        ],
+        "floor": 0.2
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 70,
+   "name": "Conlon Nancarrow",
+   "years": "1912–1997",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Tempo canon 17:18:19",
+     "fidelity": "d",
+     "principle": "Three granular voices in tempos 17:18:19 — pitch unchanged, only speed.",
+     "reference": "Studies for player piano: tempo canons, impossible for hands.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "canon",
+       {
+        "r": [
+         1,
+         1.0588,
+         1.1176
+        ],
+        "gran": 1,
+        "g": 0.65,
+        "spread": 0.9
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "e : π",
+     "fidelity": "d",
+     "principle": "Two voices in the irrational ratio e/π ≈ 0.865 — a canon that never converges.",
+     "reference": "Study No. 40: canon in the ratio e:π.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "canon",
+       {
+        "r": [
+         1,
+         0.8653
+        ],
+        "gran": 1,
+        "g": 0.6,
+        "spread": 0.8
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Player piano roll",
+     "fidelity": "r",
+     "principle": "Perforated gate and clicks — a mechanical roll.",
+     "reference": "Nancarrow punched rolls by hand in Mexico City, for decades.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.1,
+         0.1,
+         0.2,
+         0.1,
+         0.1,
+         0.3
+        ],
+        "floor": 0.05
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 4,
+        "t0": 0.1,
+        "t1": 0.3,
+        "f": 2000,
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 71,
+   "name": "Luigi Nono",
+   "years": "1924–1990",
+   "family": "qt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "…sofferte onde serene…",
+     "fidelity": "d",
+     "principle": "Near silence and long echo — calm waves of memory.",
+     "reference": "«…sofferte onde serene…» (1976): piano and tape, bells of Venice.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.15
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.8,
+        "fb": 0.65,
+        "mix": 0.6
+       }
+      ],
+      [
+       "res",
+       {
+        "f": "peaks",
+        "q": 50,
+        "g": 0.2,
+        "ramp": 1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Silence of resistance",
+     "fidelity": "r",
+     "principle": "Rare events in near silence — silence as politics.",
+     "reference": "Nono: a communist, silence as a form of resistance.",
+     "bed": 0.05,
+     "fx": [
+      [
+       "silence",
+       {
+        "g": 0.07
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         3,
+         0.4,
+         4,
+         0.3
+        ],
+        "floor": 0.02
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "La fabbrica illuminata",
+     "fidelity": "r",
+     "principle": "Factory transients and filter — the illuminated factory.",
+     "reference": "«La fabbrica illuminata» (1964): workers' voices and factory noise.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "transient",
+        "n": 24,
+        "floor": 0.06
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "bandpass",
+        "f0": 400,
+        "f1": 1600,
+        "q": 1
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 72,
+   "name": "Maurice Ohana",
+   "years": "1913–1992",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Microtones",
+     "fidelity": "r",
+     "principle": "Quarter-tone layers and a formant melisma — the Andalusian root.",
+     "reference": "Ohana: microtonality, Lorca, African rhythms.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1.0293,
+         1.0905
+        ],
+        "g": 0.5
+       }
+      ],
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "a",
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Lorca",
+     "fidelity": "i",
+     "principle": "Dark gate and resonances — lament for Lorca.",
+     "reference": "«Llanto por Ignacio Sánchez Mejías» (1950) — his requiem for Lorca.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.8,
+         0.4,
+         1.2
+        ],
+        "floor": 0.1
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         147,
+         220,
+         294
+        ],
+        "q": 20,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "African roots",
+     "fidelity": "i",
+     "principle": "Polyrhythmic clicks and gate.",
+     "reference": "Ohana was born in Casablanca; Africa is his rhythmic homeland.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "clicks",
+       {
+        "n": 4,
+        "t0": 0.2,
+        "t1": 0.6,
+        "f": 900,
+        "g": 0.35
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.3,
+         0.3,
+         0.2
+        ],
+        "floor": 0.2
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 73,
+   "name": "Bernard Parmegiani",
+   "years": "1927–2013",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "De Natura Sonorum",
+     "fidelity": "d",
+     "principle": "Dialectic of dry and granular — the natural against the formed.",
+     "reference": "«De Natura Sonorum» (1975): 12 studies on the nature of sound.",
+     "bed": 0,
+     "fx": [
+      [
+       "xf",
+       {
+        "a": [
+         [
+          "dry",
+          {
+           "g": 0.8
+          }
+         ]
+        ],
+        "b": [
+         [
+          "grain",
+          {
+           "mode": "rand",
+           "d": 24,
+           "s": 0.05,
+           "g": 0.8
+          }
+         ]
+        ]
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Violostries",
+     "fidelity": "r",
+     "principle": "Dry instrument and a ring shadow — violin and tape.",
+     "reference": "«Violostries» (1964): violin and tape in dialogue.",
+     "bed": 0.45,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.55
+       }
+      ],
+      [
+       "ring",
+       {
+        "f": 440,
+        "depth": 0.5,
+        "g": 0.45
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Matter / form",
+     "fidelity": "r",
+     "principle": "Freeze morphs into granulation — matter takes form.",
+     "reference": "GRM: sound as matter, montage as form.",
+     "bed": 0,
+     "fx": [
+      [
+       "xf",
+       {
+        "a": [
+         [
+          "freeze",
+          {
+           "s": 0.14,
+           "jit": 0.02,
+           "g": 0.7
+          }
+         ]
+        ],
+        "b": [
+         [
+          "grain",
+          {
+           "mode": "scan",
+           "d": 22,
+           "s": 0.07,
+           "g": 0.7
+          }
+         ]
+        ]
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 74,
+   "name": "Harry Partch",
+   "years": "1901–1974",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "43 steps",
+     "fidelity": "d",
+     "principle": "Harmonization in just ratios of his 43-step tuning.",
+     "reference": "«Genesis of a Music» (1949): 43 tones per octave, own instruments.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.0667,
+         1.125,
+         1.1667,
+         1.25,
+         1.333
+        ],
+        "g": 0.55
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.25
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Cloud chambers",
+     "fidelity": "r",
+     "principle": "Glass resonances — his cloud chambers made of glass.",
+     "reference": "Cloud-Chamber Bowls: glass jars tuned by him.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         523,
+         1412,
+         2667
+        ],
+        "q": 70,
+        "g": 0.7
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Bitter Music",
+     "fidelity": "r",
+     "principle": "Dry voice and speech gate — music of speech.",
+     "reference": "«Bitter Music» (1930s): a hobo's diary, speech as melody.",
+     "bed": 0.55,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.6
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.3,
+         0.2,
+         0.5,
+         0.2,
+         0.4
+        ],
+        "floor": 0.15
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 75,
+   "name": "Krzysztof Penderecki",
+   "years": "1933–2020",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Threnody: 52 strings",
+     "fidelity": "d",
+     "principle": "52 micro-copies with diverging glissandi from the spectral center.",
+     "reference": "«Threnody to the Victims of Hiroshima» (1960): 52 strings, clusters and extended techniques.",
+     "bed": 0.05,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 52,
+        "cents": 30,
+        "gliss": 200,
+        "g": 0.7
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Cluster mass",
+     "fidelity": "r",
+     "principle": "Wide semitone cluster and saturation — a sound mass.",
+     "reference": "His sonorism of the 1960s: sound as mass, not line.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 24,
+        "cents": 600,
+        "g": 0.55
+       }
+      ],
+      [
+       "shaper",
+       {
+        "kind": "soft",
+        "k": 5,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Polymorphia",
+     "fidelity": "r",
+     "principle": "The cloud converges back — glissando toward the center.",
+     "reference": "«Polymorphia» (1961): 48 strings, brain EEG became the score.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 24,
+        "cents": 300,
+        "gliss": -150,
+        "g": 0.6
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 76,
+   "name": "Steve Reich",
+   "years": "b. 1936",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Come Out: phase shift",
+     "fidelity": "d",
+     "principle": "A delayed copy of the stream runs ahead — 1% per second divergence.",
+     "reference": "«Come Out» (1966): Harlem Six voice, two tapes drift out of phase.",
+     "bed": 0.5,
+     "fx": [
+      [
+       "phase",
+       {
+        "drift": 0.01,
+        "spread": 0.7,
+        "g": 0.75
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "It's Gonna Rain",
+     "fidelity": "d",
+     "principle": "Faster phase drift and echo — process as music.",
+     "reference": "«It's Gonna Rain» (1965): Brother Walter's sermon, phase canon.",
+     "bed": 0.45,
+     "fx": [
+      [
+       "phase",
+       {
+        "drift": 0.02,
+        "spread": 0.8,
+        "g": 0.7
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.25,
+        "fb": 0.4,
+        "mix": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Pendulum Music",
+     "fidelity": "r",
+     "principle": "Feedback sweep and panorama — swinging microphones.",
+     "reference": "«Pendulum Music» (1968): microphones swing over speakers, feedback whistle.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         1200
+        ],
+        "q": 90,
+        "g": 0.5,
+        "ramp": 1
+       }
+      ],
+      [
+       "pan",
+       {
+        "f": 0.25,
+        "depth": 1
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 1200,
+        "glide": 1.8,
+        "g": 0.1,
+        "env": "drone"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 77,
+   "name": "Silvestre Revueltas",
+   "years": "1899–1940",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Sensemayá",
+     "fidelity": "r",
+     "principle": "Ritual seven-beat ostinato gate and dark resonances — a snake incantation.",
+     "reference": "«Sensemayá» (1938): a song to kill a snake, on a poem by Nicolás Guillén.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.21,
+         0.21,
+         0.21,
+         0.21,
+         0.21,
+         0.21,
+         0.42
+        ],
+        "floor": 0.1
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         110,
+         147,
+         220
+        ],
+        "q": 20,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Snake chant",
+     "fidelity": "i",
+     "principle": "Minor-second harmonization and tremolo — a hypnotic chant.",
+     "reference": "His melodics: Mexican archaism and modernism.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.059
+        ],
+        "g": 0.5
+       }
+      ],
+      [
+       "trem",
+       {
+        "f": 5,
+        "depth": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Ritual acceleration",
+     "fidelity": "i",
+     "principle": "Gate accelerates, clicks grow — ritual to frenzy.",
+     "reference": "Revueltas: rhythm as collective trance.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.5,
+         0.5,
+         0.4,
+         0.4,
+         0.3,
+         0.3,
+         0.2,
+         0.2
+        ],
+        "floor": 0.1
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 3,
+        "t0": 0.3,
+        "t1": 0.6,
+        "f": 700,
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 78,
+   "name": "Roger Reynolds",
+   "years": "b. 1934",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "The Angel of Death",
+     "fidelity": "r",
+     "principle": "Morphing between domains and incidences — memory of a motif.",
+     "reference": "«The Angel of Death» (2001): studied by IRCAM psychoacousticians and McAdams.",
+     "bed": 0,
+     "fx": [
+      [
+       "xf",
+       {
+        "a": [
+         [
+          "dry",
+          {
+           "g": 0.7
+          }
+         ]
+        ],
+        "b": [
+         [
+          "grain",
+          {
+           "mode": "rand",
+           "d": 20,
+           "s": 0.06,
+           "g": 0.7
+          }
+         ]
+        ]
+       }
+      ],
+      [
+       "xf",
+       {
+        "a": [
+         [
+          "grain",
+          {
+           "mode": "rand",
+           "d": 20,
+           "s": 0.06,
+           "g": 0.5
+          }
+         ]
+        ],
+        "b": [
+         [
+          "dry",
+          {
+           "g": 0.7
+          }
+         ]
+        ],
+        "per": 5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Whispers Out of Time",
+     "fidelity": "r",
+     "principle": "Whisper-grains and echo — whispers outside time.",
+     "reference": "«Whispers Out of Time» (1988), Pulitzer: strings and memory.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 30,
+        "s": 0.025,
+        "g": 0.6
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.45,
+        "fb": 0.55,
+        "mix": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Memory of a motif",
+     "fidelity": "i",
+     "principle": "Collage with returns — the motif is recognized through distortion.",
+     "reference": "His studies of musical memory: recognition through transformations.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 18,
+        "return": 1
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 79,
+   "name": "Amadeo Roldán",
+   "years": "1900–1939",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Rítmicas V/VI",
+     "fidelity": "d",
+     "principle": "Stream transients and wooden clicks — pure percussion without pitch.",
+     "reference": "«Rítmicas» V and VI (1930) — percussion only, earlier than Varèse's «Ionisation».",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "transient",
+        "n": 24,
+        "floor": 0.05
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 4,
+        "t0": 0.2,
+        "t1": 0.5,
+        "f": 800,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Afro-Cuban clave",
+     "fidelity": "r",
+     "principle": "Clave gate 3-2 — the key to Afro-Cuban rhythm.",
+     "reference": "Roldán: Afro-Cuban rhythms in Cuban academic music.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.3,
+         0.3,
+         0.4,
+         0.3,
+         0.3
+        ],
+        "floor": 0.1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Percussion without pitch",
+     "fidelity": "i",
+     "principle": "Wooden and metallic resonances with gate.",
+     "reference": "His percussion ensembles: rhythm and timbre instead of melody.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         200,
+         520,
+         1300,
+         2600
+        ],
+        "q": 20,
+        "g": 0.6
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.25,
+         0.25,
+         0.5
+        ],
+        "floor": 0.1
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 80,
+   "name": "Frederic Rzewski",
+   "years": "1938–2021",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Coming Together",
+     "fidelity": "d",
+     "principle": "Additive accumulation of fragments: a, a+b, a+b+c… — the process of freedom.",
+     "reference": "«Coming Together» (1971): an Attica prisoner's text, additive process.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "additive",
+        "k": 6
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "The People United",
+     "fidelity": "r",
+     "principle": "Loop-variations: the motif repeats with changes — 36 variations in miniature.",
+     "reference": "«The People United Will Never Be Defeated!» (1975): 36 variations.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "loop",
+        "n": 10
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5
+        ],
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Attica",
+     "fidelity": "i",
+     "principle": "Dry voice and gate — speech as music.",
+     "reference": "«Attica» (1972): political speech, sung and spoken.",
+     "bed": 0.55,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.65
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.3,
+         0.2,
+         0.5,
+         0.2
+        ],
+        "floor": 0.15
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 81,
+   "name": "Erik Satie",
+   "years": "1866–1925",
+   "family": "tm",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Vexations: 840 repeats",
+     "fidelity": "d",
+     "principle": "840 micro-repeats of a motif in 10 s = 84 Hz: repetition becomes pitch.",
+     "reference": "«Vexations» (1893): instruction to repeat 840 times. Greetings to Stockhausen's «…wie die Zeit vergeht…».",
+     "bed": 0.05,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "loop",
+        "n": 840
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Musique d'ameublement",
+     "fidelity": "d",
+     "principle": "Quiet dry sound in a room echo — furniture music.",
+     "reference": "«Musique d'ameublement» (1917): music not listened to.",
+     "bed": 0.7,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.25
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.35,
+        "fb": 0.5,
+        "mix": 0.5
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "lowpass",
+        "f0": 1800,
+        "f1": 1800
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Relâche",
+     "fidelity": "i",
+     "principle": "Absurd loop and clicks — the entr'acte as a joke.",
+     "reference": "«Relâche» (1924): a ballet with an entr'acte, cinema, and satire.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "loop",
+        "n": 6
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 3,
+        "t0": 0.6,
+        "t1": 1,
+        "f": 1500,
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 82,
+   "name": "Giacinto Scelsi",
+   "years": "1905–1988",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "One note",
+     "fidelity": "d",
+     "principle": "Resonator on the stream's reference frequency and ±2 cent beats — one note from inside.",
+     "reference": "«Quattro pezzi su una nota sola» (1959): four pieces on one note.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "res",
+       {
+        "f": "f0",
+        "q": 150,
+        "g": 0.8
+       }
+      ],
+      [
+       "cloud",
+       {
+        "n": 4,
+        "cents": 2,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Inside the overtones",
+     "fidelity": "r",
+     "principle": "Resonators on overtones 1..5 slowly open.",
+     "reference": "His method: sound as a living organism with an inner life.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "res",
+       {
+        "f": "harm5",
+        "q": 80,
+        "g": 0.7,
+        "ramp": 1
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Unfolding",
+     "fidelity": "r",
+     "principle": "Freeze and a dynamic wave — sound breathes.",
+     "reference": "Scelsi: sound is not a point but a sphere.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "freeze",
+       {
+        "s": 0.2,
+        "jit": 0.01,
+        "g": 0.6
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 83,
+   "name": "Arnold Schoenberg",
+   "years": "1874–1951",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "12-tone row",
+     "fidelity": "d",
+     "principle": "Resonators on the 12-tone grid and row permutation of fragments.",
+     "reference": "The 12-tone method (1923): composition with 12 tones related only to each other.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         262,
+         277,
+         294,
+         311,
+         330,
+         349,
+         370,
+         392,
+         415,
+         440,
+         466,
+         494
+        ],
+        "q": 40,
+        "g": 0.5
+       }
+      ],
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 12,
+        "seed": 12,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Sprechstimme",
+     "fidelity": "r",
+     "principle": "Sliding formant and grains — speech between singing and speaking.",
+     "reference": "«Pierrot lunaire» (1912): Sprechstimme marked with crosses on the notes.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "i",
+        "g": 0.6
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "seq",
+        "d": 20,
+        "s": 0.06,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Emancipation of dissonance",
+     "fidelity": "r",
+     "principle": "Dissonant cloud and harmonization — dissonance without resolution.",
+     "reference": "Emancipation of dissonance: dissonance no longer requires resolution.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 8,
+        "cents": 40,
+        "g": 0.45
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.414,
+         1.059
+        ],
+        "g": 0.4
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 84,
+   "name": "Erwin Schulhoff",
+   "years": "1894–1942",
+   "family": "qt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "In futurum: score of rests",
+     "fidelity": "d",
+     "principle": "Near silence: the stream is muted down to the noise floor — sound that is almost not.",
+     "reference": "«In futurum» (1919): the entire score is rests, 33 years before Cage's 4′33″.",
+     "bed": 0,
+     "fx": [
+      [
+       "silence",
+       {
+        "g": 0.05
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Jazz-dance",
+     "fidelity": "r",
+     "principle": "Swing gate and harmonization — 1920s jazz in academic fabric.",
+     "reference": "His «5 Etudes de Jazz» (1926) and jazz movements of suites.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.33,
+         0.17,
+         0.33,
+         0.17
+        ],
+        "floor": 0.25
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.26,
+         1.5
+        ],
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Dada collage",
+     "fidelity": "i",
+     "principle": "Collage and clicks — a Dadaist gesture.",
+     "reference": "Schulhoff: Dadaist, friend of Hausmann, died in the Wülzburg concentration camp.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 22
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 4,
+        "t0": 0.4,
+        "t1": 0.8,
+        "f": 1700,
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 85,
+   "name": "Alexander Scriabin",
+   "years": "1872–1915",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Mystic chord",
+     "fidelity": "d",
+     "principle": "Resonators C–F#–B♭–E–A–D — his six-note sonority.",
+     "reference": "«Prometheus» (1910): the mystic chord as harmonic foundation.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         262,
+         370,
+         466,
+         330,
+         440,
+         294
+        ],
+        "q": 50,
+        "g": 0.7
+       }
+      ],
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Light-music",
+     "fidelity": "r",
+     "principle": "Spectral tilt slowly brightens — color as harmony.",
+     "reference": "Clavier à lumières: he saw the colors of keys.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "filt",
+       {
+        "type": "highshelf",
+        "f0": 800,
+        "f1": 6000,
+        "gain": 12
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         262,
+         370,
+         466
+        ],
+        "q": 40,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Vers la flamme",
+     "fidelity": "r",
+     "principle": "Dynamic wave and cloud — toward the flame.",
+     "reference": "«Vers la flamme» (1914): growth from darkness to blinding light.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "dyn",
+       {
+        "curve": "swell"
+       }
+      ],
+      [
+       "cloud",
+       {
+        "n": 8,
+        "cents": 20,
+        "g": 0.4
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "highshelf",
+        "f0": 1500,
+        "f1": 5000,
+        "gain": 8
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 86,
+   "name": "Alice Shields",
+   "years": "b. 1943",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Apocalypse",
+     "fidelity": "r",
+     "principle": "Formant opera and granulation — electronic voice theater.",
+     "reference": "«Apocalypse» (1990s): Shields's electronic opera.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "a",
+        "g": 0.65
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "scan",
+        "d": 18,
+        "s": 0.08,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Shaman",
+     "fidelity": "i",
+     "principle": "Ritual resonances and tremolo — a shamanic voice.",
+     "reference": "Her «Shaman»: ritual and electronics.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         196,
+         294,
+         392
+        ],
+        "q": 25,
+        "g": 0.6
+       }
+      ],
+      [
+       "trem",
+       {
+        "f": 6,
+        "depth": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Columbia-Princeton",
+     "fidelity": "i",
+     "principle": "Ring modulation and tape montage — her school.",
+     "reference": "Shields studied with Ussachevsky at the Columbia-Princeton Electronic Music Center.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "ring",
+       {
+        "f": 880,
+        "depth": 0.5
+       }
+      ],
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 16,
+        "g": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 87,
+   "name": "Roger Ruskin Spear",
+   "years": "b. 1943",
+   "family": "cn",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Robot saxophone",
+     "fidelity": "r",
+     "principle": "Mechanical stutter and saxophone formant — a robot plays a solo.",
+     "reference": "Bonzo Dog Doo-Dah Band: his robot saxophonist on stage.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "stutter",
+        "a": 0.2,
+        "b": 0.08
+       }
+      ],
+      [
+       "formant",
+       {
+        "set": "sax",
+        "g": 0.6
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Trouser Press",
+     "fidelity": "i",
+     "principle": "Mechanical gate and saturation — a trouser press as an instrument.",
+     "reference": "His trouser press — an absurd mechanical performance.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.25,
+         0.25,
+         0.25,
+         0.25
+        ],
+        "floor": 0.1
+       }
+      ],
+      [
+       "shaper",
+       {
+        "kind": "soft",
+        "k": 5,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Vaudeville",
+     "fidelity": "i",
+     "principle": "Panorama and absurd clicks — English vaudeville.",
+     "reference": "Bonzo Dog Band: Dada, vaudeville, and rock.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "pan",
+       {
+        "f": 0.7,
+        "depth": 0.9
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 5,
+        "t0": 0.3,
+        "t1": 0.7,
+        "f": 1800,
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 88,
+   "name": "Vivian Stanshall",
+   "years": "1943–1995",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Sir Henry at Rawlinson End",
+     "fidelity": "r",
+     "principle": "Formant characters and dry narration — radio drama.",
+     "reference": "«Sir Henry at Rawlinson End» (1970s): a surrealist saga.",
+     "bed": 0.5,
+     "fx": [
+      [
+       "formant",
+       {
+        "set": "voice",
+        "morph": "o",
+        "g": 0.6
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Radio drama",
+     "fidelity": "i",
+     "principle": "Collage and echo — radio play montage.",
+     "reference": "His radio shows: voice as theater of the absurd.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 18
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.3,
+        "fb": 0.45,
+        "mix": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Eccentricity",
+     "fidelity": "i",
+     "principle": "Bells and gate — English eccentricity.",
+     "reference": "Stanshall: voice of the Bonzo Dog Band, poet and eccentric.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 1046,
+        "g": 0.2,
+        "env": "bell",
+        "dec": 2
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.4,
+         0.2,
+         0.8
+        ],
+        "floor": 0.2
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 89,
+   "name": "Steven Stapleton",
+   "years": "b. 1957",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Nurse With Wound",
+     "fidelity": "r",
+     "principle": "Surrealist collage and echo — a waking dream.",
+     "reference": "«Homotopy to Marie» (1982): a surrealist drone collage.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 26
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.4,
+        "fb": 0.55,
+        "mix": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Drone collage",
+     "fidelity": "i",
+     "principle": "Dark cloud and freeze — drone as a dream.",
+     "reference": "Nurse With Wound: surrealism in sound, collage as method.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 8,
+        "cents": 25,
+        "g": 0.45
+       }
+      ],
+      [
+       "freeze",
+       {
+        "s": 0.16,
+        "jit": 0.03,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Vinyl ghost",
+     "fidelity": "i",
+     "principle": "Crushed tape and crackle-clicks — a ghost of vinyl.",
+     "reference": "His collages: vinyl crackle as a texture of memory.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "crush",
+        "bits": 7,
+        "hold": 4
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 6,
+        "t0": 0.1,
+        "t1": 0.6,
+        "f": 3000,
+        "g": 0.2
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 90,
+   "name": "Karlheinz Stockhausen",
+   "years": "1928–2007",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Mixtur: ring modulation",
+     "fidelity": "d",
+     "principle": "Ring-mod of the live stream with its own carrier — sum and difference frequencies.",
+     "reference": "«Mixtur» (1964): orchestra, four ring modulators, sine tones.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "ring",
+       {
+        "f": 440,
+        "depth": 0.85
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.15
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Kontakte: rotation",
+     "fidelity": "d",
+     "principle": "Ring modulation and spatial rotation — sound flies in a circle.",
+     "reference": "«Kontakte» (1959–60): electronics, piano, percussion; rotation in four channels.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "ring",
+       {
+        "f": 660,
+        "depth": 0.6
+       }
+      ],
+      [
+       "pan",
+       {
+        "f": 0.5,
+        "depth": 1
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.15,
+        "fb": 0.4,
+        "mix": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Mantra: two pianos",
+     "fidelity": "r",
+     "principle": "Two ring layers and resonances — a mantra of 13 sounds.",
+     "reference": "«Mantra» (1970): two pianos with ring modulation, 13-sound formula.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "ring",
+       {
+        "f": 440,
+        "depth": 0.5,
+        "g": 0.6
+       }
+      ],
+      [
+       "ring",
+       {
+        "f": 660,
+        "depth": 0.4,
+        "g": 0.4
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         262,
+         392
+        ],
+        "q": 30,
+        "g": 0.3
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 91,
+   "name": "Sun Ra",
+   "years": "1914–1993",
+   "family": "sc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Space Echo",
+     "fidelity": "r",
+     "principle": "Tape echo with wow and flutter and a spring resonance — cosmos.",
+     "reference": "His Arkestra: tape echo, spring reverb, detuned keyboards.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "echo",
+       {
+        "dt": 0.31,
+        "fb": 0.55,
+        "mix": 0.55,
+        "wow": 1
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         800,
+         1600,
+         2400
+        ],
+        "q": 15,
+        "g": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Cosmic tuning",
+     "fidelity": "r",
+     "principle": "Detuned cloud and oscillator — keyboards gone into space.",
+     "reference": "Sun Ra: «Space is the Place», detuned clavioline and solovox.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 8,
+        "cents": 40,
+        "g": 0.5
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "sawtooth",
+        "f": 220,
+        "glide": 1.5,
+        "g": 0.12,
+        "env": "drone"
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Call of the horns",
+     "fidelity": "i",
+     "principle": "Brass resonances in space — a call from afar.",
+     "reference": "His Arkestra: horns as signals between worlds.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         330,
+         660,
+         990
+        ],
+        "q": 18,
+        "g": 0.55
+       }
+      ],
+      [
+       "space",
+       {
+        "n": 4,
+        "rot": 0.06
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 92,
+   "name": "Tōru Takemitsu",
+   "years": "1930–1996",
+   "family": "qt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Ma: the space between",
+     "fidelity": "d",
+     "principle": "Rare resonant events in silence — ma, emptiness as form.",
+     "reference": "His aesthetic of ma: the silence between sounds matters more than the sounds.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         2,
+         0.5,
+         3,
+         0.4
+        ],
+        "floor": 0.03
+       }
+      ],
+      [
+       "res",
+       {
+        "f": "peaks",
+        "q": 40,
+        "g": 0.4,
+        "ramp": 1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Sky, Horse and Death",
+     "fidelity": "r",
+     "principle": "Concrete collage — sky, horse, death on tape.",
+     "reference": "«Sky, Horse and Death» (1958): his first concrete piece.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 20
+       }
+      ],
+      [
+       "filt",
+       {
+        "type": "lowpass",
+        "f0": 2500,
+        "f1": 800
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Garden",
+     "fidelity": "i",
+     "principle": "Garden echo and a quiet dry layer — sound as a garden.",
+     "reference": "Takemitsu: garden as compositional model, «Water Ways».",
+     "bed": 0.45,
+     "fx": [
+      [
+       "echo",
+       {
+        "dt": 0.5,
+        "fb": 0.5,
+        "mix": 0.5
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.45
+       }
+      ],
+      [
+       "space",
+       {
+        "n": 3,
+        "rot": 0.02
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 93,
+   "name": "tENTATIVELY, a cONVENIENCE",
+   "years": "b. 1957",
+   "family": "cn",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "D.I.Y. circuit bending",
+     "fidelity": "r",
+     "principle": "Crushed tape and stutters — home-made electronics.",
+     "reference": "Baltimore conceptualist: lo-fi, d.i.y., absurdity as method.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "crush",
+        "bits": 4,
+        "hold": 10
+       }
+      ],
+      [
+       "tape",
+       {
+        "op": "stutter",
+        "a": 0.3,
+        "b": 0.1,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Self-interruption",
+     "fidelity": "i",
+     "principle": "Collage interrupted by silence — the work argues with itself.",
+     "reference": "His performances: intentional glitches and self-destruction of form.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 16
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.8,
+         0.6,
+         0.4,
+         0.8
+        ],
+        "floor": 0.02
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Low fidelity",
+     "fidelity": "i",
+     "principle": "Cassette crush and echo — fidelity of low precision.",
+     "reference": "Lo-fi as an aesthetic position, not a deficiency.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "crush",
+        "bits": 6,
+        "hold": 5
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.28,
+        "fb": 0.5,
+        "mix": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 94,
+   "name": "Edgard Varèse",
+   "years": "1883–1965",
+   "family": "sc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Poème électronique",
+     "fidelity": "d",
+     "principle": "Spatial sweeps and siren glissando — the Philips Pavilion.",
+     "reference": "«Poème électronique» (1958): 425 loudspeakers of the Philips Pavilion, Brussels.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "space",
+       {
+        "n": 6,
+        "spread": 1,
+        "rot": 0.2
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 400,
+        "glide": 3,
+        "g": 0.15,
+        "env": "siren"
+       }
+      ],
+      [
+       "shaper",
+       {
+        "kind": "soft",
+        "k": 4,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Déserts: blocks",
+     "fidelity": "d",
+     "principle": "Alternation of dry instrumental and electronic blocks.",
+     "reference": "«Déserts» (1954): instrumental blocks and tape interpolations.",
+     "bed": 0,
+     "fx": [
+      [
+       "alt",
+       {
+        "a": [
+         [
+          "dry",
+          {
+           "g": 0.7
+          }
+         ]
+        ],
+        "b": [
+         [
+          "grain",
+          {
+           "mode": "rand",
+           "d": 22,
+           "s": 0.05,
+           "g": 0.7
+          }
+         ],
+         [
+          "ring",
+          {
+           "f": 880,
+           "depth": 0.5,
+           "g": 0.4
+          }
+         ]
+        ],
+        "per": 2.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Sirens",
+     "fidelity": "r",
+     "principle": "Siren glissandi and saturation — organized sound.",
+     "reference": "«Ionisation» (1931) and «Amériques»: sirens as instruments.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 600,
+        "glide": 2,
+        "g": 0.2,
+        "env": "siren"
+       }
+      ],
+      [
+       "osc",
+       {
+        "type": "sine",
+        "f": 800,
+        "glide": 0.5,
+        "g": 0.15,
+        "env": "siren"
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.35
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 95,
+   "name": "Robin Williamson",
+   "years": "b. 1943",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Modal folk",
+     "fidelity": "r",
+     "principle": "Dorian resonances and drone harmonization — the Celtic root.",
+     "reference": "Incredible String Band: Celtic folk, ethnicity, and psychedelia.",
+     "bed": 0.35,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         294,
+         330,
+         349,
+         392,
+         440
+        ],
+        "q": 15,
+        "g": 0.55
+       }
+      ],
+      [
+       "harm",
+       {
+        "r": [
+         1,
+         1.5
+        ],
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Multi-instrumental",
+     "fidelity": "i",
+     "principle": "Different resonator banks with gate — one person, many instruments.",
+     "reference": "Williamson: harp, guitar, flute, jaw harp — all himself.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         220,
+         520,
+         1100
+        ],
+        "q": 20,
+        "g": 0.5
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.4,
+         0.3,
+         0.5
+        ],
+        "floor": 0.2
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         880,
+         1760
+        ],
+        "q": 30,
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Drone tanpura",
+     "fidelity": "i",
+     "principle": "Drone oscillator and dry layer — the Indian root of ISB.",
+     "reference": "ISB brought tanpura and raga into psychedelic folk.",
+     "bed": 0.5,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "sawtooth",
+        "f": 147,
+        "g": 0.12,
+        "env": "drone"
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 96,
+   "name": "Olly Wilson",
+   "years": "1937–2018",
+   "family": "vc",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Sometimes",
+     "fidelity": "r",
+     "principle": "Spiritual resonances and ring modulation — voice and tape.",
+     "reference": "«Sometimes» (1976): tenor and tape, transformation of the spiritual «Sometimes I Feel Like a Motherless Child».",
+     "bed": 0.25,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         220,
+         262,
+         330,
+         392
+        ],
+        "q": 20,
+        "g": 0.55
+       }
+      ],
+      [
+       "ring",
+       {
+        "f": 440,
+        "depth": 0.4,
+        "g": 0.4
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.35
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Heterogeneous sound principle",
+     "fidelity": "d",
+     "principle": "Grains, clicks, and resonances at once — the heterogeneous sound ideal.",
+     "reference": "His term (1983): African-American music as heterogeneity of timbres.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "rand",
+        "d": 16,
+        "s": 0.04,
+        "g": 0.45
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 3,
+        "t0": 0.3,
+        "t1": 0.6,
+        "f": 1200,
+        "g": 0.3
+       }
+      ],
+      [
+       "res",
+       {
+        "f": [
+         330,
+         660
+        ],
+        "q": 15,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Call-response",
+     "fidelity": "r",
+     "principle": "Dry call and echo-answer — antiphony.",
+     "reference": "Call-and-response: structure of African-American musical speech.",
+     "bed": 0.45,
+     "fx": [
+      [
+       "dry",
+       {
+        "g": 0.6
+       }
+      ],
+      [
+       "echo",
+       {
+        "dt": 0.35,
+        "fb": 0.5,
+        "mix": 0.55
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 97,
+   "name": "Trevor Wishart",
+   "years": "b. 1946",
+   "family": "sp",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Red Bird: voice → bird",
+     "fidelity": "d",
+     "principle": "Granular morph from speech grains to bird ones — sonic metamorphosis.",
+     "reference": "«Red Bird» (1977): voice, birds, machines — a political allegory of transformations.",
+     "bed": 0,
+     "fx": [
+      [
+       "xf",
+       {
+        "a": [
+         [
+          "grain",
+          {
+           "mode": "seq",
+           "d": 26,
+           "s": 0.04,
+           "g": 0.7
+          }
+         ]
+        ],
+        "b": [
+         [
+          "grain",
+          {
+           "mode": "rand",
+           "d": 34,
+           "s": 0.02,
+           "g": 0.7
+          }
+         ],
+         [
+          "harm",
+          {
+           "r": [
+            3
+           ],
+           "g": 0.3
+          }
+         ]
+        ]
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Audible Design: taxonomy",
+     "fidelity": "d",
+     "principle": "Dry → freeze → granulation: three transformations from his book.",
+     "reference": "«Audible Design» (1994) — a theory of sonic transformations, the methodological basis of this project.",
+     "bed": 0,
+     "fx": [
+      [
+       "alt",
+       {
+        "a": [
+         [
+          "dry",
+          {
+           "g": 0.7
+          }
+         ]
+        ],
+        "b": [
+         [
+          "freeze",
+          {
+           "s": 0.14,
+           "jit": 0.02,
+           "g": 0.7
+          }
+         ]
+        ],
+        "per": 3.3
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "scan",
+        "d": 16,
+        "s": 0.07,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "CDP spectrum",
+     "fidelity": "r",
+     "principle": "Freeze morphs into a resonator spectrum — his Composers Desktop Project.",
+     "reference": "Wishart co-founded CDP (1986): spectral tools for everyone.",
+     "bed": 0,
+     "fx": [
+      [
+       "xf",
+       {
+        "a": [
+         [
+          "freeze",
+          {
+           "s": 0.18,
+           "jit": 0.015,
+           "g": 0.7
+          }
+         ]
+        ],
+        "b": [
+         [
+          "res",
+          {
+           "f": "peaks",
+           "q": 90,
+           "g": 0.7,
+           "ramp": 1
+          }
+         ]
+        ]
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 98,
+   "name": "Christian Wolff",
+   "years": "b. 1934",
+   "family": "ch",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Duo for Pianists: cues",
+     "fidelity": "r",
+     "principle": "Gate reacts to the previous event — a cybernetic score.",
+     "reference": "«Duo for Pianists» (1957): the performer chooses by cue signals.",
+     "bed": 0.45,
+     "fx": [
+      [
+       "gate",
+       {
+        "pat": [
+         0.5,
+         0.3,
+         0.8,
+         0.2,
+         0.6
+        ],
+        "floor": 0.1
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Burdocks",
+     "fidelity": "r",
+     "principle": "Free cloud and clicks — an anarchic ensemble.",
+     "reference": "«Burdocks» (1971): for any number of performers, anarchist form.",
+     "bed": 0.3,
+     "fx": [
+      [
+       "cloud",
+       {
+        "n": 6,
+        "cents": 20,
+        "g": 0.45
+       }
+      ],
+      [
+       "clicks",
+       {
+        "n": 4,
+        "t0": 0.4,
+        "t1": 0.9,
+        "f": 1400,
+        "g": 0.3
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Agreement",
+     "fidelity": "i",
+     "principle": "Free canon and a dry layer — coordination without a conductor.",
+     "reference": "Wolff: music as social agreement among free people.",
+     "bed": 0.4,
+     "fx": [
+      [
+       "canon",
+       {
+        "r": [
+         1,
+         1.02,
+         0.98
+        ],
+        "gran": 0,
+        "g": 0.5,
+        "spread": 0.6
+       }
+      ],
+      [
+       "dry",
+       {
+        "g": 0.4
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 99,
+   "name": "Stefan Wolpe",
+   "years": "1902–1972",
+   "family": "cn",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Montage of contrasts",
+     "fidelity": "r",
+     "principle": "Sharp splices of opposing characters — dialectical montage.",
+     "reference": "Wolpe: montage of contrasts, Brecht and Eisler in New York.",
+     "bed": 0.15,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 14
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.2,
+         0.8,
+         0.2,
+         0.8
+        ],
+        "floor": 0.1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Battle Piece",
+     "fidelity": "r",
+     "principle": "Saturation and gate — a piano battle.",
+     "reference": "«Battle Piece» (1943–47): fury of form, a political gesture.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "shaper",
+       {
+        "kind": "fuzz",
+        "k": 10,
+        "g": 0.55
+       }
+      ],
+      [
+       "gate",
+       {
+        "pat": [
+         0.15,
+         0.15,
+         0.3,
+         0.15,
+         0.45
+        ],
+        "floor": 0.1
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "Form IV: broken sequences",
+     "fidelity": "i",
+     "principle": "Grains tear the sequence apart — broken sequences.",
+     "reference": "«Form IV: Broken Sequences» (1978): late, free form.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "grain",
+       {
+        "mode": "seq",
+        "d": 20,
+        "s": 0.06,
+        "jump": 0.4,
+        "g": 0.65
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "no": 100,
+   "name": "Charles Wuorinen",
+   "years": "1938–2020",
+   "family": "pt",
+   "patterns": [
+    {
+     "slot": 1,
+     "title": "Time's Encomium",
+     "fidelity": "d",
+     "principle": "Serial oscillator and ring modulation — the RCA Mark II.",
+     "reference": "«Time's Encomium» (1969), Pulitzer: the RCA Mark II synthesizer, time as material.",
+     "bed": 0.2,
+     "fx": [
+      [
+       "osc",
+       {
+        "type": "square",
+        "f": 220,
+        "glide": 2,
+        "g": 0.12,
+        "env": "drone"
+       }
+      ],
+      [
+       "ring",
+       {
+        "f": 880,
+        "depth": 0.6
+       }
+      ],
+      [
+       "grain",
+       {
+        "mode": "seq",
+        "d": 14,
+        "s": 0.07,
+        "g": 0.4
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 2,
+     "title": "Fractal slicing",
+     "fidelity": "r",
+     "principle": "Self-similar splice: fragments of fragments — fractal form.",
+     "reference": "Wuorinen: fractals and self-similarity in musical structure.",
+     "bed": 0.1,
+     "fx": [
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 32
+       }
+      ],
+      [
+       "tape",
+       {
+        "op": "shuffle",
+        "n": 8,
+        "g": 0.5
+       }
+      ]
+     ]
+    },
+    {
+     "slot": 3,
+     "title": "12-tone grid + phase",
+     "fidelity": "r",
+     "principle": "12-tone grid resonators and phase drift.",
+     "reference": "His serialism: 12 tones, strict organization of time.",
+     "bed": 0.25,
+     "fx": [
+      [
+       "res",
+       {
+        "f": [
+         262,
+         277,
+         294,
+         311,
+         330,
+         349,
+         370,
+         392,
+         415,
+         440,
+         466,
+         494
+        ],
+        "q": 40,
+        "g": 0.45
+       }
+      ],
+      [
+       "phase",
+       {
+        "drift": 0.015,
+        "spread": 0.6,
+        "g": 0.5
+       }
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}
