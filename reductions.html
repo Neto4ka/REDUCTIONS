@@ -32,36 +32,37 @@ background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),lin
 ::-webkit-scrollbar-thumb{background:linear-gradient(var(--s4),var(--line2));border-radius:6px;border:2px solid #090b0d}
 ::-webkit-scrollbar-thumb:hover{background:linear-gradient(var(--amber),var(--magenta))}
 *{scrollbar-width:thin;scrollbar-color:var(--line2) #090b0d}
-.ac-cyan{--ac:#39e6ef;--acbg:rgba(57,230,239,.10);--acbg2:rgba(57,230,239,.22);--acbd:rgba(57,230,239,.55)}
-.ac-lime{--ac:#b9f56a;--acbg:rgba(185,245,106,.10);--acbg2:rgba(185,245,106,.22);--acbd:rgba(185,245,106,.55)}
-.ac-amber{--ac:#ffb84d;--acbg:rgba(255,184,77,.10);--acbg2:rgba(255,184,77,.22);--acbd:rgba(255,184,77,.55)}
-.ac-blue{--ac:#597cff;--acbg:rgba(89,124,255,.12);--acbg2:rgba(89,124,255,.24);--acbd:rgba(89,124,255,.60)}
-.ac-pink{--ac:#ff4d79;--acbg:rgba(255,77,121,.10);--acbg2:rgba(255,77,121,.22);--acbd:rgba(255,77,121,.55)}
-.ac-red{--ac:#ff7052;--acbg:rgba(255,112,82,.10);--acbg2:rgba(255,112,82,.22);--acbd:rgba(255,112,82,.60)}
-.ac-violet{--ac:#b58aff;--acbg:rgba(181,138,255,.10);--acbg2:rgba(181,138,255,.22);--acbd:rgba(181,138,255,.55)}
-.ac-white{--ac:#f1f4f6;--acbg:rgba(241,244,246,.08);--acbg2:rgba(241,244,246,.18);--acbd:rgba(241,244,246,.50)}
-.ac-magenta{--ac:#ff4fd8;--acbg:rgba(255,79,216,.10);--acbg2:rgba(255,79,216,.22);--acbd:rgba(255,79,216,.55)}
-.ac-teal{--ac:#2ee6a8;--acbg:rgba(46,230,168,.10);--acbg2:rgba(46,230,168,.22);--acbd:rgba(46,230,168,.55)}
+.ac-cyan{--ac:#39e6ef;--acbg:rgba(57,230,239,.10);--acbg2:rgba(57,230,239,.22);--acbd:rgba(57,230,239,.55);--acgl:rgba(57,230,239,.20)}
+.ac-lime{--ac:#b9f56a;--acbg:rgba(185,245,106,.10);--acbg2:rgba(185,245,106,.22);--acbd:rgba(185,245,106,.55);--acgl:rgba(185,245,106,.20)}
+.ac-amber{--ac:#ffb84d;--acbg:rgba(255,184,77,.10);--acbg2:rgba(255,184,77,.22);--acbd:rgba(255,184,77,.55);--acgl:rgba(255,184,77,.20)}
+.ac-blue{--ac:#597cff;--acbg:rgba(89,124,255,.12);--acbg2:rgba(89,124,255,.24);--acbd:rgba(89,124,255,.60);--acgl:rgba(89,124,255,.22)}
+.ac-pink{--ac:#ff4d79;--acbg:rgba(255,77,121,.10);--acbg2:rgba(255,77,121,.22);--acbd:rgba(255,77,121,.55);--acgl:rgba(255,77,121,.20)}
+.ac-red{--ac:#ff7052;--acbg:rgba(255,112,82,.10);--acbg2:rgba(255,112,82,.22);--acbd:rgba(255,112,82,.60);--acgl:rgba(255,112,82,.22)}
+.ac-violet{--ac:#b58aff;--acbg:rgba(181,138,255,.10);--acbg2:rgba(181,138,255,.22);--acbd:rgba(181,138,255,.55);--acgl:rgba(181,138,255,.20)}
+.ac-white{--ac:#f1f4f6;--acbg:rgba(241,244,246,.08);--acbg2:rgba(241,244,246,.18);--acbd:rgba(241,244,246,.50);--acgl:rgba(241,244,246,.14)}
+.ac-magenta{--ac:#ff4fd8;--acbg:rgba(255,79,216,.10);--acbg2:rgba(255,79,216,.22);--acbd:rgba(255,79,216,.55);--acgl:rgba(255,79,216,.20)}
+.ac-teal{--ac:#2ee6a8;--acbg:rgba(46,230,168,.10);--acbg2:rgba(46,230,168,.22);--acbd:rgba(46,230,168,.55);--acgl:rgba(46,230,168,.20)}
 button,select,input{font:inherit;color:inherit}
-button{appearance:none;background:var(--acbg,rgba(57,230,239,.10));border:1px solid var(--acbd,rgba(57,230,239,.55));border-radius:8px;cursor:pointer;padding:0 13px;min-height:36px;color:var(--ac,#39e6ef);font:500 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;transition:color .16s,border-color .16s,transform .12s,background .16s}
-button:hover:not(:disabled){color:#fff;border-color:var(--ac,#39e6ef);filter:brightness(1.12)}
-button:active:not(:disabled){transform:translateY(1px)}
+button{appearance:none;background:var(--acbg,rgba(57,230,239,.10));border:1px solid var(--acbd,rgba(57,230,239,.55));border-radius:8px;cursor:pointer;padding:0 13px;min-height:36px;color:var(--ac,#39e6ef);font:500 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;box-shadow:0 0 12px var(--acgl,rgba(57,230,239,.2)),0 1px 0 rgba(255,255,255,.04) inset;transition:color .16s,border-color .16s,transform .12s,background .16s,box-shadow .16s}
+button:hover:not(:disabled){color:#fff;border-color:var(--ac,#39e6ef);box-shadow:0 0 18px var(--acgl,rgba(57,230,239,.2)),0 1px 0 rgba(255,255,255,.06) inset;filter:brightness(1.12)}
+button:active:not(:disabled){transform:translateY(1px);background:var(--acbg2);border-color:var(--ac);color:#fff;box-shadow:0 0 22px var(--acgl),inset 0 0 24px var(--acgl),0 1px 0 rgba(255,255,255,.06) inset}
 button:disabled{opacity:.38;cursor:not-allowed}
-button.on{background:var(--acbg2);border-color:var(--ac)}
+#playBtn:disabled,#prevBtn:disabled,#nextBtn:disabled,#restartBtn:disabled,#loopBtn:disabled{opacity:1;cursor:not-allowed;filter:none}
+button.on{background:var(--acbg2);border-color:var(--ac);color:#fff;box-shadow:0 0 20px var(--acgl),inset 0 0 22px var(--acgl),0 1px 0 rgba(255,255,255,.05) inset}
 button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--ac,var(--cyan));outline-offset:2px}
 select,input[type=text],input[type=url],input[type=search]{background:#0a0c0f;border:1px solid var(--acbd,var(--line));border-radius:8px;padding:8px 11px;min-height:36px;width:100%;color:var(--ac,var(--ink));font:400 11px var(--mono)}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:20px;background:transparent;cursor:pointer}
-input[type=range]::-webkit-slider-runnable-track{height:10px;border-radius:99px;background:var(--acbg2,rgba(57,230,239,.2));box-shadow:0 0 0 1px var(--acbd,rgba(57,230,239,.55)) inset}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;margin-top:-2px;border-radius:50%;background:var(--ac,#39e6ef);border:2px solid #0c0e11}
-input[type=range]::-moz-range-track{height:10px;border-radius:99px;background:var(--acbg2,rgba(57,230,239,.2));box-shadow:0 0 0 1px var(--acbd,rgba(57,230,239,.55)) inset}
-input[type=range]::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:var(--ac,#39e6ef);border:2px solid #0c0e11}
+input[type=range]::-webkit-slider-runnable-track{height:10px;border-radius:99px;background:var(--acbg2,rgba(57,230,239,.2));box-shadow:0 0 0 1px var(--acbd,rgba(57,230,239,.55)) inset,0 0 10px var(--acgl,rgba(57,230,239,.2))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;margin-top:-2px;border-radius:50%;background:var(--ac,#39e6ef);border:2px solid #0c0e11;box-shadow:0 0 8px var(--acgl,rgba(57,230,239,.2))}
+input[type=range]::-moz-range-track{height:10px;border-radius:99px;background:var(--acbg2,rgba(57,230,239,.2));box-shadow:0 0 0 1px var(--acbd,rgba(57,230,239,.55)) inset,0 0 10px var(--acgl,rgba(57,230,239,.2))}
+input[type=range]::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:var(--ac,#39e6ef);border:2px solid #0c0e11;box-shadow:0 0 8px var(--acgl,rgba(57,230,239,.2))}
 header{position:sticky;top:0;z-index:30;background:rgba(13,15,18,.92);backdrop-filter:blur(10px);border-bottom:0}
 header::before{content:none}
 .hwrap{max-width:1340px;margin:0 auto;padding:12px 14px 6px;display:flex;align-items:flex-end;gap:10px 18px;flex-wrap:wrap;position:relative}
 .brand{display:block}
 .eyebrow{display:block;font:500 9px/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--cyan);margin-bottom:7px}
 .title{font:800 clamp(27px,5vw,46px)/1 var(--disp);letter-spacing:.02em;color:#fff}
-.title span{color:var(--n,#fff);text-shadow:none;animation:neon 4.2s ease-in-out infinite}
+.title span{color:transparent;-webkit-text-stroke:1.2px var(--n,#fff); var(--n,#fff),0 0 8px var(--n,#fff),0 0 22px var(--n,#fff);animation:neon 4.2s ease-in-out infinite}
 .title span:nth-child(1){--n:#39e6ef;animation-delay:-.2s}
 .title span:nth-child(2){--n:#b9f56a;animation-delay:-.6s}
 .title span:nth-child(3){--n:#ffb84d;animation-delay:-1s}
@@ -74,6 +75,7 @@ header::before{content:none}
 .title span:nth-child(10){--n:#f1f4f6;animation-delay:-3.8s}
 @keyframes neon{0%,100%{opacity:1}50%{opacity:.84}}
 @keyframes neonflick{0%,92%,100%{opacity:1}93%{opacity:.35}94%{opacity:1}96%{opacity:.5}97%{opacity:1}}
+.title em{font-style:normal;color:var(--amber)}
 .chip{font:400 10px var(--mono);letter-spacing:.04em;padding:5px 10px;border-radius:99px;border:1px solid var(--line);background:#0d0f12;color:var(--mut);max-width:min(100%,440px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .chip.ok{color:var(--ok);border-color:rgba(185,245,106,.4);background:rgba(185,245,106,.07)}
 .chip.warn{color:var(--warn);border-color:rgba(255,184,77,.4);background:rgba(255,184,77,.07)}
@@ -82,15 +84,17 @@ header::before{content:none}
 .hgrow{flex:1}
 .htools{display:flex;gap:6px;align-items:center}
 #muteBtn{min-width:76px}
-#muteBtn.muted{--ac:#ff4d79;--acbg:rgba(255,77,121,.16);--acbg2:rgba(255,77,121,.26);--acbd:rgba(255,77,121,.6)}
-#recBtn.rec{background:var(--danger);border-color:var(--danger);color:#16060b;animation:pulse 1.1s infinite}
+#muteBtn.muted{--ac:#ff4d79;--acbg:rgba(255,77,121,.16);--acbg2:rgba(255,77,121,.26);--acbd:rgba(255,77,121,.6);--acgl:rgba(255,77,121,.22);border-color:var(--ac);color:#fff;box-shadow:0 0 22px rgba(255,77,121,.35),inset 0 0 24px rgba(255,77,121,.45)}
+#recBtn.rec{background:var(--danger);border-color:var(--danger);color:#16060b;animation:pulse 1.1s infinite;box-shadow:0 0 24px rgba(255,77,121,.45),inset 0 0 26px rgba(255,77,121,.55)}
 @keyframes pulse{50%{opacity:.6}}
 .srcbar{max-width:1340px;margin:0 auto;padding:0 14px 8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;position:relative}
 .srcbar .url{flex:1;min-width:180px}
 main{max-width:1340px;margin:0 auto;padding:4px 14px 14px;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:14px;position:relative;z-index:1}
 @media(max-width:1000px){main{grid-template-columns:1fr}}
 .col{display:flex;flex-direction:column;gap:14px;min-width:0}
-.panel{background:linear-gradient(145deg,rgba(18,21,26,.94),rgba(10,12,15,.96));border:1px solid var(--line);border-radius:18px;padding:18px;min-width:0;box-shadow:0 28px 90px rgba(0,0,0,.5),0 1px 0 rgba(255,255,255,.03) inset}
+.panel{--pc:57,230,239;background:linear-gradient(145deg,rgba(18,21,26,.94),rgba(10,12,15,.96));border:1px solid rgba(var(--pc),.30);border-radius:18px;padding:18px;min-width:0;box-shadow:0 28px 90px rgba(0,0,0,.5),0 0 26px rgba(var(--pc),.07),0 1px 0 rgba(255,255,255,.03) inset}
+.p-magenta{--pc:255,79,216}
+.p-violet{--pc:181,138,255}
 .nowtop{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .cnum{font:500 10px var(--mono);color:var(--cyan);letter-spacing:.12em;text-transform:uppercase}
 .cname{font:600 clamp(20px,4vw,32px)/1.1 var(--disp);letter-spacing:-.04em}
@@ -110,15 +114,17 @@ main{max-width:1340px;margin:0 auto;padding:4px 14px 14px;display:grid;grid-temp
 @keyframes fin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 #spec{width:100%;height:62px;display:block;margin:12px 0 2px;border-radius:8px;background:radial-gradient(120% 140% at 50% 100%,#111419,#0a0c0f)}
 .transport{display:flex;align-items:center;gap:6px;margin:10px 0;flex-wrap:wrap}
-#playBtn{background:rgba(185,245,106,.16);border-color:rgba(185,245,106,.6);color:var(--green);font:700 12px var(--mono);letter-spacing:.1em;padding:0 22px;min-height:40px;min-width:110px}
-#playBtn:hover:not(:disabled){color:#fff;border-color:var(--green)}
+#playBtn{background:rgba(185,245,106,.16);border:2px solid rgba(185,245,106,.6);color:var(--green);font:700 12px var(--mono);letter-spacing:.1em;padding:0 22px;min-height:40px;min-width:110px;box-shadow:0 0 22px rgba(185,245,106,.32),inset 0 0 16px rgba(185,245,106,.20)}
+#playBtn:hover:not(:disabled){color:#fff;border-color:var(--green);box-shadow:0 0 28px rgba(185,245,106,.42),inset 0 0 18px rgba(185,245,106,.25)}
+#playBtn.playing{background:rgba(185,245,106,.28);border-color:var(--green);color:#fff;box-shadow:0 0 26px rgba(185,245,106,.45),inset 0 0 28px rgba(185,245,106,.55)}
+#prevBtn,#nextBtn,#restartBtn,#loopBtn{border-width:2px;box-shadow:0 0 16px var(--acgl,rgba(57,230,239,.24)),inset 0 0 12px rgba(255,255,255,.04)}
 .time{font:400 10px var(--mono);color:var(--mut)}
 .time b{color:var(--ink);font:500 20px var(--mono);letter-spacing:-.05em}
 .tlwrap{margin-top:4px}
-#timeline{position:relative;height:40px;display:flex;gap:1px;border-radius:8px;overflow:hidden;cursor:pointer;background:#07080a;border:1px solid rgba(57,230,239,.3);touch-action:none}
-#timeline .seg{flex:1;opacity:.2;border-radius:2px;transition:opacity .12s,transform .12s}
-#timeline .seg:hover{opacity:.75;transform:scaleY(1.22)}
-#timeline .seg.cur{opacity:1}
+#timeline{position:relative;height:40px;display:flex;gap:1px;border-radius:8px;overflow:hidden;cursor:pointer;background:#07080a;border:2px solid rgba(57,230,239,.55);touch-action:none;box-shadow:0 0 16px rgba(57,230,239,.22),inset 0 0 12px rgba(57,230,239,.10)}
+#timeline .seg{flex:1;opacity:.68;border-radius:2px;transition:opacity .12s,transform .12s,box-shadow .12s}
+#timeline .seg:hover{opacity:.92;transform:scaleY(1.22)}
+#timeline .seg.cur{opacity:1;box-shadow:0 0 10px rgba(255,184,77,.55),inset 0 0 8px rgba(255,255,255,.12)}
 #playhead{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--amber);box-shadow:0 0 10px rgba(255,184,77,.6);pointer-events:none;z-index:3}
 #playhead::after{content:"";position:absolute;top:-4px;left:-4px;width:10px;height:10px;border-radius:50%;background:var(--amber)}
 #ghost{position:absolute;top:0;bottom:0;width:1px;background:var(--cyan);opacity:0;pointer-events:none;z-index:2}
@@ -132,16 +138,16 @@ main{max-width:1340px;margin:0 auto;padding:4px 14px 14px;display:grid;grid-temp
 .mixer h3,.panel h3{font:500 8px var(--mono);letter-spacing:.16em;color:var(--ink);text-transform:uppercase;margin-bottom:15px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .mgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 @media(max-width:1000px){.mgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.ctl{background:var(--acbg,rgba(57,230,239,.1));border:1px solid var(--acbd,rgba(57,230,239,.55));border-radius:8px;padding:9px 10px;min-width:0}
+.ctl{background:var(--acbg,rgba(57,230,239,.1));border:1px solid var(--acbd,rgba(57,230,239,.55));border-radius:8px;padding:9px 10px;min-width:0;box-shadow:0 0 14px var(--acgl,rgba(57,230,239,.2))}
 .ctl label{display:flex;justify-content:space-between;align-items:baseline;gap:6px;font:500 9px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--ink);margin-bottom:5px}
 .ctl label b{color:var(--ac,#39e6ef);font:500 9px var(--mono)}
 .ctl select{min-height:30px;padding:4px 8px;font-size:10px}
 .mrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
-.mrow button{font-size:9px;padding:0 10px;min-height:34px}
+.mrow button{font-size:9px;padding:0 10px;min-height:34px;border-width:2px;box-shadow:0 0 14px var(--acgl,rgba(57,230,239,.2)),inset 0 0 10px rgba(255,255,255,.03)}
 .tabs{display:flex;gap:5px;margin-bottom:12px;flex-wrap:wrap}
-.tab{font:500 9px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:0 12px;border-radius:99px;background:#0d0f12;border:1px solid var(--line);cursor:pointer;min-height:32px;color:#626a75}
-.tab:hover:not(:disabled){color:#fff;border-color:var(--line2);background:#111419;filter:none}
-.tab.on{background:#211a10;border-color:#80602e;color:var(--amber)}
+.tab{font:500 9px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:0 12px;border-radius:99px;background:#0d0f12;border:1px solid var(--line);cursor:pointer;min-height:32px;color:#626a75;box-shadow:none}
+.tab:hover:not(:disabled){color:#fff;border-color:var(--line2);background:#111419;box-shadow:none;filter:none}
+.tab.on{background:#211a10;border-color:#80602e;color:var(--amber);box-shadow:none}
 .tab .badge{display:inline-block;min-width:16px;padding:0 4px;margin-left:5px;border-radius:9px;background:var(--danger);color:#16060b;font-size:9px}
 .tabpane{display:none}
 .tabpane.on{display:block}
@@ -154,8 +160,8 @@ main{max-width:1340px;margin:0 auto;padding:4px 14px 14px;display:grid;grid-temp
 .jentry .jh{color:#5f6873;font-size:9px;font-style:italic}
 #search{margin-bottom:9px;--ac:#b58aff;--acbd:rgba(181,138,255,.5)}
 #clist{display:flex;flex-direction:column;gap:2px}
-.crow{display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:7px;cursor:pointer;border:1px solid transparent;font:400 11px var(--mono);text-align:left;background:none;width:100%;min-height:36px;color:var(--ink);text-transform:none;letter-spacing:0}
-.crow:hover{background:#111419;filter:none;border-color:transparent;color:var(--ink)}
+.crow{display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:7px;cursor:pointer;border:1px solid transparent;font:400 11px var(--mono);text-align:left;background:none;width:100%;min-height:36px;color:var(--ink);text-transform:none;letter-spacing:0;box-shadow:none}
+.crow:hover{background:#111419;box-shadow:none;filter:none;border-color:transparent;color:var(--ink)}
 .crow.cur{background:#191d23;border-color:var(--line2)}
 .crow .n{color:var(--dim);font-size:9px;width:26px;flex:none}
 .crow .dot{width:6px;height:6px;border-radius:50%;flex:none}
@@ -167,24 +173,23 @@ main{max-width:1340px;margin:0 auto;padding:4px 14px 14px;display:grid;grid-temp
 #errlog{margin-top:10px;font:400 10px var(--mono);color:#ff9db4;display:flex;flex-direction:column;gap:5px}
 #errlog div{border-left:2px solid var(--danger);padding-left:8px;word-break:break-word}
 #testout{margin-top:10px;font:400 10px var(--mono);display:flex;flex-direction:column;gap:4px}
-footer{max-width:1340px;margin:0 auto;padding:4px 14px 26px;color:var(--mut);font:400 9px var(--mono);letter-spacing:.03em;position:relative;z-index:1}
+footer{max-width:1340px;margin:0 auto;padding:4px 14px 26px;color:var(--ink);font:400 9px var(--mono);letter-spacing:.03em;position:relative;z-index:1}
 footer b{color:#fff}
-footer b{color:#fff}
-footer .fbox{background:#0d0f12;border:1px solid rgba(89,124,255,.28);border-radius:var(--r);padding:12px;margin-top:10px}
-footer .fbox+.fbox{border-color:rgba(46,230,168,.28)}
+footer .fbox{background:#0d0f12;border:1px solid rgba(89,124,255,.28);border-radius:var(--r);padding:12px;margin-top:10px;box-shadow:0 0 18px rgba(89,124,255,.06)}
+footer .fbox+.fbox{border-color:rgba(46,230,168,.28);box-shadow:0 0 18px rgba(46,230,168,.06)}
 footer code{background:#191d23;padding:1px 6px;border-radius:4px;color:var(--amber);font-size:9px}
-.credit{margin-top:14px;text-align:center;font:400 9px/1.6 var(--mono);letter-spacing:.08em;color:var(--dim)}
-.credit a{color:var(--dim);text-decoration:none;border-bottom:1px solid rgba(116,124,136,.35);transition:color .16s,border-color .16s}
-.credit a:hover{color:var(--ink);border-color:var(--ink)}
+footer .hotkeys{margin-top:14px;font:400 10px/1.6 var(--mono);letter-spacing:.04em;color:var(--mut);text-align:center}
+footer .hotkeys a{color:var(--amber);text-decoration:none;border-bottom:1px dashed rgba(255,184,77,.4)}
+footer .hotkeys a:hover{color:#fff;border-bottom-color:#fff}
 #drop{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;background:rgba(8,9,11,.93);border:3px dashed var(--amber);color:var(--amber);font:600 18px var(--disp);text-align:center;padding:20px}
 #drop.on{display:flex}
-a.dl{--ac:#b9f56a;--acbg:rgba(185,245,106,.1);--acbd:rgba(185,245,106,.55);color:var(--ac);font:500 9px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid var(--acbd);padding:0 11px;min-height:34px;display:none;align-items:center;border-radius:8px;background:var(--acbg)}
+a.dl{--ac:#b9f56a;--acbg:rgba(185,245,106,.1);--acbd:rgba(185,245,106,.55);--acgl:rgba(185,245,106,.2);color:var(--ac);font:500 9px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid var(--acbd);padding:0 11px;min-height:34px;display:none;align-items:center;border-radius:8px;background:var(--acbg);box-shadow:0 0 12px var(--acgl)}
 .nowtop,.tags,.slots{display:none}
 .srcbar,.htools{display:none}
 #urlInput{display:none}
 .filerow{margin-top:12px}
-.filerow #fileBtn{width:100%;min-height:46px;font:700 12px var(--mono);letter-spacing:.12em;background:rgba(255,184,77,.16);border-color:rgba(255,184,77,.6);color:var(--amber)}
-.filerow #fileBtn:hover:not(:disabled){color:#fff;border-color:var(--amber)}
+.filerow #fileBtn{width:100%;min-height:46px;font:700 12px var(--mono);letter-spacing:.12em;background:rgba(255,184,77,.16);border-color:rgba(255,184,77,.6);color:var(--amber);box-shadow:0 0 18px rgba(255,184,77,.22),0 1px 0 rgba(255,255,255,.05) inset}
+.filerow #fileBtn:hover:not(:disabled){color:#fff;border-color:var(--amber);box-shadow:0 0 24px rgba(255,184,77,.3)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 <script>
@@ -211,7 +216,7 @@ return r;
 })();
 </script>
 <style>
-#ring{display:block;touch-action:pan-y;cursor:pointer}
+#ring{display:block;touch-action:pan-y;cursor:pointer;filter:drop-shadow(0 15px 28px rgba(0,0,0,.65))}
 #pBody{display:none}
 .ringbox{position:relative;margin:6px auto 2px;max-width:100%}
 .ringinfo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.45em;pointer-events:none;overflow:hidden;font-size:12.5px;line-height:1.35}
@@ -229,7 +234,7 @@ return r;
 <div class="hwrap">
 <div class="brand">
 <span class="eyebrow">generative audio processor</span>
-<h1 class="title"><span>R</span><span>E</span><span>D</span><span>U</span><span>C</span><span>T</span><span>I</span><span>O</span><span>N</span><span>S</span></h1>
+<h1 class="title" aria-label="REDUCTIONS"><span>R</span><span>E</span><span>D</span><span>U</span><span>C</span><span>T</span><span>I</span><span>O</span><span>N</span><span>S</span></h1>
 </div>
 <span id="envChip" class="chip info">environment…</span>
 <span id="srcChip" class="chip warn">no source selected</span>
@@ -275,11 +280,11 @@ return r;
 </div>
 <canvas id="spec" height="62"></canvas>
 <div class="transport">
-<button id="playBtn" class="ac-lime" disabled>play</button>
-<button id="prevBtn" class="ac-cyan" disabled>−30</button>
-<button id="nextBtn" class="ac-blue" disabled>+30</button>
-<button id="restartBtn" class="ac-violet" disabled>rst</button>
-<button id="loopBtn" class="ac-amber" disabled title="loop the current 30 s composer block">loop</button>
+<button id="playBtn" class="ac-lime">play</button>
+<button id="prevBtn" class="ac-cyan">−30</button>
+<button id="nextBtn" class="ac-blue">+30</button>
+<button id="restartBtn" class="ac-violet">rst</button>
+<button id="loopBtn" class="ac-amber" title="loop the current 30 s composer block">loop</button>
 <span class="time mono"><b id="tCur">00:00</b> / <span id="tTotal">—</span></span>
 </div>
 <div class="tlwrap">
@@ -291,7 +296,7 @@ return r;
 <div class="legend" id="legend"></div>
 <div class="hint">tap or drag the timeline — scrubbing without rebuilds · space play/pause · ←/→ blocks · M sound · R record · tape speed changes both tempo and pitch — this is a tape recorder</div>
 </section>
-<section class="panel mixer">
+<section class="panel mixer p-magenta">
 <h3>mixer · live parameters over the stream</h3>
 <div class="mgrid">
 <div class="ctl ac-pink"><label>volume <b id="vVol">85%</b></label><input type="range" id="mVol" min="0" max="1" step="0.01" value="0.85"></div>
@@ -314,7 +319,7 @@ return r;
 </section>
 </div>
 <div class="col">
-<section class="panel">
+<section class="panel p-violet">
 <div class="tabs">
 <button class="tab on" data-pane="journal">journal</button>
 <button class="tab" data-pane="manifest">manifest · 100</button>
@@ -343,13 +348,17 @@ The ring buffer (the last ~4 s of live signal) serves the granulator, clouds, re
 <b>Method.</b> Levels: <b>d</b> — documented technique, <b>r</b> — reconstruction, <b>i</b> — free interpretation. Transformation taxonomy — Trevor Wishart, "Audible Design" (1994).
 Blocks 015 (Brody) and 054 (Kamin) share an echo motif: friends who died in the same car crash in 2010. If the file is longer than 50:00, the composer list loops.
 </div>
+
+<div class="hotkeys">space play · arrows seek · m snd · r rec · l loop · drag bars and ring · <a href="https://neto4ka.github.io" target="_blank" rel="noopener">neto4ka.github.io</a></div>
+
+  
 </footer>
 <div id="drop">drop the file — it becomes the continuous source</div>
 <audio id="srcAudio" preload="auto" playsinline></audio>
 <script>
 "use strict";
 const FAMS={sp:{n:"spectrum/timbre",c:"#39e6ef"},tm:{n:"time/process",c:"#b9f56a"},pt:{n:"pitch/tuning",c:"#ffb84d"},sc:{n:"space",c:"#597cff"},ch:{n:"chance/structure",c:"#ff4d79"},cn:{n:"concept",c:"#ff7052"},vc:{n:"voice/pop-avant",c:"#b58aff"},qt:{n:"silence/dynamics",c:"#e8eef4"}};
-const FID={d:"d · documented",i:"i · free interpretation"};
+const FID={d:"d · documented",r:"r · reconstruction",i:"i · free interpretation"};
 const C=[
 {n:"Charles-Valentin Alkan",y:"1813–1888",fam:"tm",ps:[
 {t:"Train gains momentum",k:"r",d:"Motif microloups accelerate from 0.4 to 0.05 s — ostinato as mechanical acceleration.",h:"«Le chemin de fer» op. 27 (1844) — the first depiction of a railway in music.",fx:[["tape",{op:"stutter",a:.4,b:.05}],["filt",{type:"lowpass",f0:500,f1:3200}]]},
@@ -447,312 +456,84 @@ const C=[
 {t:"Hypercollage",k:"r",d:"300 splices and a granular layer — extreme montage density.",h:"Curran: hyper-energetic tape collages, Musica Elettronica Viva.",fx:[["tape",{op:"shuffle",n:300}],["grain",{mode:"rand",d:15,s:.04,g:.35}]]},
 {t:"A Rose Is a Round",k:"r",d:"Three identical voices with staggered entries — a circle canon.",h:"«A Rose Is a Rose Is a Round» — a vocal circle as collage.",fx:[["canon",{r:[1,1,1],gran:1,off:[0,.8,1.6],g:.6,spread:.8}]]},
 {t:"Schtyx",k:"i",d:"Folk-jitter gate and intervallic layers — roots in the avant-garde.",h:"«Schtyx» (1988): Jewish melodic roots in new fabric.",fx:[["gate",{pat:[.2,.1,.3,.1,.2,.4],floor:.2}],["harm",{r:[1,1.5],g:.4}]]}]},
-{n:"Mario Davidovsky",y:"1934–2019",fam:"sc",ps:[
-{t:"Synchronisms: instrument and tape",k:"d",d:"Dry voice and granular shadow synchronize on attacks.",h:"The «Synchronisms» cycle (from 1962): live instrument and tape as one hybrid.",fx:[["dry",{g:.6}],["grain",{mode:"seq",d:20,s:.07,g:.5}]]},
-{t:"Synchronization point",k:"r",d:"Micro-stutters on attacks and a ping oscillator — tape answers the instrument.",h:"«Synchronisms No. 6» (1970), Pulitzer: piano and tape.",fx:[["tape",{op:"stutter",a:.15,b:.06}],["osc",{type:"sine",f:440,g:.15,env:"bell",dec:1}]]},
-{t:"Divergence",k:"i",d:"Two copies begin in sync and drift apart in phase.",h:"The dramaturgy of the cycle: union of live and electronic, their fusion and rupture.",fx:[["phase",{drift:.012,spread:.8,g:.7}]]}]},
-{n:"Peter Maxwell Davies",y:"1934–2016",fam:"vc",ps:[
-{t:"Eight Songs for a Mad King",k:"r",d:"Extreme formants and stutters — voice on the edge of madness.",h:"«Eight Songs for a Mad King» (1969): King George III sings across four octaves.",fx:[["formant",{set:"voice",morph:"i",g:.7}],["tape",{op:"stutter",a:.2,b:.07,g:.5}]]},
-{t:"Foxtrot inside the symphony",k:"r",d:"A buried dance gate is deformed by a filter.",h:"«St. Thomas Wake» (1969): a foxtrot distorted into a symphonic shadow.",fx:[["gate",{pat:[.3,.3,.6],floor:.25}],["filt",{type:"bandpass",f0:500,f1:2000,q:1.5}]]},
-{t:"Farewell to Stromness",k:"r",d:"Nearly dry sound and soft harmonization — farewell simplicity.",h:"«Farewell to Stromness» (1980) — his most famous, tender piece.",fx:[["dry",{g:.7}],["harm",{r:[1,1.5],g:.3}]]}]},
-{n:"Dubravko Detoni",y:"b. 1937",fam:"cn",ps:[
-{t:"ACEZANTEZ",k:"r",d:"Theatrical collage and click-gestures — a stage without words.",h:"ACEZANTEZ (Zagreb, 1971): Detoni's musical theater ensemble.",fx:[["tape",{op:"shuffle",n:16}],["clicks",{n:4,t0:.4,t1:.8,f:1600,g:.3}]]},
-{t:"Phonomorphia",k:"i",d:"Granular morph through the material — sound metamorphoses.",h:"His phonomorphias — a theater of sonic metamorphoses.",fx:[["grain",{mode:"scan",d:22,s:.09,g:.7}],["filt",{type:"lowpass",f0:3000,f1:500}]]},
-{t:"Stage without words",k:"i",d:"Formant characters and rhythmic gestures.",h:"Detoni: composer, pianist and writer, musical theater as method.",fx:[["formant",{set:"voice",morph:"e",g:.6}],["gate",{pat:[.4,.2,.8],floor:.15}]]}]},
-{n:"Dr. John the Night Tripper",y:"1941–2019",fam:"vc",ps:[
-{t:"Gris-Gris",k:"r",d:"Second-line gate and swamp echo — New Orleans voodoo psychedelia.",h:"«Gris-Gris» (1968): voodoo ritual as psychedelic album.",fx:[["gate",{pat:[.25,.15,.25,.15,.4],floor:.2}],["echo",{dt:.33,fb:.5,mix:.45}]]},
-{t:"Voodoo chant",k:"i",d:"Fifth doubling and tremolo — incantation in layers.",h:"His chants trace back to New Orleans rituals and Mardi Gras Indians.",fx:[["harm",{r:[1,1.5],g:.5}],["trem",{f:6,depth:.35}]]},
-{t:"Night Tripper",k:"i",d:"Slow panorama and saturation — a night tripper in space.",h:"The Night Tripper stage persona: feathers, skulls, swamp groove.",fx:[["pan",{f:.2,depth:.9}],["shaper",{kind:"soft",k:4,g:.6}]]}]},
-{n:"Charles Dodge",y:"b. 1942",fam:"vc",ps:[
-{t:"Any Resemblance…",k:"d",d:"A recognizable motif stays dry, alien synthesis around it.",h:"«Any Resemblance Is Purely Coincidental» (1980): Caruso sings inside computer music.",fx:[["dry",{g:.65}],["osc",{type:"sawtooth",f:220,glide:2,g:.15,env:"drone"}],["grain",{mode:"rand",d:10,s:.05,g:.3}]]},
-{t:"The Earth Is My Mother",k:"r",d:"Formant singer and harmonic layers — a synthesized voice.",h:"«The Earth Is My Mother» — the computer voice as a solo instrument.",fx:[["formant",{set:"voice",morph:"a",g:.7}],["harm",{r:[1,2],g:.3}]]},
-{t:"Bell Labs",k:"i",d:"Ring modulation and early computer grains — 1960s aesthetics.",h:"Dodge worked at Bell Labs — the cradle of computer music.",fx:[["ring",{f:660,depth:.6}],["grain",{mode:"seq",d:16,s:.06,g:.5}]]}]},
-{n:"Jacob Druckman",y:"1928–1996",fam:"vc",ps:[
-{t:"Animus: duel",k:"r",d:"Aggressive tape-antagonist against a dry protagonist.",h:"«Animus I» (1966): trombone and tape as opponents in a drama.",fx:[["dry",{g:.5}],["shaper",{kind:"fuzz",k:10,g:.45}],["ring",{f:880,depth:.4,g:.4}]]},
-{t:"Prism: quotes",k:"r",d:"Collage of debris and a cloud — refraction of other people's music.",h:"«Prism» (1969): quotes from Berio, Bach, Mahler in an orchestral prism.",fx:[["tape",{op:"shuffle",n:20}],["cloud",{n:6,cents:18,g:.35}]]},
-{t:"Windows",k:"i",d:"Spatial orchestral waves — windows into a sound field.",h:"«Windows» (1972), Pulitzer: orchestral windows of memory.",fx:[["space",{n:5,rot:.08}],["dyn",{curve:"swell"}]]}]},
-{n:"Iancu Dumitrescu",y:"b. 1944",fam:"sp",ps:[
-{t:"Inside sound",k:"r",d:"Freeze and resonators on peaks — microscopic listening.",h:"Romanian spectralism: Dumitrescu and Avram, music inside sound.",fx:[["freeze",{s:.16,jit:.015,g:.7}],["res",{f:"peaks",q:80,g:.5,ramp:1}]]},
-{t:"Glissando textures",k:"r",d:"A slowly diverging cloud — his long mass glissandi.",h:"His orchestral textures glide continuously like living matter.",fx:[["cloud",{n:16,cents:40,gliss:120,g:.6}]]},
-{t:"Aphonic: spectral silence",k:"i",d:"Near silence and rare grains — sound on the threshold of hearing.",h:"Spectral asceticism: extreme concentration on the small.",fx:[["silence",{g:.08}],["grain",{mode:"rand",d:6,s:.08,g:.3}]]}]},
-{n:"Tan Dun",y:"b. 1957",fam:"sc",ps:[
-{t:"Water Concerto",k:"r",d:"Water filter sweeps and drop-grains — water as instrument.",h:"«Water Concerto» (1998): water percussion in a basin, orchestra responds.",fx:[["filt",{type:"bandpass",f0:400,f1:2600,q:3}],["grain",{mode:"rand",d:20,s:.03,g:.5}]]},
-{t:"Organic Music: paper",k:"i",d:"Noise resonances and transients — paper and wood as instruments.",h:"His organic music: paper, water, stones, ceramics.",fx:[["tape",{op:"transient",n:20,floor:.08}],["res",{f:[900,1800,3200],q:15,g:.4}]]},
-{t:"Ritual",k:"i",d:"Slow gate and a bell — shamanic theater.",h:"Opera «Marco Polo» (1996): ritual as musical form.",fx:[["gate",{pat:[1,.5,1,1.5],floor:.1}],["osc",{type:"sine",f:330,g:.2,env:"bell",dec:3}]]}]},
-{n:"David Dunn",y:"b. 1953",fam:"vc",ps:[
-{t:"Interspecies dialogue",k:"r",d:"Transposition ×4 and echo-answer — a conversation with the non-human.",h:"Dunn: bioacoustics, attempts at dialogue with birds and insects.",fx:[["harm",{r:[4],g:.5}],["echo",{dt:.4,fb:.45,mix:.5}]]},
-{t:"Avian range",k:"i",d:"Transposition ×6 and chirp-grains — the stream in the avian register.",h:"His works explore how animals hear the world.",fx:[["harm",{r:[6],g:.45}],["grain",{mode:"rand",d:24,s:.025,g:.4}]]},
-{t:"Insects",k:"i",d:"40 Hz tremolo and high resonances — stridulation.",h:"Dunn recorded bark beetles and built interspecies interfaces.",fx:[["trem",{f:40,depth:.8}],["res",{f:[3200,4800,6400],q:40,g:.5}]]}]},
-{n:"Duke Ellington",y:"1899–1974",fam:"vc",ps:[
-{t:"Jungle growl",k:"r",d:"24 Hz tremolo and a bandpass wah — the growling brass of the Cotton Club.",h:"Jungle style (1920s): growl trumpets of Bubber Miley and Tricky Sam Nanton.",fx:[["trem",{f:24,depth:.6}],["filt",{type:"bandpass",f0:600,f1:1600,q:4}]]},
-{t:"Ellington effect",k:"i",d:"Mixing formant resonances — timbre as collective creation.",h:"Ellington effect: he wrote not for instruments but for specific people of the orchestra.",fx:[["res",{f:[350,700,1200,2100],q:10,g:.6}],["dry",{g:.4}]]},
-{t:"Take the A Train",k:"r",d:"Swing gate and harmonization — the orchestra's signature tune.",h:"«Take the 'A' Train» (1941, Strayhorn) — the theme of the Ellington orchestra.",fx:[["gate",{pat:[.33,.17,.33,.17],floor:.25}],["harm",{r:[1,1.26,1.5],g:.4}]]}]},
-{n:"Donald Erb",y:"1927–2008",fam:"vc",ps:[
-{t:"Trombone + tape",k:"r",d:"Sliding formant and ring modulation — brass and electronics.",h:"Erb: trombonist and composer, pioneer of live-electronics for brass.",fx:[["formant",{set:"brass",morph:"o",g:.6}],["ring",{f:440,depth:.4}]]},
-{t:"The Seventh Trumpet",k:"i",d:"Brass resonances and echo — a theatrical trumpet.",h:"«The Seventh Trumpet» (1969) — his brass-electronic theater.",fx:[["res",{f:[440,880,1320],q:20,g:.6}],["echo",{dt:.25,fb:.4,mix:.4}]]},
-{t:"Brass theater",k:"i",d:"Panoramic gestures and saturation — the instrument as character.",h:"His brass concertos with tape — the drama of soloist and electronics.",fx:[["pan",{f:.6,depth:.8}],["shaper",{kind:"soft",k:5,g:.55}]]}]},
-{n:"Morton Feldman",y:"1926–1987",fam:"qt",ps:[
-{t:"Silence and duration",k:"d",d:"−18 dB, long resonances — sound allowed to be itself.",h:"«Triadic Memories» (1981): 90 minutes of quiet, almost static music.",fx:[["dry",{g:.12}],["res",{f:"peaks",q:30,g:.2,ramp:1}]]},
-{t:"Rare events",k:"r",d:"Gate passes only a few attacks of the stream, long echo between them.",h:"Late Feldman: events as rare as stars in emptiness.",fx:[["gate",{pat:[2.5,.3,3,.4],floor:.04}],["echo",{dt:.6,fb:.6,mix:.5}]]},
-{t:"Let it be",k:"i",d:"Nearly dry sound, dark spectral tilt — non-intervention as method.",h:"Let sound be itself — his aesthetic of non-intervention.",fx:[["dry",{g:.35}],["filt",{type:"highshelf",f0:2000,f1:2000,gain:-8}]]}]},
-{n:"Lukas Foss",y:"1922–2009",fam:"cn",ps:[
-{t:"Baroque Variations: erasure",k:"d",d:"Progressive subtraction of the stream's own peaks — down to a ghost.",h:"«Baroque Variations» (1967): Bach, Handel, Scarlatti erased to semi-transparency.",fx:[["notch",{q0:2,q1:30,dry0:.9,dry1:.15}]]},
-{t:"Phorion",k:"r",d:"Ghost collage: debris of the recognizable in alien fabric.",h:"«Phorion» — part of «Baroque Variations», Bach as mirage.",fx:[["tape",{op:"shuffle",n:24,return:1}],["res",{f:"peaks",q:20,g:.3}]]},
-{t:"Improvisation ensemble",k:"i",d:"Free cloud and gate — collective improvisation of 1957.",h:"Foss founded the Improvisation Chamber Ensemble (1957) — rare for an academic.",fx:[["cloud",{n:6,cents:20,g:.45}],["gate",{pat:[.6,.3,1.2],floor:.2}]]}]},
-{n:"Kenneth Gaburo",y:"1926–1993",fam:"vc",ps:[
-{t:"Linguistics of sound",k:"r",d:"Phoneme-grains of 30 ms and formants — speech as musical matter.",h:"Gaburo: musical language, compositional linguistics.",fx:[["grain",{mode:"seq",d:30,s:.03,g:.7}],["formant",{set:"voice",morph:"e",g:.5}]]},
-{t:"Lemon Drops",k:"r",d:"Bell-drops and echo — early electronics.",h:"«Lemon Drops» (1965) — his electronic miniature.",fx:[["osc",{type:"sine",f:880,g:.25,env:"bell",dec:1.5}],["echo",{dt:.18,fb:.5,mix:.5}],["dry",{g:.3}]]},
-{t:"Antiphony III",k:"r",d:"Voice and tape in space — antiphony of live and electronic.",h:"«Antiphony III (Pearl-white moments)» (1962): voice and tape.",fx:[["space",{n:4,rot:.06}],["dry",{g:.5}],["grain",{mode:"rand",d:12,s:.06,g:.4}]]}]},
-{n:"George Gershwin",y:"1898–1937",fam:"pt",ps:[
-{t:"Rhapsody: glissando",k:"r",d:"Ascending glissando oscillator and harmonization — the famous clarinet climb.",h:"«Rhapsody in Blue» (1924): clarinet glissando, improvised at rehearsal.",fx:[["osc",{type:"triangle",f:220,glide:4,g:.2,env:"drone"}],["harm",{r:[1,1.5,2],g:.45}]]},
-{t:"Blue notes",k:"r",d:"Minor third and minor seventh against major — blues coloring.",h:"His language: blues notes inside European harmony.",fx:[["harm",{r:[1,1.189,1.782],g:.5}],["dry",{g:.35}]]},
-{t:"Swing",k:"r",d:"Swing gate over almost-dry sound.",h:"Gershwin joined jazz rhythm to concert form.",fx:[["gate",{pat:[.33,.17,.33,.17],floor:.3}],["dry",{g:.5}]]}]},
-{n:"Robert Graettinger",y:"1923–1957",fam:"pt",ps:[
-{t:"City of Glass",k:"r",d:"Dissonant cloud and brass saturation — a city of glass and brass.",h:"«City of Glass» (1951) for the Stan Kenton orchestra: an atonal jazz monument.",fx:[["cloud",{n:10,cents:50,g:.45}],["shaper",{kind:"soft",k:6,g:.5}],["res",{f:[466,622,932],q:15,g:.4}]]},
-{t:"Atonal brass",k:"i",d:"Brass resonances and percussive stabs.",h:"Graettinger: radical atonalism inside a big band.",fx:[["res",{f:[415,554,830],q:18,g:.6}],["gate",{pat:[.1,.7,.1,1.1],floor:.05}]]},
-{t:"This Modern World",k:"i",d:"Tempo strata — anxious density.",h:"«This Modern World» (1953) — his second suite for Kenton.",fx:[["canon",{r:[1,1.12,.9],gran:1,g:.55,spread:.7}]]}]},
-{n:"Alois Hába",y:"1893–1973",fam:"pt",ps:[
-{t:"Quarter tones",k:"d",d:"Harmonization in quarter-tone ratios 2^(1/24), 2^(3/24), 2^(5/24).",h:"Hába: quarter-tone system, Prague 1920s, special instruments.",fx:[["harm",{r:[1.0293,1.0905,1.1548],g:.55}],["dry",{g:.3}]]},
-{t:"24-EDO grid",k:"r",d:"Resonators on a quarter-tone grid — a new harmonic landscape.",h:"His theory: 24 steps per octave, sixth-tone harmony.",fx:[["res",{f:[262,269,277,285,294,302],q:35,g:.6}]]},
-{t:"Matka",k:"i",d:"Grains and a quarter-tone layer — an opera in microtones.",h:"Quarter-tone opera «Matka» (1931).",fx:[["grain",{mode:"scan",d:18,s:.08,g:.5}],["harm",{r:[1.0293,1.0905],g:.4}]]}]},
-{n:"Lou Harrison",y:"1917–2003",fam:"pt",ps:[
-{t:"Gamelan",k:"r",d:"Metallic resonances in an approximation of slendro — a gamelan from the stream.",h:"Harrison built an American gamelan with William Colvig.",fx:[["res",{f:[300,345,405,450,510],q:50,g:.7}],["gate",{pat:[.4,.4,.8],floor:.1}]]},
-{t:"Just intonation",k:"d",d:"Harmonization in just ratios 9/8, 5/4, 3/2, 5/3.",h:"Just intonation — his harmonic faith.",fx:[["harm",{r:[1,1.125,1.25,1.5,1.667],g:.5}],["dry",{g:.3}]]},
-{t:"Prepared piano",k:"r",d:"Inharmonic resonators — legacy of working with Cage.",h:"Harrison and Cage: prepared piano, 1940s.",fx:[["res",{f:[200,283,420,740],q:40,g:.7}]]}]},
-{n:"Josef Matthias Hauer",y:"1883–1959",fam:"pt",ps:[
-{t:"44 tropes",k:"r",d:"Deterministic permutation of 44 fragments — his trope system.",h:"Hauer: 44 tropes of 12 tones, a system earlier than Schoenberg (1919).",fx:[["tape",{op:"shuffle",n:44,seed:44}]]},
-{t:"12-tone grid",k:"r",d:"Resonators on an equal 12-tone grid.",h:"His Zwölftonmusik: law and play.",fx:[["res",{f:[262,277,294,311,330,349,370,392,415,440,466,494],q:40,g:.55}]]},
-{t:"Zwölftonspiel",k:"i",d:"Gate and row harmonization — playing by the law.",h:"Zwölftonspiele — his meditative 12-tone games.",fx:[["gate",{pat:[.5,.5,.5,1.5],floor:.2}],["harm",{r:[1,1.414],g:.35}]]}]},
-{n:"Jimi Hendrix",y:"1942–1970",fam:"vc",ps:[
-{t:"Fuzz + feedback",k:"r",d:"Asymmetric fuzz and self-exciting resonant peak.",h:"Fuzz Face and controlled feedback — his voice (1967–70).",fx:[["shaper",{kind:"fuzz",k:18,g:.6}],["res",{f:[1600],q:90,g:.5,ramp:1}]]},
-{t:"Univibe",k:"r",d:"Slow tremolo and panorama — four-stage phase vortex.",h:"Uni-Vibe (1968): «Machine Gun», Woodstock.",fx:[["trem",{f:1.8,depth:.6}],["pan",{f:.9,depth:.7}]]},
-{t:"Backwards guitar",k:"r",d:"Reverse tape and echo — a flipped solo.",h:"«Are You Experienced?» (1967): backward guitar solos.",fx:[["tape",{op:"reverse"}],["echo",{dt:.3,fb:.45,mix:.45}]]}]},
-{n:"Pierre Henry",y:"1927–2017",fam:"sp",ps:[
-{t:"Voile d'Orphée",k:"r",d:"Tearing grains and a filter sweep — Orpheus's veil tears.",h:"«Le Voile d'Orphée» (1953): Henry's first concrete drama.",fx:[["grain",{mode:"rand",d:26,s:.04,g:.7}],["filt",{type:"bandpass",f0:200,f1:3200,q:2}]]},
-{t:"Porte et soupir",k:"d",d:"Creak-stutters and breathing pauses — the door and the sigh.",h:"«Variations pour une porte et un soupir» (1963): a door hinge as soloist.",fx:[["tape",{op:"stutter",a:.3,b:.1}],["gate",{pat:[.8,1.2,.4,1.6],floor:.05}]]},
-{t:"Montage of causes",k:"r",d:"Collage of concrete debris — the source of the sound is hidden.",h:"Musique concrète: Schaeffer and Henry, Rue de l'Université studio.",fx:[["tape",{op:"shuffle",n:30}],["dry",{g:.25}]]}]},
-{n:"Hans Werner Henze",y:"1926–2012",fam:"vc",ps:[
-{t:"El Cimarrón",k:"r",d:"Dry storytelling voice and guitar gate — a fugitive slave's narrative.",h:"«El Cimarrón» (1970): recital for four performers, Montejo's story.",fx:[["dry",{g:.65}],["gate",{pat:[.2,.4,.2,.8],floor:.2}]]},
-{t:"Political gesture",k:"i",d:"Saturation and clicks — music as a position.",h:"Henze: a communist who moved to Italy; art as politics.",fx:[["shaper",{kind:"soft",k:6,g:.5}],["clicks",{n:4,t0:.4,t1:.7,f:1400,g:.3}]]},
-{t:"Night music",k:"i",d:"Dynamic waves and soft layers — late Henze's lyricism.",h:"His late scores: a politician turned lyricist.",fx:[["dyn",{curve:"swell"}],["harm",{r:[1,1.5],g:.35}]]}]},
-{n:"Mike Heron",y:"b. 1942",fam:"vc",ps:[
-{t:"A Very Cellular Song",k:"r",d:"Octave chant and a dry layer — a psychedelic folk hymn.",h:"Incredible String Band, «The Hangman's Beautiful Daughter» (1968).",fx:[["harm",{r:[.5,1,2],g:.5}],["dry",{g:.4}]]},
-{t:"Psychedelic folk",k:"i",d:"Slow phase and modal resonances.",h:"ISB: folk passed through psychedelia and ethnicity.",fx:[["phase",{drift:.006,spread:.6,g:.6}],["res",{f:[294,330,392,440],q:15,g:.4}]]},
-{t:"Log Cabin Home in the Sky",k:"i",d:"Choral cloud — polyphony of one voice.",h:"His multi-layered vocal arrangements in ISB.",fx:[["cloud",{n:8,cents:15,g:.5}]]}]},
-{n:"Lejaren Hiller",y:"1924–1994",fam:"ch",ps:[
-{t:"Illiac Suite",k:"d",d:"Stochastic permutation of fragments — the first computer score.",h:"«Illiac Suite» (1957), Hiller and Isaacson: ILLIAC I composes a string quartet.",fx:[["tape",{op:"shuffle",n:32,seed:1957}]]},
-{t:"Markov transitions",k:"r",d:"Grains run sequentially but with probabilistic jumps.",h:"Markov chains — his method of generating musical text.",fx:[["grain",{mode:"seq",d:22,s:.08,jump:.3,g:.7}]]},
-{t:"HPSCHD",k:"r",d:"Seven clouds and clicks — computer anarchy with Cage.",h:"«HPSCHD» (1969), Hiller and Cage: 7 harpsichords, 51 tapes, a mainframe.",fx:[["cloud",{n:7,cents:30,g:.4}],["clicks",{n:6,t0:.3,t1:.9,f:1700,g:.3}]]}]},
-{n:"Tim Hodgkinson",y:"b. 1949",fam:"tm",ps:[
-{t:"Henry Cow: angular riffs",k:"r",d:"Collage of angular debris and a gate — rock as chamber avant-garde.",h:"Henry Cow (1968–78): rock in opposition, compositional complexity.",fx:[["tape",{op:"shuffle",n:16}],["gate",{pat:[.2,.2,.3,.2,.5],floor:.15}]]},
-{t:"Polymeter 5 and 7",k:"i",d:"Gate 5+7 against clicks — two meters at once.",h:"His scores: polymeter as political form.",fx:[["gate",{pat:[.25,.25,.25,.25,.25,.35,.35],floor:.2}],["clicks",{n:2,t0:.5,t1:.5,f:900,g:.25}]]},
-{t:"Living in the Heart of the Beast",k:"i",d:"Reverse tape and saturation — fury of form.",h:"«In Praise of Learning» (1975): a 15-minute composition by Hodgkinson.",fx:[["tape",{op:"reverse"}],["shaper",{kind:"fuzz",k:9,g:.5}]]}]},
-{n:"Jerry Hunt",y:"1943–1993",fam:"ch",ps:[
-{t:"Haramand Plane",k:"r",d:"Irregular fast clicks and grains — ritual streaming.",h:"«Haramand Plane» (1970s): ritual performances with electronics.",fx:[["clicks",{n:8,t0:.08,t1:.5,f:2000,g:.4}],["grain",{mode:"rand",d:20,s:.03,g:.4}]]},
-{t:"Streaming",k:"r",d:"Dense jitter-granulate at 40 grains per second — formless stream.",h:"His streaming — music as continuous ritual flow.",fx:[["grain",{mode:"rand",d:40,s:.025,jit:.5,g:.7}]]},
-{t:"Breath of ritual",k:"i",d:"Near silence and tremolo — the performer's body in the sound.",h:"Hunt: Texan shaman of electronics, video, and gesture.",fx:[["silence",{g:.1}],["trem",{f:3,depth:.6}]]}]},
-{n:"Toshi Ichiyanagi",y:"1933–2022",fam:"qt",ps:[
-{t:"Sapporo",k:"r",d:"Long freeze and slow tremolo — sustained tones.",h:"«Sapporo» (1962): long tones with electronics.",fx:[["freeze",{s:.2,jit:.01,g:.7}],["trem",{f:.4,depth:.4}]]},
-{t:"Extended Voices",k:"r",d:"Formant choir and harmonic layers — extended voice.",h:"«Extended Voices» (1967): voices and electronics.",fx:[["formant",{set:"voice",morph:"u",g:.6}],["harm",{r:[1,2],g:.35}]]},
-{t:"Sustained tones",k:"i",d:"Drone oscillator and a quiet dry layer — time as material.",h:"His music: silence, duration, one sound.",fx:[["osc",{type:"sine",f:220,g:.2,env:"drone"}],["dry",{g:.3}]]}]},
-{n:"Charles Ives",y:"1874–1954",fam:"pt",ps:[
-{t:"Two chapels",k:"d",d:"Two layers in different tunings and tempos, hard-panned L/R — collision of marches.",h:"«Putnam's Camp» from «Three Places in New England»: two orchestras play different things at once.",fx:[["canon",{r:[1.03,.97],gran:0,g:.6,spread:1}],["harm",{r:[1,1.414],g:.35}]]},
-{t:"The Unanswered Question",k:"r",d:"Question-oscillator and cloud-answer — an eternal dialogue.",h:"«The Unanswered Question» (1908): trumpet asks, flutes do not answer.",fx:[["osc",{type:"triangle",f:440,g:.2,env:"bell",dec:2.5}],["cloud",{n:6,cents:25,g:.35}],["dry",{g:.3}]]},
-{t:"Central Park in the Dark",k:"i",d:"Nocturnal cloud and distant clicks — urban darkness.",h:"«Central Park in the Dark» (1906): night sounds of New York.",fx:[["cloud",{n:8,cents:20,g:.4}],["clicks",{n:3,t0:.8,t1:1.5,f:800,g:.2}]]}]},
-{n:"Mauricio Kagel",y:"1931–2008",fam:"cn",ps:[
-{t:"Match: duel",k:"r",d:"Panoramic L/R duel and a gate — two cellists compete.",h:"«Match» (1964): two cellists and a percussionist-referee.",fx:[["pan",{f:.8,depth:1}],["gate",{pat:[.3,.3,.6],floor:.15}]]},
-{t:"Absurdist montage",k:"i",d:"Collage and clicks — theater of the absurd in sound.",h:"Kagel: instrumental theater, humor as method.",fx:[["tape",{op:"shuffle",n:20}],["clicks",{n:5,t0:.3,t1:.7,f:1900,g:.3}]]},
-{t:"Gesture theater",k:"i",d:"Formant replies and stutters — sound as stage action.",h:"His mute instruments are prescribed gestures, not notes.",fx:[["formant",{set:"voice",morph:"o",g:.6}],["tape",{op:"stutter",a:.25,b:.1,g:.4}]]}]},
-{n:"Franz Kamin",y:"1941–2010",fam:"cn",ps:[
-{t:"Topology of time",k:"r",d:"Continuous tempo deformation — time as a topological space.",h:"Kamin: structures from topology, prosody, and general systems theory.",fx:[["phase",{drift:.03,spread:.6,g:.8}]]},
-{t:"Prosody",k:"r",d:"Syllable-grains and speech gate — prosodic segmentation.",h:"His oneiric forms: fictional languages and conceptual mythologies.",fx:[["grain",{mode:"seq",d:24,s:.05,g:.6}],["gate",{pat:[.3,.2,.5,.2,.4],floor:.15}]]},
-{t:"Echo to a friend",k:"i",d:"660 Hz bell and long echo — a motif connected to block 015 Brody.",h:"Kamin and Brody died together on April 11, 2010.",fx:[["osc",{type:"sine",f:660,g:.3,env:"bell",dec:4}],["echo",{dt:.5,fb:.6,mix:.6}],["dry",{g:.25}]]}]},
-{n:"William Kraft",y:"1923–2022",fam:"tm",ps:[
-{t:"Encounters",k:"r",d:"Percussive clicks in space — a meeting of percussion.",h:"«Encounters» (1970s): Kraft's percussion theater.",fx:[["clicks",{n:6,t0:.2,t1:.8,f:1200,g:.45}],["space",{n:4,rot:.1}]]},
-{t:"Percussion theater",k:"i",d:"Stream transients and panorama — attacks as characters.",h:"Kraft: percussionist of the Los Angeles Philharmonic, percussionist-composer.",fx:[["tape",{op:"transient",n:24,floor:.06}],["pan",{f:.7,depth:.8}]]},
-{t:"Rhythm mass",k:"i",d:"Dense gate and a cloud — rhythmic mass.",h:"His percussion ensembles: rhythm as architecture.",fx:[["gate",{pat:[.15,.15,.3,.15,.45],floor:.1}],["cloud",{n:6,cents:20,g:.35}]]}]},
-{n:"Johannes Kreidler",y:"b. 1980",fam:"cn",ps:[
-{t:"Fremdarbeit: outsourcing",k:"d",d:"Demonstratively cheap processing: 5-bit and decimation — labor outsourced.",h:"«Fremdarbeit» (2009): composition commissioned from a Chinese composer and an Indian programmer.",fx:[["tape",{op:"crush",bits:5,hold:8}],["dry",{g:.15}]]},
-{t:"Product placements",k:"r",d:"15 ms microsamples, 40 per second — tens of thousands of other people's sounds as a gesture.",h:"«product placements» (2008): 70,261 microsamples of other people's music.",fx:[["grain",{mode:"rand",d:40,s:.015,g:.75}]]},
-{t:"Charts Music",k:"r",d:"Oscillator pitch follows the stream's loudness — curve sonification.",h:"«Charts Music» (2009): stock charts sung through Auto-Tune.",fx:[["osc",{type:"sine",f:"rms",g:.25,env:"drone"}],["dry",{g:.3}]]}]},
-{n:"Helmut Lachenmann",y:"b. 1935",fam:"sp",ps:[
-{t:"Musique concrète instrumentale",k:"d",d:"Tonal is suppressed, attacks, rustles, breath of the stream remain.",h:"«Pression» (1969): sound equals the way it is produced, bow noise matters more than the note.",fx:[["tape",{op:"transient",n:30,floor:.04}],["filt",{type:"highpass",f0:1200,f1:1200}]]},
-{t:"Rustles",k:"r",d:"High grains and a highpass — the noise matter of the instrument.",h:"His instrumental concrete music: the body of the instrument as source.",fx:[["grain",{mode:"rand",d:28,s:.03,g:.6}],["filt",{type:"highpass",f0:2000,f1:2000}]]},
-{t:"Gran Torso",k:"r",d:"Transients and bow resonances — string quartet as noise theater.",h:"«Gran Torso» (1972): quartet No. 1, radical noise writing.",fx:[["tape",{op:"transient",n:20,floor:.05}],["res",{f:[1800,2700,3900],q:30,g:.4}]]}]},
-{n:"John Lennon",y:"1940–1980",fam:"ch",ps:[
-{t:"Revolution 9",k:"d",d:"Collage of loops and reverse — sonic chaos as composition.",h:"«Revolution 9» (1968): eight minutes of tape loops, «number nine».",fx:[["tape",{op:"shuffle",n:40}],["tape",{op:"reverse",g:.4}]]},
-{t:"Number nine",k:"r",d:"One loop repeats with panoramic drift — an obsessive phrase.",h:"The «number nine» voice from a Royal Schools of Music test record.",fx:[["tape",{op:"loop",n:16}],["pan",{f:.4,depth:.8}]]},
-{t:"Tomorrow Never Knows",k:"r",d:"Echo, phase, and resonances — the Revolver tape loops.",h:"«Tomorrow Never Knows» (1966): five tape loops spinning in the studio.",fx:[["echo",{dt:.28,fb:.55,mix:.5}],["phase",{drift:.008,spread:.7,g:.5}],["res",{f:[440,660],q:20,g:.3}]]}]},
-{n:"György Ligeti",y:"1923–2006",fam:"sp",ps:[
-{t:"Micropolyphony",k:"d",d:"48 copies detuned ±15 cents — a dense shimmering cloud.",h:"«Atmosphères» (1961): 87 voices, not one distinguishable line.",fx:[["cloud",{n:48,cents:15,delay:.04,g:.7}]]},
-{t:"Poème symphonique",k:"d",d:"24 metronomes in different tempos winding down one by one (out of 100 original).",h:"«Poème symphonique» (1962): 100 metronomes wound up and left to themselves.",fx:[["clicks",{n:24,t0:.25,t1:1.4,f:1600,g:.5,decay:1}]]},
-{t:"Lux Aeterna",k:"r",d:"16 slow voices and resonances — the light of eternity.",h:"«Lux Aeterna» (1966): 16 voices, canon without rhythm.",fx:[["cloud",{n:16,cents:10,g:.55}],["res",{f:"peaks",q:40,g:.3,ramp:1}]]}]},
-{n:"Annea Lockwood",y:"b. 1939",fam:"sc",ps:[
-{t:"World Rhythms",k:"r",d:"Quiet dry layer and gong-clicks — rivers and a gong.",h:"«World Rhythms» (1975): 10-channel tape, gong and river sounds.",fx:[["dry",{g:.45}],["clicks",{n:2,t0:1.5,t1:2.5,f:300,g:.4}],["osc",{type:"sine",f:98,g:.15,env:"bell",dec:5}]]},
-{t:"Danube",k:"r",d:"Water filter and stream-grains — a sound map of a river.",h:"«A Sound Map of the Danube» (2005): 86 places along the river.",fx:[["filt",{type:"bandpass",f0:300,f1:1800,q:2}],["grain",{mode:"seq",d:18,s:.06,g:.5}]]},
-{t:"Sound geography",k:"i",d:"Slow diffusion — the place sounds itself.",h:"Lockwood: listening as ecology, sound as place.",fx:[["space",{n:4,spread:.8,rot:.03}],["dry",{g:.5}]]}]},
-{n:"Alvin Lucier",y:"1931–2021",fam:"sp",ps:[
-{t:"I Am Sitting in a Room",k:"d",d:"Resonators on the stream's reference frequencies are excited one by one — the room amplifies itself.",h:"«I Am Sitting in a Room» (1969): room re-recorded over itself, resonances defeat speech.",fx:[["res",{f:"peaks",q:120,g:.85,ramp:1}],["dyn",{curve:"fade",to:.3}]]},
-{t:"Vespers",k:"d",d:"Echolocation clicks and echo — sound feels its way through space.",h:"«Vespers» (1961): performers with sondols orient by echo like bats.",fx:[["clicks",{n:3,t0:.5,t1:.9,f:2400,g:.5}],["echo",{dt:.12,fb:.5,mix:.6}],["dry",{g:.2}]]},
-{t:"Music on a Long Thin Wire",k:"r",d:"Drone and slow tremolo — the wire sings itself.",h:"«Music on a Long Thin Wire» (1977): an electromagnet excites a 20-meter wire.",fx:[["osc",{type:"sine",f:220,g:.25,env:"drone"}],["trem",{f:.3,depth:.5}],["dry",{g:.3}]]}]},
-{n:"Ivo Malec",y:"1925–2019",fam:"tm",ps:[
-{t:"Triola",k:"r",d:"Tape speed fluctuates — GRM time jumps.",h:"«Triola» (1978): tape and orchestra, playing with time.",fx:[["phase",{drift:.02,spread:.7,g:.7}],["filt",{type:"lowpass",f0:2500,f1:1200}]]},
-{t:"Zeitsprünge",k:"i",d:"Granular morph with sharp tempo jumps.",h:"His music: montage of time, jumps between states.",fx:[["grain",{mode:"scan",d:26,s:.06,g:.7}],["grain",{mode:"rand",d:10,s:.1,g:.4}]]},
-{t:"Spectral theater",k:"i",d:"Grains and formants — sound as a stage.",h:"Malec: Croatian-French master of musique concrète.",fx:[["grain",{mode:"scan",d:20,s:.08,g:.6}],["formant",{set:"voice",morph:"a",g:.4}]]}]},
-{n:"Toshiro Mayuzumi",y:"1929–1997",fam:"sp",ps:[
-{t:"Nirvana Symphony",k:"r",d:"Bon-shō bell resonances 1 : 2.4 : 4.1 : 6.8 — Buddhist tolling.",h:"«Nirvana Symphony» (1958): bon-shō bells as harmonic model.",fx:[["res",{f:[98,235,402,666],q:60,g:.8}],["dyn",{curve:"swell"}]]},
-{t:"Mandala",k:"r",d:"Freeze and drone — a sound mandala.",h:"«Mandala Symphony» (1960): Buddhist cosmology in sound.",fx:[["freeze",{s:.18,jit:.02,g:.6}],["osc",{type:"sine",f:110,g:.15,env:"drone"}]]},
-{t:"Bon-shō",k:"i",d:"A bell with long decay and echo — the strike and its shadow.",h:"Bon-shō: a Japanese temple bell that sounds for minutes.",fx:[["osc",{type:"sine",f:98,g:.35,env:"bell",dec:6}],["echo",{dt:.7,fb:.6,mix:.6}],["dry",{g:.2}]]}]},
-{n:"Olivier Messiaen",y:"1908–1992",fam:"pt",ps:[
-{t:"Mode 2: octatonic",k:"d",d:"Resonators and harmonization on the octatonic grid — a mode of limited transposition.",h:"«Technique de mon langage musical» (1944): seven modes of limited transposition.",fx:[["res",{f:[262,294,311,349,392,415,466,494],q:35,g:.6}],["harm",{r:[1,1.189,1.414],g:.35}]]},
-{t:"Non-retrogradable rhythms",k:"d",d:"Palindromic gate 3-5-7-5-3 — a rhythm readable in both directions.",h:"His non-retrogradable rhythms: palindromes as a theological symbol.",fx:[["gate",{pat:[.3,.5,.7,.5,.3,1],floor:.08}]]},
-{t:"Birds",k:"r",d:"Chirp-grains and high transposition — a bird catalog.",h:"«Catalogue d'oiseaux» (1958): 13 pieces, 77 bird species.",fx:[["grain",{mode:"rand",d:30,s:.02,g:.6}],["harm",{r:[3,4],g:.35}]]}]},
-{n:"Darius Milhaud",y:"1892–1974",fam:"pt",ps:[
-{t:"Polytonality",k:"d",d:"Two harmonic layers in a tritone relation — two keys at once.",h:"«Le Bœuf sur le toit» (1919), «Saudades do Brasil»: polytonality as a signature.",fx:[["harm",{r:[1,1.414],g:.55}],["dry",{g:.3}]]},
-{t:"Saudades do Brasil",k:"r",d:"Samba gate and harmonization — Brazilian memory.",h:"«Saudades do Brasil» (1920): 12 dances written after Brazil.",fx:[["gate",{pat:[.2,.2,.4,.2,.2,.4],floor:.2}],["harm",{r:[1,1.5],g:.4}]]},
-{t:"Tenderness",k:"i",d:"Dry sound and soft layers — a lyricist inside Les Six.",h:"Milhaud: lyricism and polyphony of keys, La Six.",fx:[["dry",{g:.6}],["harm",{r:[1,1.25],g:.3}]]}]},
-{n:"Minoru Miki",y:"1930–2011",fam:"tm",ps:[
-{t:"Marimba Spiritual",k:"r",d:"Wooden resonances and an accelerating gate — a marimba ritual.",h:"«Marimba Spiritual» (1984): marimba and percussion, a prayer for repose.",fx:[["res",{f:[220,660,1100],q:25,g:.6}],["gate",{pat:[.4,.4,.3,.3,.2,.2,.15,.15],floor:.1}]]},
-{t:"Ritual ostinato",k:"i",d:"Repeating gate and clicks — a growing ritual.",h:"His percussion pieces: ostinato as incantation.",fx:[["gate",{pat:[.25,.25,.5],floor:.1}],["clicks",{n:3,t0:.25,t1:.5,f:800,g:.35}]]},
-{t:"Wood and skin",k:"i",d:"Wooden resonances and transients — the instrument's material.",h:"Miki revived Japanese instruments in contemporary music.",fx:[["res",{f:[180,576,990],q:20,g:.55}],["tape",{op:"transient",n:16,floor:.08,g:.4}]]}]},
-{n:"Ilhan Mimaroglu",y:"1926–2012",fam:"sp",ps:[
-{t:"Songmy",k:"r",d:"Hard saturation and collage — political electronics.",h:"«Sing Me a Song of Songmy» (1971) with Freddie Hubbard: protest on tape.",fx:[["shaper",{kind:"fuzz",k:14,g:.55}],["tape",{op:"shuffle",n:24,g:.5}]]},
-{t:"Aggressive montage",k:"r",d:"Sharp splices and speed jumps — tape as a weapon.",h:"His montage: violence of form as a political statement.",fx:[["tape",{op:"shuffle",n:60}],["tape",{op:"speed",r:1.6,g:.4}]]},
-{t:"Political tape",k:"i",d:"Ring modulation and echo — a voice distorted by the system.",h:"Mimaroglu: Turkish-American pioneer of electronic music.",fx:[["ring",{f:660,depth:.7}],["echo",{dt:.2,fb:.5,mix:.5}]]}]},
-{n:"Charles Mingus",y:"1922–1979",fam:"vc",ps:[
-{t:"Pithecanthropus Erectus",k:"r",d:"Free canon and dynamic waves — collective improvisation.",h:"«Pithecanthropus Erectus» (1956): a suite of the rise and fall of man.",fx:[["canon",{r:[1,1.05,.95],gran:0,g:.55,spread:.7}],["dyn",{curve:"swell"}]]},
-{t:"The Clown",k:"i",d:"Swing gate and formant storytelling — jazz as theater.",h:"«The Clown» (1957): narrator and orchestra, tragicomedy.",fx:[["gate",{pat:[.33,.17,.33,.17],floor:.25}],["formant",{set:"voice",morph:"o",g:.5}]]},
-{t:"Double bass growl",k:"i",d:"Low resonances and tremolo — a growling bass.",h:"His bass: from tenderness to fury, always on the cutting edge.",fx:[["res",{f:[82,123,164],q:15,g:.6}],["trem",{f:7,depth:.4}]]}]},
-{n:"Joni Mitchell",y:"b. 1943",fam:"pt",ps:[
-{t:"Open tunings",k:"r",d:"Resonators of the open C-G-C-G-E chord — guitar in her tuning.",h:"Mitchell used about 50 open tunings; «Big Yellow Taxi» is open E.",fx:[["res",{f:[131,196,262,392,330],q:25,g:.65}],["dry",{g:.3}]]},
-{t:"Blue: vocal layers",k:"r",d:"Harmonic layers over the dry voice — her polyphony.",h:"«Blue» (1971): she overdubbed all the vocal parts herself.",fx:[["harm",{r:[1,1.5,2],g:.45}],["dry",{g:.5}]]},
-{t:"Dulcimer",k:"i",d:"String resonances and gate — Appalachian dulcimer.",h:"«All I Want» (Blue): a dulcimer bought in Arkansas.",fx:[["res",{f:[294,440,587,880],q:30,g:.6}],["gate",{pat:[.2,.2,.4],floor:.2}]]}]},
-{n:"Conlon Nancarrow",y:"1912–1997",fam:"tm",ps:[
-{t:"Tempo canon 17:18:19",k:"d",d:"Three granular voices in tempos 17:18:19 — pitch unchanged, only speed.",h:"Studies for player piano: tempo canons, impossible for hands.",fx:[["canon",{r:[1,1.0588,1.1176],gran:1,g:.65,spread:.9}]]},
-{t:"e : π",k:"d",d:"Two voices in the irrational ratio e/π ≈ 0.865 — a canon that never converges.",h:"Study No. 40: canon in the ratio e:π.",fx:[["canon",{r:[1,.8653],gran:1,g:.6,spread:.8}]]},
-{t:"Player piano roll",k:"r",d:"Perforated gate and clicks — a mechanical roll.",h:"Nancarrow punched rolls by hand in Mexico City, for decades.",fx:[["gate",{pat:[.1,.1,.2,.1,.1,.3],floor:.05}],["clicks",{n:4,t0:.1,t1:.3,f:2000,g:.3}]]}]},
-{n:"Luigi Nono",y:"1924–1990",fam:"qt",ps:[
-{t:"…sofferte onde serene…",k:"d",d:"Near silence and long echo — calm waves of memory.",h:"«…sofferte onde serene…» (1976): piano and tape, bells of Venice.",fx:[["dry",{g:.15}],["echo",{dt:.8,fb:.65,mix:.6}],["res",{f:"peaks",q:50,g:.2,ramp:1}]]},
-{t:"Silence of resistance",k:"r",d:"Rare events in near silence — silence as politics.",h:"Nono: a communist, silence as a form of resistance.",fx:[["silence",{g:.07}],["gate",{pat:[3,.4,4,.3],floor:.02}]]},
-{t:"La fabbrica illuminata",k:"r",d:"Factory transients and filter — the illuminated factory.",h:"«La fabbrica illuminata» (1964): workers' voices and factory noise.",fx:[["tape",{op:"transient",n:24,floor:.06}],["filt",{type:"bandpass",f0:400,f1:1600,q:1}]]}]},
-{n:"Maurice Ohana",y:"1913–1992",fam:"pt",ps:[
-{t:"Microtones",k:"r",d:"Quarter-tone layers and a formant melisma — the Andalusian root.",h:"Ohana: microtonality, Lorca, African rhythms.",fx:[["harm",{r:[1.0293,1.0905],g:.5}],["formant",{set:"voice",morph:"a",g:.4}]]},
-{t:"Lorca",k:"i",d:"Dark gate and resonances — lament for Lorca.",h:"«Llanto por Ignacio Sánchez Mejías» (1950) — his requiem for Lorca.",fx:[["gate",{pat:[.8,.4,1.2],floor:.1}],["res",{f:[147,220,294],q:20,g:.5}]]},
-{t:"African roots",k:"i",d:"Polyrhythmic clicks and gate.",h:"Ohana was born in Casablanca; Africa is his rhythmic homeland.",fx:[["clicks",{n:4,t0:.2,t1:.6,f:900,g:.35}],["gate",{pat:[.3,.3,.2],floor:.2}]]}]},
-{n:"Bernard Parmegiani",y:"1927–2013",fam:"sp",ps:[
-{t:"De Natura Sonorum",k:"d",d:"Dialectic of dry and granular — the natural against the formed.",h:"«De Natura Sonorum» (1975): 12 studies on the nature of sound.",fx:[["xf",{a:[["dry",{g:.8}]],b:[["grain",{mode:"rand",d:24,s:.05,g:.8}]]}]]},
-{t:"Violostries",k:"r",d:"Dry instrument and a ring shadow — violin and tape.",h:"«Violostries» (1964): violin and tape in dialogue.",fx:[["dry",{g:.55}],["ring",{f:440,depth:.5,g:.45}]]},
-{t:"Matter / form",k:"r",d:"Freeze morphs into granulation — matter takes form.",h:"GRM: sound as matter, montage as form.",fx:[["xf",{a:[["freeze",{s:.14,jit:.02,g:.7}]],b:[["grain",{mode:"scan",d:22,s:.07,g:.7}]]}]]}]},
-{n:"Harry Partch",y:"1901–1974",fam:"pt",ps:[
-{t:"43 steps",k:"d",d:"Harmonization in just ratios of his 43-step tuning.",h:"«Genesis of a Music» (1949): 43 tones per octave, own instruments.",fx:[["harm",{r:[1,1.0667,1.125,1.1667,1.25,1.333],g:.55}],["dry",{g:.25}]]},
-{t:"Cloud chambers",k:"r",d:"Glass resonances — his cloud chambers made of glass.",h:"Cloud-Chamber Bowls: glass jars tuned by him.",fx:[["res",{f:[523,1412,2667],q:70,g:.7}],["dyn",{curve:"swell"}]]},
-{t:"Bitter Music",k:"r",d:"Dry voice and speech gate — music of speech.",h:"«Bitter Music» (1930s): a hobo's diary, speech as melody.",fx:[["dry",{g:.6}],["gate",{pat:[.3,.2,.5,.2,.4],floor:.15}]]}]},
-{n:"Krzysztof Penderecki",y:"1933–2020",fam:"sp",ps:[
-{t:"Threnody: 52 strings",k:"d",d:"52 micro-copies with diverging glissandi from the spectral center.",h:"«Threnody to the Victims of Hiroshima» (1960): 52 strings, clusters and extended techniques.",fx:[["cloud",{n:52,cents:30,gliss:200,g:.7}]]},
-{t:"Cluster mass",k:"r",d:"Wide semitone cluster and saturation — a sound mass.",h:"His sonorism of the 1960s: sound as mass, not line.",fx:[["cloud",{n:24,cents:600,g:.55}],["shaper",{kind:"soft",k:5,g:.4}]]},
-{t:"Polymorphia",k:"r",d:"The cloud converges back — glissando toward the center.",h:"«Polymorphia» (1961): 48 strings, brain EEG became the score.",fx:[["cloud",{n:24,cents:300,gliss:-150,g:.6}]]}]},
-{n:"Steve Reich",y:"b. 1936",fam:"tm",ps:[
-{t:"Come Out: phase shift",k:"d",d:"A delayed copy of the stream runs ahead — 1% per second divergence.",h:"«Come Out» (1966): Harlem Six voice, two tapes drift out of phase.",fx:[["phase",{drift:.01,spread:.7,g:.75}]]},
-{t:"It's Gonna Rain",k:"d",d:"Faster phase drift and echo — process as music.",h:"«It's Gonna Rain» (1965): Brother Walter's sermon, phase canon.",fx:[["phase",{drift:.02,spread:.8,g:.7}],["echo",{dt:.25,fb:.4,mix:.35}]]},
-{t:"Pendulum Music",k:"r",d:"Feedback sweep and panorama — swinging microphones.",h:"«Pendulum Music» (1968): microphones swing over speakers, feedback whistle.",fx:[["res",{f:[1200],q:90,g:.5,ramp:1}],["pan",{f:.25,depth:1}],["osc",{type:"sine",f:1200,glide:1.8,g:.1,env:"drone"}]]}]},
-{n:"Silvestre Revueltas",y:"1899–1940",fam:"pt",ps:[
-{t:"Sensemayá",k:"r",d:"Ritual seven-beat ostinato gate and dark resonances — a snake incantation.",h:"«Sensemayá» (1938): a song to kill a snake, on a poem by Nicolás Guillén.",fx:[["gate",{pat:[.21,.21,.21,.21,.21,.21,.42],floor:.1}],["res",{f:[110,147,220],q:20,g:.5}]]},
-{t:"Snake chant",k:"i",d:"Minor-second harmonization and tremolo — a hypnotic chant.",h:"His melodics: Mexican archaism and modernism.",fx:[["harm",{r:[1,1.059],g:.5}],["trem",{f:5,depth:.4}]]},
-{t:"Ritual acceleration",k:"i",d:"Gate accelerates, clicks grow — ritual to frenzy.",h:"Revueltas: rhythm as collective trance.",fx:[["gate",{pat:[.5,.5,.4,.4,.3,.3,.2,.2],floor:.1}],["clicks",{n:3,t0:.3,t1:.6,f:700,g:.3}]]}]},
-{n:"Roger Reynolds",y:"b. 1934",fam:"sp",ps:[
-{t:"The Angel of Death",k:"r",d:"Morphing between domains and incidences — memory of a motif.",h:"«The Angel of Death» (2001): studied by IRCAM psychoacousticians and McAdams.",fx:[["xf",{a:[["dry",{g:.7}]],b:[["grain",{mode:"rand",d:20,s:.06,g:.7}]]}],["xf",{a:[["grain",{mode:"rand",d:20,s:.06,g:.5}]],b:[["dry",{g:.7}]],per:5}]]},
-{t:"Whispers Out of Time",k:"r",d:"Whisper-grains and echo — whispers outside time.",h:"«Whispers Out of Time» (1988), Pulitzer: strings and memory.",fx:[["grain",{mode:"rand",d:30,s:.025,g:.6}],["echo",{dt:.45,fb:.55,mix:.5}]]},
-{t:"Memory of a motif",k:"i",d:"Collage with returns — the motif is recognized through distortion.",h:"His studies of musical memory: recognition through transformations.",fx:[["tape",{op:"shuffle",n:18,return:1}],["dry",{g:.3}]]}]},
-{n:"Amadeo Roldán",y:"1900–1939",fam:"tm",ps:[
-{t:"Rítmicas V/VI",k:"d",d:"Stream transients and wooden clicks — pure percussion without pitch.",h:"«Rítmicas» V and VI (1930) — percussion only, earlier than Varèse's «Ionisation».",fx:[["tape",{op:"transient",n:24,floor:.05}],["clicks",{n:4,t0:.2,t1:.5,f:800,g:.4}]]},
-{t:"Afro-Cuban clave",k:"r",d:"Clave gate 3-2 — the key to Afro-Cuban rhythm.",h:"Roldán: Afro-Cuban rhythms in Cuban academic music.",fx:[["gate",{pat:[.3,.3,.4,.3,.3],floor:.1}]]},
-{t:"Percussion without pitch",k:"i",d:"Wooden and metallic resonances with gate.",h:"His percussion ensembles: rhythm and timbre instead of melody.",fx:[["res",{f:[200,520,1300,2600],q:20,g:.6}],["gate",{pat:[.25,.25,.5],floor:.1}]]}]},
-{n:"Frederic Rzewski",y:"1938–2021",fam:"tm",ps:[
-{t:"Coming Together",k:"d",d:"Additive accumulation of fragments: a, a+b, a+b+c… — the process of freedom.",h:"«Coming Together» (1971): an Attica prisoner's text, additive process.",fx:[["tape",{op:"additive",k:6}],["dyn",{curve:"swell"}]]},
-{t:"The People United",k:"r",d:"Loop-variations: the motif repeats with changes — 36 variations in miniature.",h:"«The People United Will Never Be Defeated!» (1975): 36 variations.",fx:[["tape",{op:"loop",n:10}],["harm",{r:[1,1.5],g:.3}]]},
-{t:"Attica",k:"i",d:"Dry voice and gate — speech as music.",h:"«Attica» (1972): political speech, sung and spoken.",fx:[["dry",{g:.65}],["gate",{pat:[.3,.2,.5,.2],floor:.15}]]}]},
-{n:"Erik Satie",y:"1866–1925",fam:"tm",ps:[
-{t:"Vexations: 840 repeats",k:"d",d:"840 micro-repeats of a motif in 10 s = 84 Hz: repetition becomes pitch.",h:"«Vexations» (1893): instruction to repeat 840 times. Greetings to Stockhausen's «…wie die Zeit vergeht…».",fx:[["tape",{op:"loop",n:840}]]},
-{t:"Musique d'ameublement",k:"d",d:"Quiet dry sound in a room echo — furniture music.",h:"«Musique d'ameublement» (1917): music not listened to.",fx:[["dry",{g:.25}],["echo",{dt:.35,fb:.5,mix:.5}],["filt",{type:"lowpass",f0:1800,f1:1800}]]},
-{t:"Relâche",k:"i",d:"Absurd loop and clicks — the entr'acte as a joke.",h:"«Relâche» (1924): a ballet with an entr'acte, cinema, and satire.",fx:[["tape",{op:"loop",n:6}],["clicks",{n:3,t0:.6,t1:1,f:1500,g:.3}]]}]},
-{n:"Giacinto Scelsi",y:"1905–1988",fam:"sp",ps:[
-{t:"One note",k:"d",d:"Resonator on the stream's reference frequency and ±2 cent beats — one note from inside.",h:"«Quattro pezzi su una nota sola» (1959): four pieces on one note.",fx:[["res",{f:"f0",q:150,g:.8}],["cloud",{n:4,cents:2,g:.4}]]},
-{t:"Inside the overtones",k:"r",d:"Resonators on overtones 1..5 slowly open.",h:"His method: sound as a living organism with an inner life.",fx:[["res",{f:"harm5",q:80,g:.7,ramp:1}],["dyn",{curve:"swell"}]]},
-{t:"Unfolding",k:"r",d:"Freeze and a dynamic wave — sound breathes.",h:"Scelsi: sound is not a point but a sphere.",fx:[["freeze",{s:.2,jit:.01,g:.6}],["dyn",{curve:"swell"}]]}]},
-{n:"Arnold Schoenberg",y:"1874–1951",fam:"pt",ps:[
-{t:"12-tone row",k:"d",d:"Resonators on the 12-tone grid and row permutation of fragments.",h:"The 12-tone method (1923): composition with 12 tones related only to each other.",fx:[["res",{f:[262,277,294,311,330,349,370,392,415,440,466,494],q:40,g:.5}],["tape",{op:"shuffle",n:12,seed:12,g:.5}]]},
-{t:"Sprechstimme",k:"r",d:"Sliding formant and grains — speech between singing and speaking.",h:"«Pierrot lunaire» (1912): Sprechstimme marked with crosses on the notes.",fx:[["formant",{set:"voice",morph:"i",g:.6}],["grain",{mode:"seq",d:20,s:.06,g:.5}]]},
-{t:"Emancipation of dissonance",k:"r",d:"Dissonant cloud and harmonization — dissonance without resolution.",h:"Emancipation of dissonance: dissonance no longer requires resolution.",fx:[["cloud",{n:8,cents:40,g:.45}],["harm",{r:[1,1.414,1.059],g:.4}]]}]},
-{n:"Erwin Schulhoff",y:"1894–1942",fam:"qt",ps:[
-{t:"In futurum: score of rests",k:"d",d:"Near silence: the stream is muted down to the noise floor — sound that is almost not.",h:"«In futurum» (1919): the entire score is rests, 33 years before Cage's 4′33″.",fx:[["silence",{g:.05}]]},
-{t:"Jazz-dance",k:"r",d:"Swing gate and harmonization — 1920s jazz in academic fabric.",h:"His «5 Etudes de Jazz» (1926) and jazz movements of suites.",fx:[["gate",{pat:[.33,.17,.33,.17],floor:.25}],["harm",{r:[1,1.26,1.5],g:.4}]]},
-{t:"Dada collage",k:"i",d:"Collage and clicks — a Dadaist gesture.",h:"Schulhoff: Dadaist, friend of Hausmann, died in the Wülzburg concentration camp.",fx:[["tape",{op:"shuffle",n:22}],["clicks",{n:4,t0:.4,t1:.8,f:1700,g:.3}]]}]},
-{n:"Alexander Scriabin",y:"1872–1915",fam:"pt",ps:[
-{t:"Mystic chord",k:"d",d:"Resonators C–F#–B♭–E–A–D — his six-note sonority.",h:"«Prometheus» (1910): the mystic chord as harmonic foundation.",fx:[["res",{f:[262,370,466,330,440,294],q:50,g:.7}],["dyn",{curve:"swell"}]]},
-{t:"Light-music",k:"r",d:"Spectral tilt slowly brightens — color as harmony.",h:"Clavier à lumières: he saw the colors of keys.",fx:[["filt",{type:"highshelf",f0:800,f1:6000,gain:12}],["res",{f:[262,370,466],q:40,g:.4}]]},
-{t:"Vers la flamme",k:"r",d:"Dynamic wave and cloud — toward the flame.",h:"«Vers la flamme» (1914): growth from darkness to blinding light.",fx:[["dyn",{curve:"swell"}],["cloud",{n:8,cents:20,g:.4}],["filt",{type:"highshelf",f0:1500,f1:5000,gain:8}]]}]},
-{n:"Alice Shields",y:"b. 1943",fam:"vc",ps:[
-{t:"Apocalypse",k:"r",d:"Formant opera and granulation — electronic voice theater.",h:"«Apocalypse» (1990s): Shields's electronic opera.",fx:[["formant",{set:"voice",morph:"a",g:.65}],["grain",{mode:"scan",d:18,s:.08,g:.5}]]},
-{t:"Shaman",k:"i",d:"Ritual resonances and tremolo — a shamanic voice.",h:"Her «Shaman»: ritual and electronics.",fx:[["res",{f:[196,294,392],q:25,g:.6}],["trem",{f:6,depth:.5}]]},
-{t:"Columbia-Princeton",k:"i",d:"Ring modulation and tape montage — her school.",h:"Shields studied with Ussachevsky at the Columbia-Princeton Electronic Music Center.",fx:[["ring",{f:880,depth:.5}],["tape",{op:"shuffle",n:16,g:.5}]]}]},
-{n:"Roger Ruskin Spear",y:"b. 1943",fam:"cn",ps:[
-{t:"Robot saxophone",k:"r",d:"Mechanical stutter and saxophone formant — a robot plays a solo.",h:"Bonzo Dog Doo-Dah Band: his robot saxophonist on stage.",fx:[["tape",{op:"stutter",a:.2,b:.08}],["formant",{set:"sax",g:.6}]]},
-{t:"Trouser Press",k:"i",d:"Mechanical gate and saturation — a trouser press as an instrument.",h:"His trouser press — an absurd mechanical performance.",fx:[["gate",{pat:[.25,.25,.25,.25],floor:.1}],["shaper",{kind:"soft",k:5,g:.5}]]},
-{t:"Vaudeville",k:"i",d:"Panorama and absurd clicks — English vaudeville.",h:"Bonzo Dog Band: Dada, vaudeville, and rock.",fx:[["pan",{f:.7,depth:.9}],["clicks",{n:5,t0:.3,t1:.7,f:1800,g:.3}]]}]},
-{n:"Vivian Stanshall",y:"1943–1995",fam:"vc",ps:[
-{t:"Sir Henry at Rawlinson End",k:"r",d:"Formant characters and dry narration — radio drama.",h:"«Sir Henry at Rawlinson End» (1970s): a surrealist saga.",fx:[["formant",{set:"voice",morph:"o",g:.6}],["dry",{g:.5}]]},
-{t:"Radio drama",k:"i",d:"Collage and echo — radio play montage.",h:"His radio shows: voice as theater of the absurd.",fx:[["tape",{op:"shuffle",n:18}],["echo",{dt:.3,fb:.45,mix:.4}]]},
-{t:"Eccentricity",k:"i",d:"Bells and gate — English eccentricity.",h:"Stanshall: voice of the Bonzo Dog Band, poet and eccentric.",fx:[["osc",{type:"sine",f:1046,g:.2,env:"bell",dec:2}],["gate",{pat:[.4,.2,.8],floor:.2}]]}]},
-{n:"Steven Stapleton",y:"b. 1957",fam:"sp",ps:[
-{t:"Nurse With Wound",k:"r",d:"Surrealist collage and echo — a waking dream.",h:"«Homotopy to Marie» (1982): a surrealist drone collage.",fx:[["tape",{op:"shuffle",n:26}],["echo",{dt:.4,fb:.55,mix:.5}]]},
-{t:"Drone collage",k:"i",d:"Dark cloud and freeze — drone as a dream.",h:"Nurse With Wound: surrealism in sound, collage as method.",fx:[["cloud",{n:8,cents:25,g:.45}],["freeze",{s:.16,jit:.03,g:.5}]]},
-{t:"Vinyl ghost",k:"i",d:"Crushed tape and crackle-clicks — a ghost of vinyl.",h:"His collages: vinyl crackle as a texture of memory.",fx:[["tape",{op:"crush",bits:7,hold:4}],["clicks",{n:6,t0:.1,t1:.6,f:3000,g:.2}]]}]},
-{n:"Karlheinz Stockhausen",y:"1928–2007",fam:"sp",ps:[
-{t:"Mixtur: ring modulation",k:"d",d:"Ring-mod of the live stream with its own carrier — sum and difference frequencies.",h:"«Mixtur» (1964): orchestra, four ring modulators, sine tones.",fx:[["ring",{f:440,depth:.85}],["dry",{g:.15}]]},
-{t:"Kontakte: rotation",k:"d",d:"Ring modulation and spatial rotation — sound flies in a circle.",h:"«Kontakte» (1959–60): electronics, piano, percussion; rotation in four channels.",fx:[["ring",{f:660,depth:.6}],["pan",{f:.5,depth:1}],["echo",{dt:.15,fb:.4,mix:.3}]]},
-{t:"Mantra: two pianos",k:"r",d:"Two ring layers and resonances — a mantra of 13 sounds.",h:"«Mantra» (1970): two pianos with ring modulation, 13-sound formula.",fx:[["ring",{f:440,depth:.5,g:.6}],["ring",{f:660,depth:.4,g:.4}],["res",{f:[262,392],q:30,g:.3}]]}]},
-{n:"Sun Ra",y:"1914–1993",fam:"sc",ps:[
-{t:"Space Echo",k:"r",d:"Tape echo with wow and flutter and a spring resonance — cosmos.",h:"His Arkestra: tape echo, spring reverb, detuned keyboards.",fx:[["echo",{dt:.31,fb:.55,mix:.55,wow:1}],["res",{f:[800,1600,2400],q:15,g:.35}]]},
-{t:"Cosmic tuning",k:"r",d:"Detuned cloud and oscillator — keyboards gone into space.",h:"Sun Ra: «Space is the Place», detuned clavioline and solovox.",fx:[["cloud",{n:8,cents:40,g:.5}],["osc",{type:"sawtooth",f:220,glide:1.5,g:.12,env:"drone"}]]},
-{t:"Call of the horns",k:"i",d:"Brass resonances in space — a call from afar.",h:"His Arkestra: horns as signals between worlds.",fx:[["res",{f:[330,660,990],q:18,g:.55}],["space",{n:4,rot:.06}]]}]},
-{n:"Tōru Takemitsu",y:"1930–1996",fam:"qt",ps:[
-{t:"Ma: the space between",k:"d",d:"Rare resonant events in silence — ma, emptiness as form.",h:"His aesthetic of ma: the silence between sounds matters more than the sounds.",fx:[["gate",{pat:[2,.5,3,.4],floor:.03}],["res",{f:"peaks",q:40,g:.4,ramp:1}]]},
-{t:"Sky, Horse and Death",k:"r",d:"Concrete collage — sky, horse, death on tape.",h:"«Sky, Horse and Death» (1958): his first concrete piece.",fx:[["tape",{op:"shuffle",n:20}],["filt",{type:"lowpass",f0:2500,f1:800}]]},
-{t:"Garden",k:"i",d:"Garden echo and a quiet dry layer — sound as a garden.",h:"Takemitsu: garden as compositional model, «Water Ways».",fx:[["echo",{dt:.5,fb:.5,mix:.5}],["dry",{g:.45}],["space",{n:3,rot:.02}]]}]},
-{n:"tENTATIVELY, a cONVENIENCE",y:"b. 1957",fam:"cn",ps:[
-{t:"D.I.Y. circuit bending",k:"r",d:"Crushed tape and stutters — home-made electronics.",h:"Baltimore conceptualist: lo-fi, d.i.y., absurdity as method.",fx:[["tape",{op:"crush",bits:4,hold:10}],["tape",{op:"stutter",a:.3,b:.1,g:.5}]]},
-{t:"Self-interruption",k:"i",d:"Collage interrupted by silence — the work argues with itself.",h:"His performances: intentional glitches and self-destruction of form.",fx:[["tape",{op:"shuffle",n:16}],["gate",{pat:[.8,.6,.4,.8],floor:.02}]]},
-{t:"Low fidelity",k:"i",d:"Cassette crush and echo — fidelity of low precision.",h:"Lo-fi as an aesthetic position, not a deficiency.",fx:[["tape",{op:"crush",bits:6,hold:5}],["echo",{dt:.28,fb:.5,mix:.5}]]}]},
-{n:"Edgard Varèse",y:"1883–1965",fam:"sc",ps:[
-{t:"Poème électronique",k:"d",d:"Spatial sweeps and siren glissando — the Philips Pavilion.",h:"«Poème électronique» (1958): 425 loudspeakers of the Philips Pavilion, Brussels.",fx:[["space",{n:6,spread:1,rot:.2}],["osc",{type:"sine",f:400,glide:3,g:.15,env:"siren"}],["shaper",{kind:"soft",k:4,g:.4}]]},
-{t:"Déserts: blocks",k:"d",d:"Alternation of dry instrumental and electronic blocks.",h:"«Déserts» (1954): instrumental blocks and tape interpolations.",fx:[["alt",{a:[["dry",{g:.7}]],b:[["grain",{mode:"rand",d:22,s:.05,g:.7}],["ring",{f:880,depth:.5,g:.4}]],per:2.5}]]},
-{t:"Sirens",k:"r",d:"Siren glissandi and saturation — organized sound.",h:"«Ionisation» (1931) and «Amériques»: sirens as instruments.",fx:[["osc",{type:"sine",f:600,glide:2,g:.2,env:"siren"}],["osc",{type:"sine",f:800,glide:.5,g:.15,env:"siren"}],["dry",{g:.35}]]}]},
-{n:"Robin Williamson",y:"b. 1943",fam:"vc",ps:[
-{t:"Modal folk",k:"r",d:"Dorian resonances and drone harmonization — the Celtic root.",h:"Incredible String Band: Celtic folk, ethnicity, and psychedelia.",fx:[["res",{f:[294,330,349,392,440],q:15,g:.55}],["harm",{r:[1,1.5],g:.4}]]},
-{t:"Multi-instrumental",k:"i",d:"Different resonator banks with gate — one person, many instruments.",h:"Williamson: harp, guitar, flute, jaw harp — all himself.",fx:[["res",{f:[220,520,1100],q:20,g:.5}],["gate",{pat:[.4,.3,.5],floor:.2}],["res",{f:[880,1760],q:30,g:.3}]]},
-{t:"Drone tanpura",k:"i",d:"Drone oscillator and dry layer — the Indian root of ISB.",h:"ISB brought tanpura and raga into psychedelic folk.",fx:[["osc",{type:"sawtooth",f:147,g:.12,env:"drone"}],["dry",{g:.5}]]}]},
-{n:"Olly Wilson",y:"1937–2018",fam:"vc",ps:[
-{t:"Sometimes",k:"r",d:"Spiritual resonances and ring modulation — voice and tape.",h:"«Sometimes» (1976): tenor and tape, transformation of the spiritual «Sometimes I Feel Like a Motherless Child».",fx:[["res",{f:[220,262,330,392],q:20,g:.55}],["ring",{f:440,depth:.4,g:.4}],["dry",{g:.35}]]},
-{t:"Heterogeneous sound principle",k:"d",d:"Grains, clicks, and resonances at once — the heterogeneous sound ideal.",h:"His term (1983): African-American music as heterogeneity of timbres.",fx:[["grain",{mode:"rand",d:16,s:.04,g:.45}],["clicks",{n:3,t0:.3,t1:.6,f:1200,g:.3}],["res",{f:[330,660],q:15,g:.4}]]},
-{t:"Call-response",k:"r",d:"Dry call and echo-answer — antiphony.",h:"Call-and-response: structure of African-American musical speech.",fx:[["dry",{g:.6}],["echo",{dt:.35,fb:.5,mix:.55}]]}]},
-{n:"Trevor Wishart",y:"b. 1946",fam:"sp",ps:[
-{t:"Red Bird: voice → bird",k:"d",d:"Granular morph from speech grains to bird ones — sonic metamorphosis.",h:"«Red Bird» (1977): voice, birds, machines — a political allegory of transformations.",fx:[["xf",{a:[["grain",{mode:"seq",d:26,s:.04,g:.7}]],b:[["grain",{mode:"rand",d:34,s:.02,g:.7}],["harm",{r:[3],g:.3}]]}]]},
-{t:"Audible Design: taxonomy",k:"d",d:"Dry → freeze → granulation: three transformations from his book.",h:"«Audible Design» (1994) — a theory of sonic transformations, the methodological basis of this project.",fx:[["alt",{a:[["dry",{g:.7}]],b:[["freeze",{s:.14,jit:.02,g:.7}]],per:3.3}],["grain",{mode:"scan",d:16,s:.07,g:.4}]]},
-{t:"CDP spectrum",k:"r",d:"Freeze morphs into a resonator spectrum — his Composers Desktop Project.",h:"Wishart co-founded CDP (1986): spectral tools for everyone.",fx:[["xf",{a:[["freeze",{s:.18,jit:.015,g:.7}]],b:[["res",{f:"peaks",q:90,g:.7,ramp:1}]]}]]}]},
-{n:"Christian Wolff",y:"b. 1934",fam:"ch",ps:[
-{t:"Duo for Pianists: cues",k:"r",d:"Gate reacts to the previous event — a cybernetic score.",h:"«Duo for Pianists» (1957): the performer chooses by cue signals.",fx:[["gate",{pat:[.5,.3,.8,.2,.6],floor:.1}],["dry",{g:.5}]]},
-{t:"Burdocks",k:"r",d:"Free cloud and clicks — an anarchic ensemble.",h:"«Burdocks» (1971): for any number of performers, anarchist form.",fx:[["cloud",{n:6,cents:20,g:.45}],["clicks",{n:4,t0:.4,t1:.9,f:1400,g:.3}]]},
-{t:"Agreement",k:"i",d:"Free canon and a dry layer — coordination without a conductor.",h:"Wolff: music as social agreement among free people.",fx:[["canon",{r:[1,1.02,.98],gran:0,g:.5,spread:.6}],["dry",{g:.4}]]}]},
-{n:"Stefan Wolpe",y:"1902–1972",fam:"cn",ps:[
-{t:"Montage of contrasts",k:"r",d:"Sharp splices of opposing characters — dialectical montage.",h:"Wolpe: montage of contrasts, Brecht and Eisler in New York.",fx:[["tape",{op:"shuffle",n:14}],["gate",{pat:[.2,.8,.2,.8],floor:.1}]]},
-{t:"Battle Piece",k:"r",d:"Saturation and gate — a piano battle.",h:"«Battle Piece» (1943–47): fury of form, a political gesture.",fx:[["shaper",{kind:"fuzz",k:10,g:.55}],["gate",{pat:[.15,.15,.3,.15,.45],floor:.1}]]},
-{t:"Form IV: broken sequences",k:"i",d:"Grains tear the sequence apart — broken sequences.",h:"«Form IV: Broken Sequences» (1978): late, free form.",fx:[["grain",{mode:"seq",d:20,s:.06,jump:.4,g:.65}]]}]},
-{n:"Charles Wuorinen",y:"1938–2020",fam:"pt",ps:[
-{t:"Time's Encomium",k:"d",d:"Serial oscillator and ring modulation — the RCA Mark II.",h:"«Time's Encomium» (1969), Pulitzer: the RCA Mark II synthesizer, time as material.",fx:[["osc",{type:"square",f:220,glide:2,g:.12,env:"drone"}],["ring",{f:880,depth:.6}],["grain",{mode:"seq",d:14,s:.07,g:.4}]]},
-{t:"Fractal slicing",k:"r",d:"Self-similar splice: fragments of fragments — fractal form.",h:"Wuorinen: fractals and self-similarity in musical structure.",fx:[["tape",{op:"shuffle",n:32}],["tape",{op:"shuffle",n:8,g:.5}]]},
-{t:"12-tone grid + phase",k:"r",d:"12-tone grid resonators and phase drift.",h:"His serialism: 12 tones, strict organization of time.",fx:[["res",{f:[262,277,294,311,330,349,370,392,415,440,466,494],q:40,g:.45}],["phase",{drift:.015,spread:.6,g:.5}]]}]}
+{n:"Mario Davidovsky",y:"1934–2019",fam:"sc",ps:[{t:"Synchronisms: instrument and tape",k:"d",d:"Dry voice and granular shadow synchronize on attacks.",h:"The «Synchronisms» cycle (from 1962): live instrument and tape as one hybrid.",fx:[["dry",{g:.6}],["grain",{mode:"seq",d:20,s:.07,g:.5}]]},{t:"Synchronization point",k:"r",d:"Micro-stutters on attacks and a ping oscillator — tape answers the instrument.",h:"«Synchronisms No. 6» (1970), Pulitzer: piano and tape.",fx:[["tape",{op:"stutter",a:.15,b:.06}],["osc",{type:"sine",f:440,g:.15,env:"bell",dec:1}]]},{t:"Divergence",k:"i",d:"Two copies begin in sync and drift apart in phase.",h:"The dramaturgy of the cycle: union of live and electronic, their fusion and rupture.",fx:[["phase",{drift:.012,spread:.8,g:.7}]]}]},
+{n:"Peter Maxwell Davies",y:"1934–2016",fam:"vc",ps:[{t:"Eight Songs for a Mad King",k:"r",d:"Extreme formants and stutters — voice on the edge of madness.",h:"«Eight Songs for a Mad King» (1969): King George III sings across four octaves.",fx:[["formant",{set:"voice",morph:"i",g:.7}],["tape",{op:"stutter",a:.2,b:.07,g:.5}]]},{t:"Foxtrot inside the symphony",k:"r",d:"A buried dance gate is deformed by a filter.",h:"«St. Thomas Wake» (1969): a foxtrot distorted into a symphonic shadow.",fx:[["gate",{pat:[.3,.3,.6],floor:.25}],["filt",{type:"bandpass",f0:500,f1:2000,q:1.5}]]},{t:"Farewell to Stromness",k:"r",d:"Nearly dry sound and soft harmonization — farewell simplicity.",h:"«Farewell to Stromness» (1980) — his most famous, tender piece.",fx:[["dry",{g:.7}],["harm",{r:[1,1.5],g:.3}]]}]},
+{n:"Dubravko Detoni",y:"b. 1937",fam:"cn",ps:[{t:"ACEZANTEZ",k:"r",d:"Theatrical collage and click-gestures — a stage without words.",h:"ACEZANTEZ (Zagreb, 1971): Detoni's musical theater ensemble.",fx:[["tape",{op:"shuffle",n:16}],["clicks",{n:4,t0:.4,t1:.8,f:1600,g:.3}]]},{t:"Phonomorphia",k:"i",d:"Granular morph through the material — sound metamorphoses.",h:"His phonomorphias — a theater of sonic metamorphoses.",fx:[["grain",{mode:"scan",d:22,s:.09,g:.7}],["filt",{type:"lowpass",f0:3000,f1:500}]]},{t:"Stage without words",k:"i",d:"Formant characters and rhythmic gestures.",h:"Detoni: composer, pianist and writer, musical theater as method.",fx:[["formant",{set:"voice",morph:"e",g:.6}],["gate",{pat:[.4,.2,.8],floor:.15}]]}]},
+{n:"Dr. John the Night Tripper",y:"1941–2019",fam:"vc",ps:[{t:"Gris-Gris",k:"r",d:"Second-line gate and swamp echo — New Orleans voodoo psychedelia.",h:"«Gris-Gris» (1968): voodoo ritual as psychedelic album.",fx:[["gate",{pat:[.25,.15,.25,.15,.4],floor:.2}],["echo",{dt:.33,fb:.5,mix:.45}]]},{t:"Voodoo chant",k:"i",d:"Fifth doubling and tremolo — incantation in layers.",h:"His chants trace back to New Orleans rituals and Mardi Gras Indians.",fx:[["harm",{r:[1,1.5],g:.5}],["trem",{f:6,depth:.35}]]},{t:"Night Tripper",k:"i",d:"Slow panorama and saturation — a night tripper in space.",h:"The Night Tripper stage persona: feathers, skulls, swamp groove.",fx:[["pan",{f:.2,depth:.9}],["shaper",{kind:"soft",k:4,g:.6}]]}]},
+{n:"Charles Dodge",y:"b. 1942",fam:"vc",ps:[{t:"Any Resemblance…",k:"d",d:"A recognizable motif stays dry, alien synthesis around it.",h:"«Any Resemblance Is Purely Coincidental» (1980): Caruso sings inside computer music.",fx:[["dry",{g:.65}],["osc",{type:"sawtooth",f:220,glide:2,g:.15,env:"drone"}],["grain",{mode:"rand",d:10,s:.05,g:.3}]]},{t:"The Earth Is My Mother",k:"r",d:"Formant singer and harmonic layers — a synthesized voice.",h:"«The Earth Is My Mother» — the computer voice as a solo instrument.",fx:[["formant",{set:"voice",morph:"a",g:.7}],["harm",{r:[1,2],g:.3}]]},{t:"Bell Labs",k:"i",d:"Ring modulation and early computer grains — 1960s aesthetics.",h:"Dodge worked at Bell Labs — the cradle of computer music.",fx:[["ring",{f:660,depth:.6}],["grain",{mode:"seq",d:16,s:.06,g:.5}]]}]},
+{n:"Jacob Druckman",y:"1928–1996",fam:"vc",ps:[{t:"Animus: duel",k:"r",d:"Aggressive tape-antagonist against a dry protagonist.",h:"«Animus I» (1966): trombone and tape as opponents in a drama.",fx:[["dry",{g:.5}],["shaper",{kind:"fuzz",k:10,g:.45}],["ring",{f:880,depth:.4,g:.4}]]},{t:"Prism: quotes",k:"r",d:"Collage of debris and a cloud — refraction of other people's music.",h:"«Prism» (1969): quotes from Berio, Bach, Mahler in an orchestral prism.",fx:[["tape",{op:"shuffle",n:20}],["cloud",{n:6,cents:18,g:.35}]]},{t:"Windows",k:"i",d:"Spatial orchestral waves — windows into a sound field.",h:"«Windows» (1972), Pulitzer: orchestral windows of memory.",fx:[["space",{n:5,rot:.08}],["dyn",{curve:"swell"}]]}]},
+{n:"Iancu Dumitrescu",y:"b. 1944",fam:"sp",ps:[{t:"Inside sound",k:"r",d:"Freeze and resonators on peaks — microscopic listening.",h:"Romanian spectralism: Dumitrescu and Avram, music inside sound.",fx:[["freeze",{s:.16,jit:.015,g:.7}],["res",{f:"peaks",q:80,g:.5,ramp:1}]]},{t:"Glissando textures",k:"r",d:"A slowly diverging cloud — his long mass glissandi.",h:"His orchestral textures glide continuously like living matter.",fx:[["cloud",{n:16,cents:40,gliss:120,g:.6}]]},{t:"Aphonic: spectral silence",k:"i",d:"Near silence and rare grains — sound on the threshold of hearing.",h:"Spectral asceticism: extreme concentration on the small.",fx:[["silence",{g:.08}],["grain",{mode:"rand",d:6,s:.08,g:.3}]]}]},
+{n:"Tan Dun",y:"b. 1957",fam:"sc",ps:[{t:"Water Concerto",k:"r",d:"Water filter sweeps and drop-grains — water as instrument.",h:"«Water Concerto» (1998): water percussion in a basin, orchestra responds.",fx:[["filt",{type:"bandpass",f0:400,f1:2600,q:3}],["grain",{mode:"rand",d:20,s:.03,g:.5}]]},{t:"Organic Music: paper",k:"i",d:"Noise resonances and transients — paper and wood as instruments.",h:"His organic music: paper, water, stones, ceramics.",fx:[["tape",{op:"transient",n:20,floor:.08}],["res",{f:[900,1800,3200],q:15,g:.4}]]},{t:"Ritual",k:"i",d:"Slow gate and a bell — shamanic theater.",h:"Opera «Marco Polo» (1996): ritual as musical form.",fx:[["gate",{pat:[1,.5,1,1.5],floor:.1}],["osc",{type:"sine",f:330,g:.2,env:"bell",dec:3}]]}]},
+{n:"David Dunn",y:"b. 1953",fam:"vc",ps:[{t:"Interspecies dialogue",k:"r",d:"Transposition ×4 and echo-answer — a conversation with the non-human.",h:"Dunn: bioacoustics, attempts at dialogue with birds and insects.",fx:[["harm",{r:[4],g:.5}],["echo",{dt:.4,fb:.45,mix:.5}]]},{t:"Avian range",k:"i",d:"Transposition ×6 and chirp-grains — the stream in the avian register.",h:"His works explore how animals hear the world.",fx:[["harm",{r:[6],g:.45}],["grain",{mode:"rand",d:24,s:.025,g:.4}]]},{t:"Insects",k:"i",d:"40 Hz tremolo and high resonances — stridulation.",h:"Dunn recorded bark beetles and built interspecies interfaces.",fx:[["trem",{f:40,depth:.8}],["res",{f:[3200,4800,6400],q:40,g:.5}]]}]},
+{n:"Duke Ellington",y:"1899–1974",fam:"vc",ps:[{t:"Jungle growl",k:"r",d:"24 Hz tremolo and a bandpass wah — the growling brass of the Cotton Club.",h:"Jungle style (1920s): growl trumpets of Bubber Miley and Tricky Sam Nanton.",fx:[["trem",{f:24,depth:.6}],["filt",{type:"bandpass",f0:600,f1:1600,q:4}]]},{t:"Ellington effect",k:"i",d:"Mixing formant resonances — timbre as collective creation.",h:"Ellington effect: he wrote not for instruments but for specific people of the orchestra.",fx:[["res",{f:[350,700,1200,2100],q:10,g:.6}],["dry",{g:.4}]]},{t:"Take the A Train",k:"r",d:"Swing gate and harmonization — the orchestra's signature tune.",h:"«Take the 'A' Train» (1941, Strayhorn) — the theme of the Ellington orchestra.",fx:[["gate",{pat:[.33,.17,.33,.17],floor:.25}],["harm",{r:[1,1.26,1.5],g:.4}]]}]},
+{n:"Donald Erb",y:"1927–2008",fam:"vc",ps:[{t:"Trombone + tape",k:"r",d:"Sliding formant and ring modulation — brass and electronics.",h:"Erb: trombonist and composer, pioneer of live-electronics for brass.",fx:[["formant",{set:"brass",morph:"o",g:.6}],["ring",{f:440,depth:.4}]]},{t:"The Seventh Trumpet",k:"i",d:"Brass resonances and echo — a theatrical trumpet.",h:"«The Seventh Trumpet» (1969) — his brass-electronic theater.",fx:[["res",{f:[440,880,1320],q:20,g:.6}],["echo",{dt:.25,fb:.4,mix:.4}]]},{t:"Brass theater",k:"i",d:"Panoramic gestures and saturation — the instrument as character.",h:"His brass concertos with tape — the drama of soloist and electronics.",fx:[["pan",{f:.6,depth:.8}],["shaper",{kind:"soft",k:5,g:.55}]]}]},
+{n:"Morton Feldman",y:"1926–1987",fam:"qt",ps:[{t:"Silence and duration",k:"d",d:"−18 dB, long resonances — sound allowed to be itself.",h:"«Triadic Memories» (1981): 90 minutes of quiet, almost static music.",fx:[["dry",{g:.12}],["res",{f:"peaks",q:30,g:.2,ramp:1}]]},{t:"Rare events",k:"r",d:"Gate passes only a few attacks of the stream, long echo between them.",h:"Late Feldman: events as rare as stars in emptiness.",fx:[["gate",{pat:[2.5,.3,3,.4],floor:.04}],["echo",{dt:.6,fb:.6,mix:.5}]]},{t:"Let it be",k:"i",d:"Nearly dry sound, dark spectral tilt — non-intervention as method.",h:"Let sound be itself — his aesthetic of non-intervention.",fx:[["dry",{g:.35}],["filt",{type:"highshelf",f0:2000,f1:2000,gain:-8}]]}]},
+{n:"Lukas Foss",y:"1922–2009",fam:"cn",ps:[{t:"Baroque Variations: erasure",k:"d",d:"Progressive subtraction of the stream's own peaks — down to a ghost.",h:"«Baroque Variations» (1967): Bach, Handel, Scarlatti erased to semi-transparency.",fx:[["notch",{q0:2,q1:30,dry0:.9,dry1:.15}]]},{t:"Phorion",k:"r",d:"Ghost collage: debris of the recognizable in alien fabric.",h:"«Phorion» — part of «Baroque Variations», Bach as mirage.",fx:[["tape",{op:"shuffle",n:24,return:1}],["res",{f:"peaks",q:20,g:.3}]]},{t:"Improvisation ensemble",k:"i",d:"Free cloud and gate — collective improvisation of 1957.",h:"Foss founded the Improvisation Chamber Ensemble (1957) — rare for an academic.",fx:[["cloud",{n:6,cents:20,g:.45}],["gate",{pat:[.6,.3,1.2],floor:.2}]]}]},
+{n:"Kenneth Gaburo",y:"1926–1993",fam:"vc",ps:[{t:"Linguistics of sound",k:"r",d:"Phoneme-grains of 30 ms and formants — speech as musical matter.",h:"Gaburo: musical language, compositional linguistics.",fx:[["grain",{mode:"seq",d:30,s:.03,g:.7}],["formant",{set:"voice",morph:"e",g:.5}]]},{t:"Lemon Drops",k:"r",d:"Bell-drops and echo — early electronics.",h:"«Lemon Drops» (1965) — his electronic miniature.",fx:[["osc",{type:"sine",f:880,g:.25,env:"bell",dec:1.5}],["echo",{dt:.18,fb:.5,mix:.5}],["dry",{g:.3}]]},{t:"Antiphony III",k:"r",d:"Voice and tape in space — antiphony of live and electronic.",h:"«Antiphony III (Pearl-white moments)» (1962): voice and tape.",fx:[["space",{n:4,rot:.06}],["dry",{g:.5}],["grain",{mode:"rand",d:12,s:.06,g:.4}]]}]},
+{n:"George Gershwin",y:"1898–1937",fam:"pt",ps:[{t:"Rhapsody: glissando",k:"r",d:"Ascending glissando oscillator and harmonization — the famous clarinet climb.",h:"«Rhapsody in Blue» (1924): clarinet glissando, improvised at rehearsal.",fx:[["osc",{type:"triangle",f:220,glide:4,g:.2,env:"drone"}],["harm",{r:[1,1.5,2],g:.45}]]},{t:"Blue notes",k:"r",d:"Minor third and minor seventh against major — blues coloring.",h:"His language: blues notes inside European harmony.",fx:[["harm",{r:[1,1.189,1.782],g:.5}],["dry",{g:.35}]]},{t:"Swing",k:"r",d:"Swing gate over almost-dry sound.",h:"Gershwin joined jazz rhythm to concert form.",fx:[["gate",{pat:[.33,.17,.33,.17],floor:.3}],["dry",{g:.5}]]}]},
+{n:"Robert Graettinger",y:"1923–1957",fam:"pt",ps:[{t:"City of Glass",k:"r",d:"Dissonant cloud and brass saturation — a city of glass and brass.",h:"«City of Glass» (1951) for the Stan Kenton orchestra: an atonal jazz monument.",fx:[["cloud",{n:10,cents:50,g:.45}],["shaper",{kind:"soft",k:6,g:.5}],["res",{f:[466,622,932],q:15,g:.4}]]},{t:"Atonal brass",k:"i",d:"Brass resonances and percussive stabs.",h:"Graettinger: radical atonalism inside a big band.",fx:[["res",{f:[415,554,830],q:18,g:.6}],["gate",{pat:[.1,.7,.1,1.1],floor:.05}]]},{t:"This Modern World",k:"i",d:"Tempo strata — anxious density.",h:"«This Modern World» (1953) — his second suite for Kenton.",fx:[["canon",{r:[1,1.12,.9],gran:1,g:.55,spread:.7}]]}]},
+{n:"Alois Hába",y:"1893–1973",fam:"pt",ps:[{t:"Quarter tones",k:"d",d:"Harmonization in quarter-tone ratios 2^(1/24), 2^(3/24), 2^(5/24).",h:"Hába: quarter-tone system, Prague 1920s, special instruments.",fx:[["harm",{r:[1.0293,1.0905,1.1548],g:.55}],["dry",{g:.3}]]},{t:"24-EDO grid",k:"r",d:"Resonators on a quarter-tone grid — a new harmonic landscape.",h:"His theory: 24 steps per octave, sixth-tone harmony.",fx:[["res",{f:[262,269,277,285,294,302],q:35,g:.6}]]},{t:"Matka",k:"i",d:"Grains and a quarter-tone layer — an opera in microtones.",h:"Quarter-tone opera «Matka» (1931).",fx:[["grain",{mode:"scan",d:18,s:.08,g:.5}],["harm",{r:[1.0293,1.0905],g:.4}]]}]},
+{n:"Lou Harrison",y:"1917–2003",fam:"pt",ps:[{t:"Gamelan",k:"r",d:"Metallic resonances in an approximation of slendro — a gamelan from the stream.",h:"Harrison built an American gamelan with William Colvig.",fx:[["res",{f:[300,345,405,450,510],q:50,g:.7}],["gate",{pat:[.4,.4,.8],floor:.1}]]},{t:"Just intonation",k:"d",d:"Harmonization in just ratios 9/8, 5/4, 3/2, 5/3.",h:"Just intonation — his harmonic faith.",fx:[["harm",{r:[1,1.125,1.25,1.5,1.667],g:.5}],["dry",{g:.3}]]},{t:"Prepared piano",k:"r",d:"Inharmonic resonators — legacy of working with Cage.",h:"Harrison and Cage: prepared piano, 1940s.",fx:[["res",{f:[200,283,420,740],q:40,g:.7}]]}]},
+{n:"Josef Matthias Hauer",y:"1883–1959",fam:"pt",ps:[{t:"44 tropes",k:"r",d:"Deterministic permutation of 44 fragments — his trope system.",h:"Hauer: 44 tropes of 12 tones, a system earlier than Schoenberg (1919).",fx:[["tape",{op:"shuffle",n:44,seed:44}]]},{t:"12-tone grid",k:"r",d:"Resonators on an equal 12-tone grid.",h:"His Zwölftonmusik: law and play.",fx:[["res",{f:[262,277,294,311,330,349,370,392,415,440,466,494],q:40,g:.55}]]},{t:"Zwölftonspiel",k:"i",d:"Gate and row harmonization — playing by the law.",h:"Zwölftonspiele — his meditative 12-tone games.",fx:[["gate",{pat:[.5,.5,.5,1.5],floor:.2}],["harm",{r:[1,1.414],g:.35}]]}]},
+{n:"Jimi Hendrix",y:"1942–1970",fam:"vc",ps:[{t:"Fuzz + feedback",k:"r",d:"Asymmetric fuzz and self-exciting resonant peak.",h:"Fuzz Face and controlled feedback — his voice (1967–70).",fx:[["shaper",{kind:"fuzz",k:18,g:.6}],["res",{f:[1600],q:90,g:.5,ramp:1}]]},{t:"Univibe",k:"r",d:"Slow tremolo and panorama — four-stage phase vortex.",h:"Uni-Vibe (1968): «Machine Gun», Woodstock.",fx:[["trem",{f:1.8,depth:.6}],["pan",{f:.9,depth:.7}]]},{t:"Backwards guitar",k:"r",d:"Reverse tape and echo — a flipped solo.",h:"«Are You Experienced?» (1967): backward guitar solos.",fx:[["tape",{op:"reverse"}],["echo",{dt:.3,fb:.45,mix:.45}]]}]},
+{n:"Pierre Henry",y:"1927–2017",fam:"sp",ps:[{t:"Voile d'Orphée",k:"r",d:"Tearing grains and a filter sweep — Orpheus's veil tears.",h:"«Le Voile d'Orphée» (1953): Henry's first concrete drama.",fx:[["grain",{mode:"rand",d:26,s:.04,g:.7}],["filt",{type:"bandpass",f0:200,f1:3200,q:2}]]},{t:"Porte et soupir",k:"d",d:"Creak-stutters and breathing pauses — the door and the sigh.",h:"«Variations pour une porte et un soupir» (1963): a door hinge as soloist.",fx:[["tape",{op:"stutter",a:.3,b:.1}],["gate",{pat:[.8,1.2,.4,1.6],floor:.05}]]},{t:"Montage of causes",k:"r",d:"Collage of concrete debris — the source of the sound is hidden.",h:"Musique concrète: Schaeffer and Henry, Rue de l'Université studio.",fx:[["tape",{op:"shuffle",n:30}],["dry",{g:.25}]]}]},
+{n:"Hans Werner Henze",y:"1926–2012",fam:"vc",ps:[{t:"El Cimarrón",k:"r",d:"Dry storytelling voice and guitar gate — a fugitive slave's narrative.",h:"«El Cimarrón» (1970): recital for four performers, Montejo's story.",fx:[["dry",{g:.65}],["gate",{pat:[.2,.4,.2,.8],floor:.2}]]},{t:"Political gesture",k:"i",d:"Saturation and clicks — music as a position.",h:"Henze: a communist who moved to Italy; art as politics.",fx:[["shaper",{kind:"soft",k:6,g:.5}],["clicks",{n:4,t0:.4,t1:.7,f:1400,g:.3}]]},{t:"Night music",k:"i",d:"Dynamic waves and soft layers — late Henze's lyricism.",h:"His late scores: a politician turned lyricist.",fx:[["dyn",{curve:"swell"}],["harm",{r:[1,1.5],g:.35}]]}]},
+{n:"Mike Heron",y:"b. 1942",fam:"vc",ps:[{t:"A Very Cellular Song",k:"r",d:"Octave chant and a dry layer — a psychedelic folk hymn.",h:"Incredible String Band, «The Hangman's Beautiful Daughter» (1968).",fx:[["harm",{r:[.5,1,2],g:.5}],["dry",{g:.4}]]},{t:"Psychedelic folk",k:"i",d:"Slow phase and modal resonances.",h:"ISB: folk passed through psychedelia and ethnicity.",fx:[["phase",{drift:.006,spread:.6,g:.6}],["res",{f:[294,330,392,440],q:15,g:.4}]]},{t:"Log Cabin Home in the Sky",k:"i",d:"Choral cloud — polyphony of one voice.",h:"His multi-layered vocal arrangements in ISB.",fx:[["cloud",{n:8,cents:15,g:.5}]]}]},
+{n:"Lejaren Hiller",y:"1924–1994",fam:"ch",ps:[{t:"Illiac Suite",k:"d",d:"Stochastic permutation of fragments — the first computer score.",h:"«Illiac Suite» (1957), Hiller and Isaacson: ILLIAC I composes a string quartet.",fx:[["tape",{op:"shuffle",n:32,seed:1957}]]},{t:"Markov transitions",k:"r",d:"Grains run sequentially but with probabilistic jumps.",h:"Markov chains — his method of generating musical text.",fx:[["grain",{mode:"seq",d:22,s:.08,jump:.3,g:.7}]]},{t:"HPSCHD",k:"r",d:"Seven clouds and clicks — computer anarchy with Cage.",h:"«HPSCHD» (1969), Hiller and Cage: 7 harpsichords, 51 tapes, a mainframe.",fx:[["cloud",{n:7,cents:30,g:.4}],["clicks",{n:6,t0:.3,t1:.9,f:1700,g:.3}]]}]},
+{n:"Tim Hodgkinson",y:"b. 1949",fam:"tm",ps:[{t:"Henry Cow: angular riffs",k:"r",d:"Collage of angular debris and a gate — rock as chamber avant-garde.",h:"Henry Cow (1968–78): rock in opposition, compositional complexity.",fx:[["tape",{op:"shuffle",n:16}],["gate",{pat:[.2,.2,.3,.2,.5],floor:.15}]]},{t:"Polymeter 5 and 7",k:"i",d:"Gate 5+7 against clicks — two meters at once.",h:"His scores: polymeter as political form.",fx:[["gate",{pat:[.25,.25,.25,.25,.25,.35,.35],floor:.2}],["clicks",{n:2,t0:.5,t1:.5,f:900,g:.25}]]},{t:"Living in the Heart of the Beast",k:"i",d:"Reverse tape and saturation — fury of form.",h:"«In Praise of Learning» (1975): a 15-minute composition by Hodgkinson.",fx:[["tape",{op:"reverse"}],["shaper",{kind:"fuzz",k:9,g:.5}]]}]},
+{n:"Jerry Hunt",y:"1943–1993",fam:"ch",ps:[{t:"Haramand Plane",k:"r",d:"Irregular fast clicks and grains — ritual streaming.",h:"«Haramand Plane» (1970s): ritual performances with electronics.",fx:[["clicks",{n:8,t0:.08,t1:.5,f:2000,g:.4}],["grain",{mode:"rand",d:20,s:.03,g:.4}]]},{t:"Streaming",k:"r",d:"Dense jitter-granulate at 40 grains per second — formless stream.",h:"His streaming — music as continuous ritual flow.",fx:[["grain",{mode:"rand",d:40,s:.025,jit:.5,g:.7}]]},{t:"Breath of ritual",k:"i",d:"Near silence and tremolo — the performer's body in the sound.",h:"Hunt: Texan shaman of electronics, video, and gesture.",fx:[["silence",{g:.1}],["trem",{f:3,depth:.6}]]}]},
+{n:"Toshi Ichiyanagi",y:"1933–2022",fam:"qt",ps:[{t:"Sapporo",k:"r",d:"Long freeze and slow tremolo — sustained tones.",h:"«Sapporo» (1962): long tones with electronics.",fx:[["freeze",{s:.2,jit:.01,g:.7}],["trem",{f:.4,depth:.4}]]},{t:"Extended Voices",k:"r",d:"Formant choir and harmonic layers — extended voice.",h:"«Extended Voices» (1967): voices and electronics.",fx:[["formant",{set:"voice",morph:"u",g:.6}],["harm",{r:[1,2],g:.35}]]},{t:"Sustained tones",k:"i",d:"Drone oscillator and a quiet dry layer — time as material.",h:"His music: silence, duration, one sound.",fx:[["osc",{type:"sine",f:220,g:.2,env:"drone"}],["dry",{g:.3}]]}]},
+{n:"Charles Ives",y:"1874–1954",fam:"pt",ps:[{t:"Two chapels",k:"d",d:"Two layers in different tunings and tempos, hard-panned L/R — collision of marches.",h:"«Putnam's Camp» from «Three Places in New England»: two orchestras play different things at once.",fx:[["canon",{r:[1.03,.97],gran:0,g:.6,spread:1}],["harm",{r:[1,1.414],g:.35}]]},{t:"The Unanswered Question",k:"r",d:"Question-oscillator and cloud-answer — an eternal dialogue.",h:"«The Unanswered Question» (1908): trumpet asks, flutes do not answer.",fx:[["osc",{type:"triangle",f:440,g:.2,env:"bell",dec:2.5}],["cloud",{n:6,cents:25,g:.35}],["dry",{g:.3}]]},{t:"Central Park in the Dark",k:"i",d:"Nocturnal cloud and distant clicks — urban darkness.",h:"«Central Park in the Dark» (1906): night sounds of New York.",fx:[["cloud",{n:8,cents:20,g:.4}],["clicks",{n:3,t0:.8,t1:1.5,f:800,g:.2}]]}]},
+{n:"Mauricio Kagel",y:"1931–2008",fam:"cn",ps:[{t:"Match: duel",k:"r",d:"Panoramic L/R duel and a gate — two cellists compete.",h:"«Match» (1964): two cellists and a percussionist-referee.",fx:[["pan",{f:.8,depth:1}],["gate",{pat:[.3,.3,.6],floor:.15}]]},{t:"Absurdist montage",k:"i",d:"Collage and clicks — theater of the absurd in sound.",h:"Kagel: instrumental theater, humor as method.",fx:[["tape",{op:"shuffle",n:20}],["clicks",{n:5,t0:.3,t1:.7,f:1900,g:.3}]]},{t:"Gesture theater",k:"i",d:"Formant replies and stutters — sound as stage action.",h:"His mute instruments are prescribed gestures, not notes.",fx:[["formant",{set:"voice",morph:"o",g:.6}],["tape",{op:"stutter",a:.25,b:.1,g:.4}]]}]},
+{n:"Franz Kamin",y:"1941–2010",fam:"cn",ps:[{t:"Topology of time",k:"r",d:"Continuous tempo deformation — time as a topological space.",h:"Kamin: structures from topology, prosody, and general systems theory.",fx:[["phase",{drift:.03,spread:.6,g:.8}]]},{t:"Prosody",k:"r",d:"Syllable-grains and speech gate — prosodic segmentation.",h:"His oneiric forms: fictional languages and conceptual mythologies.",fx:[["grain",{mode:"seq",d:24,s:.05,g:.6}],["gate",{pat:[.3,.2,.5,.2,.4],floor:.15}]]},{t:"Echo to a friend",k:"i",d:"660 Hz bell and long echo — a motif connected to block 015 Brody.",h:"Kamin and Brody died together on April 11, 2010.",fx:[["osc",{type:"sine",f:660,g:.3,env:"bell",dec:4}],["echo",{dt:.5,fb:.6,mix:.6}],["dry",{g:.25}]]}]},
+{n:"William Kraft",y:"1923–2022",fam:"tm",ps:[{t:"Encounters",k:"r",d:"Percussive clicks in space — a meeting of percussion.",h:"«Encounters» (1970s): Kraft's percussion theater.",fx:[["clicks",{n:6,t0:.2,t1:.8,f:1200,g:.45}],["space",{n:4,rot:.1}]]},{t:"Percussion theater",k:"i",d:"Stream transients and panorama — attacks as characters.",h:"Kraft: percussionist of the Los Angeles Philharmonic, percussionist-composer.",fx:[["tape",{op:"transient",n:24,floor:.06}],["pan",{f:.7,depth:.8}]]},{t:"Rhythm mass",k:"i",d:"Dense gate and a cloud — rhythmic mass.",h:"His percussion ensembles: rhythm as architecture.",fx:[["gate",{pat:[.15,.15,.3,.15,.45],floor:.1}],["cloud",{n:6,cents:20,g:.35}]]}]},
+{n:"Johannes Kreidler",y:"b. 1980",fam:"cn",ps:[{t:"Fremdarbeit: outsourcing",k:"d",d:"Demonstratively cheap processing: 5-bit and decimation — labor outsourced.",h:"«Fremdarbeit» (2009): composition commissioned from a Chinese composer and an Indian programmer.",fx:[["tape",{op:"crush",bits:5,hold:8}],["dry",{g:.15}]]},{t:"Product placements",k:"r",d:"15 ms microsamples, 40 per second — tens of thousands of other people's sounds as a gesture.",h:"«product placements» (2008): 70,261 microsamples of other people's music.",fx:[["grain",{mode:"rand",d:40,s:.015,g:.75}]]},{t:"Charts Music",k:"r",d:"Oscillator pitch follows the stream's loudness — curve sonification.",h:"«Charts Music» (2009): stock charts sung through Auto-Tune.",fx:[["osc",{type:"sine",f:"rms",g:.25,env:"drone"}],["dry",{g:.3}]]}]},
+{n:"Helmut Lachenmann",y:"b. 1935",fam:"sp",ps:[{t:"Musique concrète instrumentale",k:"d",d:"Tonal is suppressed, attacks, rustles, breath of the stream remain.",h:"«Pression» (1969): sound equals the way it is produced, bow noise matters more than the note.",fx:[["tape",{op:"transient",n:30,floor:.04}],["filt",{type:"highpass",f0:1200,f1:1200}]]},{t:"Rustles",k:"r",d:"High grains and a highpass — the noise matter of the instrument.",h:"His instrumental concrete music: the body of the instrument as source.",fx:[["grain",{mode:"rand",d:28,s:.03,g:.6}],["filt",{type:"highpass",f0:2000,f1:2000}]]},{t:"Gran Torso",k:"r",d:"Transients and bow resonances — string quartet as noise theater.",h:"«Gran Torso» (1972): quartet No. 1, radical noise writing.",fx:[["tape",{op:"transient",n:20,floor:.05}],["res",{f:[1800,2700,3900],q:30,g:.4}]]}]},
+{n:"John Lennon",y:"1940–1980",fam:"ch",ps:[{t:"Revolution 9",k:"d",d:"Collage of loops and reverse — sonic chaos as composition.",h:"«Revolution 9» (1968): eight minutes of tape loops, «number nine».",fx:[["tape",{op:"shuffle",n:40}],["tape",{op:"reverse",g:.4}]]},{t:"Number nine",k:"r",d:"One loop repeats with panoramic drift — an obsessive phrase.",h:"The «number nine» voice from a Royal Schools of Music test record.",fx:[["tape",{op:"loop",n:16}],["pan",{f:.4,depth:.8}]]},{t:"Tomorrow Never Knows",k:"r",d:"Echo, phase, and resonances — the Revolver tape loops.",h:"«Tomorrow Never Knows» (1966): five tape loops spinning in the studio.",fx:[["echo",{dt:.28,fb:.55,mix:.5}],["phase",{drift:.008,spread:.7,g:.5}],["res",{f:[440,660],q:20,g:.3}]]}]},
+{n:"György Ligeti",y:"1923–2006",fam:"sp",ps:[{t:"Micropolyphony",k:"d",d:"48 copies detuned ±15 cents — a dense shimmering cloud.",h:"«Atmosphères» (1961): 87 voices, not one distinguishable line.",fx:[["cloud",{n:48,cents:15,delay:.04,g:.7}]]},{t:"Poème symphonique",k:"d",d:"24 metronomes in different tempos winding down one by one (out of 100 original).",h:"«Poème symphonique» (1962): 100 metronomes wound up and left to themselves.",fx:[["clicks",{n:24,t0:.25,t1:1.4,f:1600,g:.5,decay:1}]]},{t:"Lux Aeterna",k:"r",d:"16 slow voices and resonances — the light of eternity.",h:"«Lux Aeterna» (1966): 16 voices, canon without rhythm.",fx:[["cloud",{n:16,cents:10,g:.55}],["res",{f:"peaks",q:40,g:.3,ramp:1}]]}]},
+{n:"Annea Lockwood",y:"b. 1939",fam:"sc",ps:[{t:"World Rhythms",k:"r",d:"Quiet dry layer and gong-clicks — rivers and a gong.",h:"«World Rhythms» (1975): 10-channel tape, gong and river sounds.",fx:[["dry",{g:.45}],["clicks",{n:2,t0:1.5,t1:2.5,f:300,g:.4}],["osc",{type:"sine",f:98,g:.15,env:"bell",dec:5}]]},{t:"Danube",k:"r",d:"Water filter and stream-grains — a sound map of a river.",h:"«A Sound Map of the Danube» (2005): 86 places along the river.",fx:[["filt",{type:"bandpass",f0:300,f1:1800,q:2}],["grain",{mode:"seq",d:18,s:.06,g:.5}]]},{t:"Sound geography",k:"i",d:"Slow diffusion — the place sounds itself.",h:"Lockwood: listening as ecology, sound as place.",fx:[["space",{n:4,spread:.8,rot:.03}],["dry",{g:.5}]]}]},
+{n:"Alvin Lucier",y:"1931–2021",fam:"sp",ps:[{t:"I Am Sitting in a Room",k:"d",d:"Resonators on the stream's reference frequencies are excited one by one — the room amplifies itself.",h:"«I Am Sitting in a Room» (1969): room re-recorded over itself, resonances defeat speech.",fx:[["res",{f:"peaks",q:120,g:.85,ramp:1}],["dyn",{curve:"fade",to:.3}]]},{t:"Vespers",k:"d",d:"Echolocation clicks and echo — sound feels its way through space.",h:"«Vespers» (1961): performers with sondols orient by echo like bats.",fx:[["clicks",{n:3,t0:.5,t1:.9,f:2400,g:.5}],["echo",{dt:.12,fb:.5,mix:.6}],["dry",{g:.2}]]},{t:"Music on a Long Thin Wire",k:"r",d:"Drone and slow tremolo — the wire sings itself.",h:"«Music on a Long Thin Wire» (1977): an electromagnet excites a 20-meter wire.",fx:[["osc",{type:"sine",f:220,g:.25,env:"drone"}],["trem",{f:.3,depth:.5}],["dry",{g:.3}]]}]},
+{n:"Ivo Malec",y:"1925–2019",fam:"tm",ps:[{t:"Triola",k:"r",d:"Tape speed fluctuates — GRM time jumps.",h:"«Triola» (1978): tape and orchestra, playing with time.",fx:[["phase",{drift:.02,spread:.7,g:.7}],["filt",{type:"lowpass",f0:2500,f1:1200}]]},{t:"Zeitsprünge",k:"i",d:"Granular morph with sharp tempo jumps.",h:"His music: montage of time, jumps between states.",fx:[["grain",{mode:"scan",d:26,s:.06,g:.7}],["grain",{mode:"rand",d:10,s:.1,g:.4}]]},{t:"Spectral theater",k:"i",d:"Grains and formants — sound as a stage.",h:"Malec: Croatian-French master of musique concrète.",fx:[["grain",{mode:"scan",d:20,s:.08,g:.6}],["formant",{set:"voice",morph:"a",g:.4}]]}]},
+{n:"Toshiro Mayuzumi",y:"1929–1997",fam:"sp",ps:[{t:"Nirvana Symphony",k:"r",d:"Bon-shō bell resonances 1 : 2.4 : 4.1 : 6.8 — Buddhist tolling.",h:"«Nirvana Symphony» (1958): bon-shō bells as harmonic model.",fx:[["res",{f:[98,235,402,666],q:60,g:.8}],["dyn",{curve:"swell"}]]},{t:"Mandala",k:"r",d:"Freeze and drone — a sound mandala.",h:"«Mandala Symphony» (1960): Buddhist cosmology in sound.",fx:[["freeze",{s:.18,jit:.02,g:.6}],["osc",{type:"sine",f:110,g:.15,env:"drone"}]]},{t:"Bon-shō",k:"i",d:"A bell with long decay and echo — the strike and its shadow.",h:"Bon-shō: a Japanese temple bell that sounds for minutes.",fx:[["osc",{type:"sine",f:98,g:.35,env:"bell",dec:6}],["echo",{dt:.7,fb:.6,mix:.6}],["dry",{g:.2}]]}]},
+{n:"Olivier Messiaen",y:"1908–1992",fam:"pt",ps:[{t:"Mode 2: octatonic",k:"d",d:"Resonators and harmonization on the octatonic grid — a mode of limited transposition.",h:"«Technique de mon langage musical» (1944): seven modes of limited transposition.",fx:[["res",{f:[262,294,311,349,392,415,466,494],q:35,g:.6}],["harm",{r:[1,1.189,1.414],g:.35}]]},{t:"Non-retrogradable rhythms",k:"d",d:"Palindromic gate 3-5-7-5-3 — a rhythm readable in both directions.",h:"His non-retrogradable rhythms: palindromes as a theological symbol.",fx:[["gate",{pat:[.3,.5,.7,.5,.3,1],floor:.08}]]},{t:"Birds",k:"r",d:"Chirp-grains and high transposition — a bird catalog.",h:"«Catalogue d'oiseaux» (1958): 13 pieces, 77 bird species.",fx:[["grain",{mode:"rand",d:30,s:.02,g:.6}],["harm",{r:[3,4],g:.35}]]}]},
+{n:"Darius Milhaud",y:"1892–1974",fam:"pt",ps:[{t:"Polytonality",k:"d",d:"Two harmonic layers in a tritone relation — two keys at once.",h:"«Le Bœuf sur le toit» (1919), «Saudades do Brasil»: polytonality as a signature.",fx:[["harm",{r:[1,1.414],g:.55}],["dry",{g:.3}]]},{t:"Saudades do Brasil",k:"r",d:"Samba gate and harmonization — Brazilian memory.",h:"«Saudades do Brasil» (1920): 12 dances written after Brazil.",fx:[["gate",{pat:[.2,.2,.4,.2,.2,.4],floor:.2}],["harm",{r:[1,1.5],g:.4}]]},{t:"Tenderness",k:"i",d:"Dry sound and soft layers — a lyricist inside Les Six.",h:"Milhaud: lyricism and polyphony of keys, La Six.",fx:[["dry",{g:.6}],["harm",{r:[1,1.25],g:.3}]]}]},
+{n:"Minoru Miki",y:"1930–2011",fam:"tm",ps:[{t:"Marimba Spiritual",k:"r",d:"Wooden resonances and an accelerating gate — a marimba ritual.",h:"«Marimba Spiritual» (1984): marimba and percussion, a prayer for repose.",fx:[["res",{f:[220,660,1100],q:25,g:.6}],["gate",{pat:[.4,.4,.3,.3,.2,.2,.15,.15],floor:.1}]]},{t:"Ritual ostinato",k:"i",d:"Repeating gate and clicks — a growing ritual.",h:"His percussion pieces: ostinato as incantation.",fx:[["gate",{pat:[.25,.25,.5],floor:.1}],["clicks",{n:3,t0:.25,t1:.5,f:800,g:.35}]]},{t:"Wood and skin",k:"i",d:"Wooden resonances and transients — the instrument's material.",h:"Miki revived Japanese instruments in contemporary music.",fx:[["res",{f:[180,576,990],q:20,g:.55}],["tape",{op:"transient",n:16,floor:.08,g:.4}]]}]},
+{n:"Ilhan Mimaroglu",y:"1926–2012",fam:"sp",ps:[{t:"Songmy",k:"r",d:"Hard saturation and collage — political electronics.",h:"«Sing Me a Song of Songmy» (1971) with Freddie Hubbard: protest on tape.",fx:[["shaper",{kind:"fuzz",k:14,g:.55}],["tape",{op:"shuffle",n:24,g:.5}]]},{t:"Aggressive montage",k:"r",d:"Sharp splices and speed jumps — tape as a weapon.",h:"His montage: violence of form as a political statement.",fx:[["tape",{op:"shuffle",n:60}],["tape",{op:"speed",r:1.6,g:.4}]]},{t:"Political tape",k:"i",d:"Ring modulation and echo — a voice distorted by the system.",h:"Mimaroglu: Turkish-American pioneer of electronic music.",fx:[["ring",{f:660,depth:.7}],["echo",{dt:.2,fb:.5,mix:.5}]]}]},
+{n:"Charles Mingus",y:"1922–1979",fam:"vc",ps:[{t:"Pithecanthropus Erectus",k:"r",d:"Free canon and dynamic waves — collective improvisation.",h:"«Pithecanthropus Erectus» (1956): a suite of the rise and fall of man.",fx:[["canon",{r:[1,1.05,.95],gran:0,g:.55,spread:.7}],["dyn",{curve:"swell"}]]},{t:"The Clown",k:"i",d:"Swing gate and formant storytelling — jazz as theater.",h:"«The Clown» (1957): narrator and orchestra, tragicomedy.",fx:[["gate",{pat:[.33,.17,.33,.17],floor:.25}],["formant",{set:"voice",morph:"o",g:.5}]]},{t:"Double bass growl",k:"i",d:"Low resonances and tremolo — a growling bass.",h:"His bass: from tenderness to fury, always on the cutting edge.",fx:[["res",{f:[82,123,164],q:15,g:.6}],["trem",{f:7,depth:.4}]]}]},
+{n:"Joni Mitchell",y:"b. 1943",fam:"pt",ps:[{t:"Open tunings",k:"r",d:"Resonators of the open C-G-C-G-E chord — guitar in her tuning.",h:"Mitchell used about 50 open tunings; «Big Yellow Taxi» is open E.",fx:[["res",{f:[131,196,262,392,330],q:25,g:.65}],["dry",{g:.3}]]},{t:"Blue: vocal layers",k:"r",d:"Harmonic layers over the dry voice — her polyphony.",h:"«Blue» (1971): she overdubbed all the vocal parts herself.",fx:[["harm",{r:[1,1.5,2],g:.45}],["dry",{g:.5}]]},{t:"Dulcimer",k:"i",d:"String resonances and gate — Appalachian dulcimer.",h:"«All I Want» (Blue): a dulcimer bought in Arkansas.",fx:[["res",{f:[294,440,587,880],q:30,g:.6}],["gate",{pat:[.2,.2,.4],floor:.2}]]}]},
+{n:"Conlon Nancarrow",y:"1912–1997",fam:"tm",ps:[{t:"Tempo canon 17:18:19",k:"d",d:"Three granular voices in tempos 17:18:19 — pitch unchanged, only speed.",h:"Studies for player piano: tempo canons, impossible for hands.",fx:[["canon",{r:[1,1.0588,1.1176],gran:1,g:.65,spread:.9}]]},{t:"e : π",k:"d",d:"Two voices in the irrational ratio e/π ≈ 0.865 — a canon that never converges.",h:"Study No. 40: canon in the ratio e:π.",fx:[["canon",{r:[1,.8653],gran:1,g:.6,spread:.8}]]},{t:"Player piano roll",k:"r",d:"Perforated gate and clicks — a mechanical roll.",h:"Nancarrow punched rolls by hand in Mexico City, for decades.",fx:[["gate",{pat:[.1,.1,.2,.1,.1,.3],floor:.05}],["clicks",{n:4,t0:.1,t1:.3,f:2000,g:.3}]]}]},
+{n:"Luigi Nono",y:"1924–1990",fam:"qt",ps:[{t:"…sofferte onde serene…",k:"d",d:"Near silence and long echo — calm waves of memory.",h:"«…sofferte onde serene…» (1976): piano and tape, bells of Venice.",fx:[["dry",{g:.15}],["echo",{dt:.8,fb:.65,mix:.6}],["res",{f:"peaks",q:50,g:.2,ramp:1}]]},{t:"Silence of resistance",k:"r",d:"Rare events in near silence — silence as politics.",h:"Nono: a communist, silence as a form of resistance.",fx:[["silence",{g:.07}],["gate",{pat:[3,.4,4,.3],floor:.02}]]},{t:"La fabbrica illuminata",k:"r",d:"Factory transients and filter — the illuminated factory.",h:"«La fabbrica illuminata» (1964): workers' voices and factory noise.",fx:[["tape",{op:"transient",n:24,floor:.06}],["filt",{type:"bandpass",f0:400,f1:1600,q:1}]]}]},
+{n:"Maurice Ohana",y:"1913–1992",fam:"pt",ps:[{t:"Microtones",k:"r",d:"Quarter-tone layers and a formant melisma — the Andalusian root.",h:"Ohana: microtonality, Lorca, African rhythms.",fx:[["harm",{r:[1.0293,1.0905],g:.5}],["formant",{set:"voice",morph:"a",g:.4}]]},{t:"Lorca",k:"i",d:"Dark gate and resonances — lament for Lorca.",h:"«Llanto por Ignacio Sánchez Mejías» (1950) — his requiem for Lorca.",fx:[["gate",{pat:[.8,.4,1.2],floor:.1}],["res",{f:[147,220,294],q:20,g:.5}]]},{t:"African roots",k:"i",d:"Polyrhythmic clicks and gate.",h:"Ohana was born in Casablanca; Africa is his rhythmic homeland.",fx:[["clicks",{n:4,t0:.2,t1:.6,f:900,g:.35}],["gate",{pat:[.3,.3,.2],floor:.2}]]}]},
+{n:"Bernard Parmegiani",y:"1927–2013",fam:"sp",ps:[{t:"De Natura Sonorum",k:"d",d:"Dialectic of dry and granular — the natural against the formed.",h:"«De Natura Sonorum» (1975): 12 studies on the nature of sound.",fx:[["xf",{a:[["dry",{g:.8}]],b:[["grain",{mode:"rand",d:24,s:.05,g:.8}]]}]]},{t:"Violostries",k:"r",d:"Dry instrument and a ring shadow — violin and tape.",h:"«Violostries» (1964): violin and tape in dialogue.",fx:[["dry",{g:.55}],["ring",{f:440,depth:.5,g:.45}]]},{t:"Matter / form",k:"r",d:"Freeze morphs into granulation — matter takes form.",h:"GRM: sound as matter, montage as form.",fx:[["xf",{a:[["freeze",{s:.14,jit:.02,g:.7}]],b:[["grain",{mode:"scan",d:22,s:.07,g:.7}]]}]]}]},
+{n:"Harry Partch",y:"1901–1974",fam:"pt",ps:[{t:"43 steps",k:"d",d:"Harmonization in just ratios of his 43-step tuning.",h:"«Genesis of a Music» (1949): 43 tones per octave, own instruments.",fx:[["harm",{r:[1,1.0667,1.125,1.1667,1.25,1.333],g:.55}],["dry",{g:.25}]]},{t:"Cloud chambers",k:"r",d:"Glass resonances — his cloud chambers made of glass.",h:"Cloud-Chamber Bowls: glass jars tuned by him.",fx:[["res",{f:[523,1412,2667],q:70,g:.7}],["dyn",{curve:"swell"}]]},{t:"Bitter Music",k:"r",d:"Dry voice and speech gate — music of speech.",h:"«Bitter Music» (1930s): a hobo's diary, speech as melody.",fx:[["dry",{g:.6}],["gate",{pat:[.3,.2,.5,.2,.4],floor:.15}]]}]},
+{n:"Krzysztof Penderecki",y:"1933–2020",fam:"sp",ps:[{t:"Threnody: 52 strings",k:"d",d:"52 micro-copies with diverging glissandi from the spectral center.",h:"«Threnody to the Victims of Hiroshima» (1960): 52 strings, clusters and extended techniques.",fx:[["cloud",{n:52,cents:30,gliss:200,g:.7}]]},{t:"Cluster mass",k:"r",d:"Wide semitone cluster and saturation — a sound mass.",h:"His sonorism of the 1960s: sound as mass, not line.",fx:[["cloud",{n:24,cents:600,g:.55}],["shaper",{kind:"soft",k:5,g:.4}]]},{t:"Polymorphia",k:"r",d:"The cloud converges back — glissando toward the center.",h:"«Polymorphia» (1961): 48 strings, brain EEG became the score.",fx:[["cloud",{n:24,cents:300,gliss:-150,g:.6}]]}]},
+{n:"Steve Reich",y:"b. 1936",fam:"tm",ps:[{t:"Come Out: phase shift",k:"d",d:"A delayed copy of the stream runs ahead — 1% per second divergence.",h:"«Come Out» (1966): Harlem Six voice, two tapes drift out of phase.",fx:[["phase",{drift:.01,spread:.7,g:.75}]]},{t:"It's Gonna Rain",k:"d",d:"Faster phase drift and echo — process as music.",h:"«It's Gonna Rain» (1965): Brother Walter's sermon, phase canon.",fx:[["phase",{drift:.02,spread:.8,g:.7}],["echo",{dt:.25,fb:.4,mix:.35}]]},{t:"Pendulum Music",k:"r",d:"Feedback sweep and panorama — swinging microphones.",h:"«Pendulum Music» (1968): microphones swing over speakers, feedback whistle.",fx:[["res",{f:[1200],q:90,g:.5,ramp:1}],["pan",{f:.25,depth:1}],["osc",{type:"sine",f:1200,glide:1.8,g:.1,env:"drone"}]]}]},
+{n:"Silvestre Revueltas",y:"1899–1940",fam:"pt",ps:[{t:"Sensemayá",k:"r",d:"Ritual seven-beat ostinato gate and dark resonances — a snake incantation.",h:"«Sensemayá» (1938): a song to kill a snake, on a poem by Nicolás Guillén.",fx:[["gate",{pat:[.21,.21,.21,.21,.21,.21,.42],floor:.1}],["res",{f:[110,147,220],q:20,g:.5}]]},{t:"Snake chant",k:"i",d:"Minor-second harmonization and tremolo — a hypnotic chant.",h:"His melodics: Mexican archaism and modernism.",fx:[["harm",{r:[1,1.059],g:.5}],["trem",{f:5,depth:.4}]]},{t:"Ritual acceleration",k:"i",d:"Gate accelerates, clicks grow — ritual to frenzy.",h:"Revueltas: rhythm as collective trance.",fx:[["gate",{pat:[.5,.5,.4,.4,.3,.3,.2,.2],floor:.1}],["clicks",{n:3,t0:.3,t1:.6,f:700,g:.3}]]}]},
+{n:"Roger Reynolds",y:"b. 1934",fam:"sp",ps:[{t:"The Angel of Death",k:"r",d:"Morphing between domains and incidences — memory of a motif.",h:"«The Angel of Death» (2001): studied by IRCAM psychoacousticians and McAdams.",fx:[["xf",{a:[["dry",{g:.7}]],b:[["grain",{mode:"rand",d:20,s:.06,g:.7}]]}],["xf",{a:[["grain",{mode:"rand",d:20,s:.06,g:.5}]],b:[["dry",{g:.7}]],per:5}]]},{t:"Whispers Out of Time",k:"r",d:"Whisper-grains and echo — whispers outside time.",h:"«Whispers Out of Time» (1988), Pulitzer: strings and memory.",fx:[["grain",{mode:"rand",d:30,s:.025,g:.6}],["echo",{dt:.45,fb:.55,mix:.5}]]},{t:"Memory of a motif",k:"i",d:"Collage with returns — the motif is recognized through distortion.",h:"His studies of musical memory: recognition through transformations.",fx:[["tape",{op:"shuffle",n:18,return:1}],["dry",{g:.3}]]}]},
+{n:"Amadeo Roldán",y:"1900–1939",fam:"tm",ps:[{t:"Rítmicas V/VI",k:"d",d:"Stream transients and wooden clicks — pure percussion without pitch.",h:"«Rítmicas» V and VI (1930) — percussion only, earlier than Varèse's «Ionisation».",fx:[["tape",{op:"transient",n:24,floor:.05}],["clicks",{n:4,t0:.2,t1:.5,f:800,g:.4}]]},{t:"Afro-Cuban clave",k:"r",d:"Clave gate 3-2 — the key to Afro-Cuban rhythm.",h:"Roldán: Afro-Cuban rhythms in Cuban academic music.",fx:[["gate",{pat:[.3,.3,.4,.3,.3],floor:.1}]]},{t:"Percussion without pitch",k:"i",d:"Wooden and metallic resonances with gate.",h:"His percussion ensembles: rhythm and timbre instead of melody.",fx:[["res",{f:[200,520,1300,2600],q:20,g:.6}],["gate",{pat:[.25,.25,.5],floor:.1}]]}]},
+{n:"Frederic Rzewski",y:"1938–2021",fam:"tm",ps:[{t:"Coming Together",k:"d",d:"Additive accumulation of fragments: a, a+b, a+b+c… — the process of freedom.",h:"«Coming Together» (1971): an Attica prisoner's text, additive process.",fx:[["tape",{op:"additive",k:6}],["dyn",{curve:"swell"}]]},{t:"The People United",k:"r",d:"Loop-variations: the motif repeats with changes — 36 variations in miniature.",h:"«The People United Will Never Be Defeated!» (1975): 36 variations.",fx:[["tape",{op:"loop",n:10}],["harm",{r:[1,1.5],g:.3}]]},{t:"Attica",k:"i",d:"Dry voice and gate — speech as music.",h:"«Attica» (1972): political speech, sung and spoken.",fx:[["dry",{g:.65}],["gate",{pat:[.3,.2,.5,.2],floor:.15}]]}]},
+{n:"Erik Satie",y:"1866–1925",fam:"tm",ps:[{t:"Vexations: 840 repeats",k:"d",d:"840 micro-repeats of a motif in 10 s = 84 Hz: repetition becomes pitch.",h:"«Vexations» (1893): instruction to repeat 840 times. Greetings to Stockhausen's «…wie die Zeit vergeht…».",fx:[["tape",{op:"loop",n:840}]]},{t:"Musique d'ameublement",k:"d",d:"Quiet dry sound in a room echo — furniture music.",h:"«Musique d'ameublement» (1917): music not listened to.",fx:[["dry",{g:.25}],["echo",{dt:.35,fb:.5,mix:.5}],["filt",{type:"lowpass",f0:1800,f1:1800}]]},{t:"Relâche",k:"i",d:"Absurd loop and clicks — the entr'acte as a joke.",h:"«Relâche» (1924): a ballet with an entr'acte, cinema, and satire.",fx:[["tape",{op:"loop",n:6}],["clicks",{n:3,t0:.6,t1:1,f:1500,g:.3}]]}]},
+{n:"Giacinto Scelsi",y:"1905–1988",fam:"sp",ps:[{t:"One note",k:"d",d:"Resonator on the stream's reference frequency and ±2 cent beats — one note from inside.",h:"«Quattro pezzi su una nota sola» (1959): four pieces on one note.",fx:[["res",{f:"f0",q:150,g:.8}],["cloud",{n:4,cents:2,g:.4}]]},{t:"Inside the overtones",k:"r",d:"Resonators on overtones 1..5 slowly open.",h:"His method: sound as a living organism with an inner life.",fx:[["res",{f:"harm5",q:80,g:.7,ramp:1}],["dyn",{curve:"swell"}]]},{t:"Unfolding",k:"r",d:"Freeze and a dynamic wave — sound breathes.",h:"Scelsi: sound is not a point but a sphere.",fx:[["freeze",{s:.2,jit:.01,g:.6}],["dyn",{curve:"swell"}]]}]},
+{n:"Arnold Schoenberg",y:"1874–1951",fam:"pt",ps:[{t:"12-tone row",k:"d",d:"Resonators on the 12-tone grid and row permutation of fragments.",h:"The 12-tone method (1923): composition with 12 tones related only to each other.",fx:[["res",{f:[262,277,294,311,330,349,370,392,415,440,466,494],q:40,g:.5}],["tape",{op:"shuffle",n:12,seed:12,g:.5}]]},{t:"Sprechstimme",k:"r",d:"Sliding formant and grains — speech between singing and speaking.",h:"«Pierrot lunaire» (1912): Sprechstimme marked with crosses on the notes.",fx:[["formant",{set:"voice",morph:"i",g:.6}],["grain",{mode:"seq",d:20,s:.06,g:.5}]]},{t:"Emancipation of dissonance",k:"r",d:"Dissonant cloud and harmonization — dissonance without resolution.",h:"Emancipation of dissonance: dissonance no longer requires resolution.",fx:[["cloud",{n:8,cents:40,g:.45}],["harm",{r:[1,1.414,1.059],g:.4}]]}]},
+{n:"Erwin Schulhoff",y:"1894–1942",fam:"qt",ps:[{t:"In futurum: score of rests",k:"d",d:"Near silence: the stream is muted down to the noise floor — sound that is almost not.",h:"«In futurum» (1919): the entire score is rests, 33 years before Cage's 4′33″.",fx:[["silence",{g:.05}]]},{t:"Jazz-dance",k:"r",d:"Swing gate and harmonization — 1920s jazz in academic fabric.",h:"His «5 Etudes de Jazz» (1926) and jazz movements of suites.",fx:[["gate",{pat:[.33,.17,.33,.17],floor:.25}],["harm",{r:[1,1.26,1.5],g:.4}]]},{t:"Dada collage",k:"i",d:"Collage and clicks — a Dadaist gesture.",h:"Schulhoff: Dadaist, friend of Hausmann, died in the Wülzburg concentration camp.",fx:[["tape",{op:"shuffle",n:22}],["clicks",{n:4,t0:.4,t1:.8,f:1700,g:.3}]]}]},
+{n:"Alexander Scriabin",y:"1872–1915",fam:"pt",ps:[{t:"Mystic chord",k:"d",d:"Resonators C–F#–B♭–E–A–D — his six-note sonority.",h:"«Prometheus» (1910): the mystic chord as harmonic foundation.",fx:[["res",{f:[262,370,466,330,440,294],q:50,g:.7}],["dyn",{curve:"swell"}]]},{t:"Light-music",k:"r",d:"Spectral tilt slowly brightens — color as harmony.",h:"Clavier à lumières: he saw the colors of keys.",fx:[["filt",{type:"highshelf",f0:800,f1:6000,gain:12}],["res",{f:[262,370,466],q:40,g:.4}]]},{t:"Vers la flamme",k:"r",d:"Dynamic wave and cloud — toward the flame.",h:"«Vers la flamme» (1914): growth from darkness to blinding light.",fx:[["dyn",{curve:"swell"}],["cloud",{n:8,cents:20,g:.4}],["filt",{type:"highshelf",f0:1500,f1:5000,gain:8}]]}]},
+{n:"Alice Shields",y:"b. 1943",fam:"vc",ps:[{t:"Apocalypse",k:"r",d:"Formant opera and granulation — electronic voice theater.",h:"«Apocalypse» (1990s): Shields's electronic opera.",fx:[["formant",{set:"voice",morph:"a",g:.65}],["grain",{mode:"scan",d:18,s:.08,g:.5}]]},{t:"Shaman",k:"i",d:"Ritual resonances and tremolo — a shamanic voice.",h:"Her «Shaman»: ritual and electronics.",fx:[["res",{f:[196,294,392],q:25,g:.6}],["trem",{f:6,depth:.5}]]},{t:"Columbia-Princeton",k:"i",d:"Ring modulation and tape montage — her school.",h:"Shields studied with Ussachevsky at the Columbia-Princeton Electronic Music Center.",fx:[["ring",{f:880,depth:.5}],["tape",{op:"shuffle",n:16,g:.5}]]}]},
+{n:"Roger Ruskin Spear",y:"b. 1943",fam:"cn",ps:[{t:"Robot saxophone",k:"r",d:"Mechanical stutter and saxophone formant — a robot plays a solo.",h:"Bonzo Dog Doo-Dah Band: his robot saxophonist on stage.",fx:[["tape",{op:"stutter",a:.2,b:.08}],["formant",{set:"sax",g:.6}]]},{t:"Trouser Press",k:"i",d:"Mechanical gate and saturation — a trouser press as an instrument.",h:"His trouser press — an absurd mechanical performance.",fx:[["gate",{pat:[.25,.25,.25,.25],floor:.1}],["shaper",{kind:"soft",k:5,g:.5}]]},{t:"Vaudeville",k:"i",d:"Panorama and absurd clicks — English vaudeville.",h:"Bonzo Dog Band: Dada, vaudeville, and rock.",fx:[["pan",{f:.7,depth:.9}],["clicks",{n:5,t0:.3,t1:.7,f:1800,g:.3}]]}]},
+{n:"Vivian Stanshall",y:"1943–1995",fam:"vc",ps:[{t:"Sir Henry at Rawlinson End",k:"r",d:"Formant characters and dry narration — radio drama.",h:"«Sir Henry at Rawlinson End» (1970s): a surrealist saga.",fx:[["formant",{set:"voice",morph:"o",g:.6}],["dry",{g:.5}]]},{t:"Radio drama",k:"i",d:"Collage and echo — radio play montage.",h:"His radio shows: voice as theater of the absurd.",fx:[["tape",{op:"shuffle",n:18}],["echo",{dt:.3,fb:.45,mix:.4}]]},{t:"Eccentricity",k:"i",d:"Bells and gate — English eccentricity.",h:"Stanshall: voice of the Bonzo Dog Band, poet and eccentric.",fx:[["osc",{type:"sine",f:1046,g:.2,env:"bell",dec:2}],["gate",{pat:[.4,.2,.8],floor:.2}]]}]},
+{n:"Steven Stapleton",y:"b. 1957",fam:"sp",ps:[{t:"Nurse With Wound",k:"r",d:"Surrealist collage and echo — a waking dream.",h:"«Homotopy to Marie» (1982): a surrealist drone collage.",fx:[["tape",{op:"shuffle",n:26}],["echo",{dt:.4,fb:.55,mix:.5}]]},{t:"Drone collage",k:"i",d:"Dark cloud and freeze — drone as a dream.",h:"Nurse With Wound: surrealism in sound, collage as method.",fx:[["cloud",{n:8,cents:25,g:.45}],["freeze",{s:.16,jit:.03,g:.5}]]},{t:"Vinyl ghost",k:"i",d:"Crushed tape and crackle-clicks — a ghost of vinyl.",h:"His collages: vinyl crackle as a texture of memory.",fx:[["tape",{op:"crush",bits:7,hold:4}],["clicks",{n:6,t0:.1,t1:.6,f:3000,g:.2}]]}]},
+{n:"Karlheinz Stockhausen",y:"1928–2007",fam:"sp",ps:[{t:"Mixtur: ring modulation",k:"d",d:"Ring-mod of the live stream with its own carrier — sum and difference frequencies.",h:"«Mixtur» (1964): orchestra, four ring modulators, sine tones.",fx:[["ring",{f:440,depth:.85}],["dry",{g:.15}]]},{t:"Kontakte: rotation",k:"d",d:"Ring modulation and spatial rotation — sound flies in a circle.",h:"«Kontakte» (1959–60): electronics, piano, percussion; rotation in four channels.",fx:[["ring",{f:660,depth:.6}],["pan",{f:.5,depth:1}],["echo",{dt:.15,fb:.4,mix:.3}]]},{t:"Mantra: two pianos",k:"r",d:"Two ring layers and resonances — a mantra of 13 sounds.",h:"«Mantra» (1970): two pianos with ring modulation, 13-sound formula.",fx:[["ring",{f:440,depth:.5,g:.6}],["ring",{f:660,depth:.4,g:.4}],["res",{f:[262,392],q:30,g:.3}]]}]},
+{n:"Sun Ra",y:"1914–1993",fam:"sc",ps:[{t:"Space Echo",k:"r",d:"Tape echo with wow and flutter and a spring resonance — cosmos.",h:"His Arkestra: tape echo, spring reverb, detuned keyboards.",fx:[["echo",{dt:.31,fb:.55,mix:.55,wow:1}],["res",{f:[800,1600,2400],q:15,g:.35}]]},{t:"Cosmic tuning",k:"r",d:"Detuned cloud and oscillator — keyboards gone into space.",h:"Sun Ra: «Space is the Place», detuned clavioline and solovox.",fx:[["cloud",{n:8,cents:40,g:.5}],["osc",{type:"sawtooth",f:220,glide:1.5,g:.12,env:"drone"}]]},{t:"Call of the horns",k:"i",d:"Brass resonances in space — a call from afar.",h:"His Arkestra: horns as signals between worlds.",fx:[["res",{f:[330,660,990],q:18,g:.55}],["space",{n:4,rot:.06}]]}]},
+{n:"Tōru Takemitsu",y:"1930–1996",fam:"qt",ps:[{t:"Ma: the space between",k:"d",d:"Rare resonant events in silence — ma, emptiness as form.",h:"His aesthetic of ma: the silence between sounds matters more than the sounds.",fx:[["gate",{pat:[2,.5,3,.4],floor:.03}],["res",{f:"peaks",q:40,g:.4,ramp:1}]]},{t:"Sky, Horse and Death",k:"r",d:"Concrete collage — sky, horse, death on tape.",h:"«Sky, Horse and Death» (1958): his first concrete piece.",fx:[["tape",{op:"shuffle",n:20}],["filt",{type:"lowpass",f0:2500,f1:800}]]},{t:"Garden",k:"i",d:"Garden echo and a quiet dry layer — sound as a garden.",h:"Takemitsu: garden as compositional model, «Water Ways».",fx:[["echo",{dt:.5,fb:.5,mix:.5}],["dry",{g:.45}],["space",{n:3,rot:.02}]]}]},
+{n:"tENTATIVELY, a cONVENIENCE",y:"b. 1957",fam:"cn",ps:[{t:"D.I.Y. circuit bending",k:"r",d:"Crushed tape and stutters — home-made electronics.",h:"Baltimore conceptualist: lo-fi, d.i.y., absurdity as method.",fx:[["tape",{op:"crush",bits:4,hold:10}],["tape",{op:"stutter",a:.3,b:.1,g:.5}]]},{t:"Self-interruption",k:"i",d:"Collage interrupted by silence — the work argues with itself.",h:"His performances: intentional glitches and self-destruction of form.",fx:[["tape",{op:"shuffle",n:16}],["gate",{pat:[.8,.6,.4,.8],floor:.02}]]},{t:"Low fidelity",k:"i",d:"Cassette crush and echo — fidelity of low precision.",h:"Lo-fi as an aesthetic position, not a deficiency.",fx:[["tape",{op:"crush",bits:6,hold:5}],["echo",{dt:.28,fb:.5,mix:.5}]]}]},
+{n:"Edgard Varèse",y:"1883–1965",fam:"sc",ps:[{t:"Poème électronique",k:"d",d:"Spatial sweeps and siren glissando — the Philips Pavilion.",h:"«Poème électronique» (1958): 425 loudspeakers of the Philips Pavilion, Brussels.",fx:[["space",{n:6,spread:1,rot:.2}],["osc",{type:"sine",f:400,glide:3,g:.15,env:"siren"}],["shaper",{kind:"soft",k:4,g:.4}]]},{t:"Déserts: blocks",k:"d",d:"Alternation of dry instrumental and electronic blocks.",h:"«Déserts» (1954): instrumental blocks and tape interpolations.",fx:[["alt",{a:[["dry",{g:.7}]],b:[["grain",{mode:"rand",d:22,s:.05,g:.7}],["ring",{f:880,depth:.5,g:.4}]],per:2.5}]]},{t:"Sirens",k:"r",d:"Siren glissandi and saturation — organized sound.",h:"«Ionisation» (1931) and «Amériques»: sirens as instruments.",fx:[["osc",{type:"sine",f:600,glide:2,g:.2,env:"siren"}],["osc",{type:"sine",f:800,glide:.5,g:.15,env:"siren"}],["dry",{g:.35}]]}]},
+{n:"Robin Williamson",y:"b. 1943",fam:"vc",ps:[{t:"Modal folk",k:"r",d:"Dorian resonances and drone harmonization — the Celtic root.",h:"Incredible String Band: Celtic folk, ethnicity, and psychedelia.",fx:[["res",{f:[294,330,349,392,440],q:15,g:.55}],["harm",{r:[1,1.5],g:.4}]]},{t:"Multi-instrumental",k:"i",d:"Different resonator banks with gate — one person, many instruments.",h:"Williamson: harp, guitar, flute, jaw harp — all himself.",fx:[["res",{f:[220,520,1100],q:20,g:.5}],["gate",{pat:[.4,.3,.5],floor:.2}],["res",{f:[880,1760],q:30,g:.3}]]},{t:"Drone tanpura",k:"i",d:"Drone oscillator and dry layer — the Indian root of ISB.",h:"ISB brought tanpura and raga into psychedelic folk.",fx:[["osc",{type:"sawtooth",f:147,g:.12,env:"drone"}],["dry",{g:.5}]]}]},
+{n:"Olly Wilson",y:"1937–2018",fam:"vc",ps:[{t:"Sometimes",k:"r",d:"Spiritual resonances and ring modulation — voice and tape.",h:"«Sometimes» (1976): tenor and tape, transformation of the spiritual «Sometimes I Feel Like a Motherless Child».",fx:[["res",{f:[220,262,330,392],q:20,g:.55}],["ring",{f:440,depth:.4,g:.4}],["dry",{g:.35}]]},{t:"Heterogeneous sound principle",k:"d",d:"Grains, clicks, and resonances at once — the heterogeneous sound ideal.",h:"His term (1983): African-American music as heterogeneity of timbres.",fx:[["grain",{mode:"rand",d:16,s:.04,g:.45}],["clicks",{n:3,t0:.3,t1:.6,f:1200,g:.3}],["res",{f:[330,660],q:15,g:.4}]]},{t:"Call-response",k:"r",d:"Dry call and echo-answer — antiphony.",h:"Call-and-response: structure of African-American musical speech.",fx:[["dry",{g:.6}],["echo",{dt:.35,fb:.5,mix:.55}]]}]},
+{n:"Trevor Wishart",y:"b. 1946",fam:"sp",ps:[{t:"Red Bird: voice → bird",k:"d",d:"Granular morph from speech grains to bird ones — sonic metamorphosis.",h:"«Red Bird» (1977): voice, birds, machines — a political allegory of transformations.",fx:[["xf",{a:[["grain",{mode:"seq",d:26,s:.04,g:.7}]],b:[["grain",{mode:"rand",d:34,s:.02,g:.7}],["harm",{r:[3],g:.3}]]}]]},{t:"Audible Design: taxonomy",k:"d",d:"Dry → freeze → granulation: three transformations from his book.",h:"«Audible Design» (1994) — a theory of sonic transformations, the methodological basis of this project.",fx:[["alt",{a:[["dry",{g:.7}]],b:[["freeze",{s:.14,jit:.02,g:.7}]],per:3.3}],["grain",{mode:"scan",d:16,s:.07,g:.4}]]},{t:"CDP spectrum",k:"r",d:"Freeze morphs into a resonator spectrum — his Composers Desktop Project.",h:"Wishart co-founded CDP (1986): spectral tools for everyone.",fx:[["xf",{a:[["freeze",{s:.18,jit:.015,g:.7}]],b:[["res",{f:"peaks",q:90,g:.7,ramp:1}]]}]]}]},
+{n:"Christian Wolff",y:"b. 1934",fam:"ch",ps:[{t:"Duo for Pianists: cues",k:"r",d:"Gate reacts to the previous event — a cybernetic score.",h:"«Duo for Pianists» (1957): the performer chooses by cue signals.",fx:[["gate",{pat:[.5,.3,.8,.2,.6],floor:.1}],["dry",{g:.5}]]},{t:"Burdocks",k:"r",d:"Free cloud and clicks — an anarchic ensemble.",h:"«Burdocks» (1971): for any number of performers, anarchist form.",fx:[["cloud",{n:6,cents:20,g:.45}],["clicks",{n:4,t0:.4,t1:.9,f:1400,g:.3}]]},{t:"Agreement",k:"i",d:"Free canon and a dry layer — coordination without a conductor.",h:"Wolff: music as social agreement among free people.",fx:[["canon",{r:[1,1.02,.98],gran:0,g:.5,spread:.6}],["dry",{g:.4}]]}]},
+{n:"Stefan Wolpe",y:"1902–1972",fam:"cn",ps:[{t:"Montage of contrasts",k:"r",d:"Sharp splices of opposing characters — dialectical montage.",h:"Wolpe: montage of contrasts, Brecht and Eisler in New York.",fx:[["tape",{op:"shuffle",n:14}],["gate",{pat:[.2,.8,.2,.8],floor:.1}]]},{t:"Battle Piece",k:"r",d:"Saturation and gate — a piano battle.",h:"«Battle Piece» (1943–47): fury of form, a political gesture.",fx:[["shaper",{kind:"fuzz",k:10,g:.55}],["gate",{pat:[.15,.15,.3,.15,.45],floor:.1}]]},{t:"Form IV: broken sequences",k:"i",d:"Grains tear the sequence apart — broken sequences.",h:"«Form IV: Broken Sequences» (1978): late, free form.",fx:[["grain",{mode:"seq",d:20,s:.06,jump:.4,g:.65}]]}]},
+{n:"Charles Wuorinen",y:"1938–2020",fam:"pt",ps:[{t:"Time's Encomium",k:"d",d:"Serial oscillator and ring modulation — the RCA Mark II.",h:"«Time's Encomium» (1969), Pulitzer: the RCA Mark II synthesizer, time as material.",fx:[["osc",{type:"square",f:220,glide:2,g:.12,env:"drone"}],["ring",{f:880,depth:.6}],["grain",{mode:"seq",d:14,s:.07,g:.4}]]},{t:"Fractal slicing",k:"r",d:"Self-similar splice: fragments of fragments — fractal form.",h:"Wuorinen: fractals and self-similarity in musical structure.",fx:[["tape",{op:"shuffle",n:32}],["tape",{op:"shuffle",n:8,g:.5}]]},{t:"12-tone grid + phase",k:"r",d:"12-tone grid resonators and phase drift.",h:"His serialism: 12 tones, strict organization of time.",fx:[["res",{f:[262,277,294,311,330,349,370,392,415,440,466,494],q:40,g:.45}],["phase",{drift:.015,spread:.6,g:.5}]]}]}
 ];
-const BEDS="202520151015302520152515354020101570151015402525101530301520251530252510053515202525152530401520052000202510302030251540302020101520152025051530402535102570201520203025452010352535101005252030101015154030152025853080903030153045304055152020302025153020102030052010101520552540403525101520202510250510202550204535202025252030302025100525051010051020050515503570102535251520152025301515303060202525100510253020354530151520300515252525004500301555051010504520202520002035152020102055057020101020252020003020153025152015102025502030151515151015202525251545101515200035353050252545000000453040151010201025";
+  const BEDS="202520151015302520152515354020101570151015402525101530301520251530252510053515202525152530401520052000202510302030251540302020101520152025051530402535102570201520203025452010352535101005252030101015154030152025853080903030153045304055152020302025153020102030052010101520552540403525101520202510250510202550204535202025252030302025100525051010051020050515503570102535251520152025301515303060202525100510253020354530151520300515252525004500301555051010504520202520002035152020102055057020101020252020003020153025152015102025502030151515151015202525251545101515200035353050252545000000453040151010201025";
 function bedOf(patIdx){const i=((patIdx%300)+300)%300;return parseInt(BEDS.substr(i*2,2),10)/100;}
 const $=id=>document.getElementById(id);
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
@@ -781,7 +562,7 @@ let ctx=null,srcNode=null,tap=null;
 let busIn=null,tone=null,drive=null,SwNode=null,master=null,limiter=null,post=null,analyser=null,streamDest=null,REVSEND=null;
 const buses={A:{gain:null,input:null,bed:null,wet:null,nodes:[],srcs:[],grainSpecs:[],patIdx:-1,bedPattern:.5,bedOverride:undefined,bedAuto:false,rmsOscs:null},
 B:{gain:null,input:null,bed:null,wet:null,nodes:[],srcs:[],grainSpecs:[],patIdx:-1,bedPattern:.5,bedOverride:undefined,bedAuto:false,rmsOscs:null}};
-let activeBus="A",currentPatIdx=-1,currentPatIdxTarget=-1,switchTimer=null,state="empty",muted=false,loopBlock=false;
+let activeBus="A",currentPatIdx=-1,currentPatIdxTarget=-1,switchTimer=null,state="empty",muted=false,loopBlock=false,loopAnchor=-1;
 let objURL=null,srcName="",srcDur=0,seed=20261117,wakeLock=null,recorder=null,recChunks=[],recURL=null;
 let mix={vol:.85,mix:1,tone:18000,drive:1,space:0,width:1,rate:1,lim:true};
 try{const s=localStorage.getItem("reductions.mix");if(s)Object.assign(mix,JSON.parse(s));
@@ -1328,8 +1109,11 @@ const t=audio.currentTime;
 const patIdx=Math.floor(t/10);
 if(patIdx!==currentPatIdx)switchPattern(patIdx,false);
 if(loopBlock){
-const bs=Math.floor(t/30)*30;
-if(t>=bs+30)audio.currentTime=bs+.01;
+if(loopAnchor<0)loopAnchor=Math.floor(t/30)*30;
+if(t>=loopAnchor+30){
+audio.currentTime=loopAnchor+.01;
+patternTick();
+}
 }
 }
 let grainAcc={};
@@ -1411,6 +1195,7 @@ objURL=url;srcName=name;
 if(ctx){disposeBus(buses.A);disposeBus(buses.B);}
 activeBus="A";currentPatIdx=-1;state="empty";
 $("playBtn").textContent="play";
+$("playBtn").classList.remove("playing");
 audio.src=url;audio.load();
 setChip(name+" · metadata…","warn");
 }
@@ -1433,6 +1218,7 @@ if(!isNaN(t)&&t>0)seekTo(t);
 audio.addEventListener("error",()=>{setChip("could not open source — try another format","err");logErr("audio error");});
 audio.addEventListener("ended",()=>{
 state="done";$("playBtn").textContent="play";
+$("playBtn").classList.remove("playing");
 addJournal(fmt(audio.currentTime),"END","The stream played in full: "+fmt(srcDur)+".","All 30-second blocks passed non-stop over the continuous sound.",FAMS.pt.c);
 if(recorder&&recorder.state==="recording")recorder.stop();
 releaseWake();updateUI();
@@ -1443,17 +1229,21 @@ if(!ensureCtx())return;
 try{await ctx.resume();}catch(e){}
 try{await audio.play();}catch(e){logErr("play: "+e.message);setChip("play blocked — try again","err");return;}
 state="playing";$("playBtn").textContent="pause";
+$("playBtn").classList.add("playing");
 requestWake();patternTick();
 }
 function pause(){
 if(state!=="playing")return;
 audio.pause();state="paused";
-$("playBtn").textContent="play";releaseWake();
+$("playBtn").textContent="play";
+$("playBtn").classList.remove("playing");
+releaseWake();
 }
 function seekTo(t){
 if(!srcDur)return;
 t=clamp(t,0,Math.max(0,srcDur-.1));
 audio.currentTime=t;currentPatIdx=-1;
+if(loopBlock)loopAnchor=Math.floor(t/30)*30;
 if(state==="playing")patternTick();else updatePanel(Math.floor(t/10));
 updateUI();
 }
@@ -1682,7 +1472,7 @@ patterns:c.ps.map((p,j)=>({slot:j+1,title:p.t,fidelity:p.k,principle:p.d,referen
 function readme(){
 var NL=String.fromCharCode(10);
 var s=["# REDUCTIONS · continuous stream",
-"100 composers",
+"100 composers × 3 patterns × 10 seconds over a continuous stream.",
 "",
 "## Running",
 "- Place `REDUCTIONS.html` and `sound.wav` in one folder.",
@@ -1763,7 +1553,13 @@ $("prevBtn").addEventListener("click",()=>seekTo(audio.currentTime-30));
 $("nextBtn").addEventListener("click",()=>seekTo(audio.currentTime+30));
 $("restartBtn").addEventListener("click",()=>{seekTo(0);play();});
 $("loopBtn").classList.toggle("on",loopBlock);
-$("loopBtn").addEventListener("click",()=>{loopBlock=!loopBlock;$("loopBtn").classList.toggle("on",loopBlock);saveMix();});
+if(loopBlock)loopAnchor=0;
+$("loopBtn").addEventListener("click",()=>{
+loopBlock=!loopBlock;
+loopAnchor=loopBlock?Math.floor((audio.currentTime||0)/30)*30:-1;
+$("loopBtn").classList.toggle("on",loopBlock);
+saveMix();
+});
 $("muteBtn").addEventListener("click",()=>{
 muted=!muted;$("muteBtn").classList.toggle("muted",muted);
 $("muteBtn").setAttribute("aria-pressed",String(muted));
@@ -1865,13 +1661,13 @@ fitInfo();
 }
 function applyPat(key){
 if(key==="idle"){
-riMeta.textContent="100 composers";
+riMeta.textContent="100 composers · 3 patterns · 10 s";
 riTitle.textContent="choose sound.wav or demo below";
 riDesc.textContent="The stream plays from disk; every 10 seconds a new composer pattern takes over.";
 riHist.style.display="none";
 }else{
 var kk=key.split("/"),ci=+kk[0],si=+kk[1],c=C[ci],p=(c.ps&&c.ps[si])||{};
-riMeta.textContent="No. "+String(ci+1).padStart(3,"0")+" / "+N+(p.k&&FID[p.k]?" · "+FID[p.k]:"");
+riMeta.textContent="No. "+String(ci+1).padStart(3,"0")+" / "+N;
 riTitle.textContent=(si+1)+"/3 · "+(p.t||"");
 riDesc.textContent=p.d||"";
 riHist.textContent=p.h||"";
