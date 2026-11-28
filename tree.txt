@@ -1,0 +1,16 @@
+AUDIT.md
+LICENSE
+README.md
+SPEC.md
+app/build.gradle.kts
+app/src/main/AndroidManifest.xml
+app/src/main/assets/reductions.html
+app/src/main/java/com/neto4ka/reductions/MainActivity.kt
+app/src/main/res/values/strings.xml
+app/src/main/res/values/themes.xml
+build.gradle.kts
+gradle.properties
+reductions.html
+reductions.json
+settings.gradle.kts
+tests/render.mjs
